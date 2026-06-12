@@ -40,7 +40,7 @@ load_dotenv()
 from call_summarizer.config import load_config
 from call_summarizer.evaluator import EvaluationReport, evaluate_summary
 from call_summarizer.service import generate_summary_from_content
-from call_summarizer.storage import derive_output_path, save_summary
+from call_summarizer.utils.storage import derive_output_path, save_summary
 
 # ── Display constants (ASCII-safe for Windows cp1252) ─────────────────────────
 _W_NAME   = 22

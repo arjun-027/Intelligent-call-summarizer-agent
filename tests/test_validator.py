@@ -3,7 +3,7 @@
 import pytest
 
 from call_summarizer.summarizer import CHAR_LIMIT
-from call_summarizer.validator import (
+from call_summarizer.utils.validator import (
     ValidationResult,
     validate_input_file,
     validate_summary,

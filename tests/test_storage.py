@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from call_summarizer.storage import derive_output_path, save_summary
+from call_summarizer.utils.storage import derive_output_path, save_summary
 
 
 class TestDeriveOutputPath:

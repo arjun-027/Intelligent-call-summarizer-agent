@@ -34,6 +34,7 @@ from .evaluator import build_eval_feedback_prompt, evaluate_summary
 from .graph import build_graph
 from .input_guardrails import InputValidationResult, validate_transcript_input
 from .models import ProcessingResult, SummaryState
+from .utils.preprocessor import preprocess_transcript
 from .utils.storage import derive_output_path, save_summary
 from .summarizer import build_llm, generate_summary
 from .utils.transcript import find_transcripts, load_transcript
@@ -129,7 +130,14 @@ def generate_summary_from_content(
     """
     logger.info("Generating summary | file: %s | transcript: %d chars", filename, len(transcript_content))
 
+    # ── Pre-processing: fix encoding artefacts, normalise speaker labels, strip fillers ──
+    preprocess_result = preprocess_transcript(transcript_content)
+    transcript_content = preprocess_result.cleaned
+    if preprocess_result.notes:
+        logger.info("Pre-processing applied | file: %s | %d change(s)", filename, len(preprocess_result.notes))
+
     # ── Input guardrails (Tier 1: token budget, Tier 2: injection, Tier 3: PII audit) ──
+    # Run on the cleaned transcript so the token budget reflects what the LLM actually sees.
     input_result: InputValidationResult = validate_transcript_input(transcript_content, filename)
     if not input_result.allowed:
         error_msgs = "; ".join(f.message for f in input_result.errors)
@@ -370,7 +378,18 @@ def process_transcript_file(
             error=str(exc),
         )
 
-    # Input guardrails: run before spending LLM quota.
+    # Pre-processing: fix encoding artefacts, normalise speaker labels, strip fillers.
+    preprocess_result = preprocess_transcript(content)
+    content = preprocess_result.cleaned
+    if preprocess_result.notes:
+        logger.info(
+            "Pre-processing applied | file: %s | %d change(s)",
+            transcript_path.name,
+            len(preprocess_result.notes),
+        )
+
+    # Input guardrails: run on the cleaned transcript so the token budget reflects
+    # what the LLM actually sees.
     input_result = validate_transcript_input(content, transcript_path.name)
     if not input_result.allowed:
         error_msgs = "; ".join(f.message for f in input_result.errors)

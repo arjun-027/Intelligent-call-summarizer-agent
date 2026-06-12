@@ -1,6 +1,6 @@
 import pytest
 
-from call_summarizer.transcript import find_transcripts, load_transcript
+from call_summarizer.utils.transcript import find_transcripts, load_transcript
 
 
 class TestLoadTranscript:

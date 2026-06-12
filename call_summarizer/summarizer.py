@@ -81,7 +81,8 @@ STRICT RULES:
 6. Caller relationship describes their relationship to the CLAIM, not to the agent.
 7. If the caller represents another insurer or a solicitor's firm, state that specifically.
 8. Total summary must be ≤ 1,500 characters including all whitespace.
-9. Do not add any explanatory notes, footer comments, or meta-commentary to the output. The summary must contain ONLY the structured fields defined above. Never append statements such as "Note: the conditional sections were not discussed" — simply omit any section that does not apply."""
+9. Do not add any explanatory notes, footer comments, or meta-commentary to the output. The summary must contain ONLY the structured fields defined above. Never append statements such as "Note: the conditional sections were not discussed" — simply omit any section that does not apply.
+10. Production transcripts contain real speech artefacts. Sentences may be fragmented or incomplete; turns may begin mid-thought. Markers such as [unclear] indicate a word or phrase the transcriber could not recover — do not invent content to fill these gaps. Extract the intended meaning from surrounding context and stated facts. Base all claims on what was explicitly said, not inferred."""
 
 
 def build_llm(api_key: str, model: str) -> ChatGroq:

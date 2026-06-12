@@ -1,6 +1,6 @@
 # Insurance Call Summariser Agent
 
-**Upload a call transcript, generate a structured summary, review it with guardrail feedback, then save it to the output folder.**
+**Upload a call transcript, generate a structured summary, review it with guardrail and evaluation feedback, then save it to the output folder.**
 
 An end-to-end pipeline that transforms raw insurance call transcripts into structured, guardrail-validated summaries using a Groq-hosted LLM (`llama-3.1-8b-instant`), exposed through a FastAPI backend and a Streamlit web UI.
 
@@ -30,6 +30,7 @@ An end-to-end pipeline that transforms raw insurance call transcripts into struc
 18. [Batch Evaluation](#batch-evaluation)
 19. [Logging](#logging)
 20. [Future Expansion](#future-expansion)
+21. [Transcript Pre-processing](#transcript-pre-processing)
 
 ---
 
@@ -40,6 +41,7 @@ Insurance claims handlers review dozens of call recordings per shift. This agent
 **Key capabilities:**
 
 - Structured summary generation in a fixed schema (Caller, Subject, Executive Summary, Next Steps, five optional conditional sections)
+- **Transcript pre-processing** before the LLM sees the text: encoding artefact repair (mojibake), inaudible marker normalisation, speaker label canonicalisation, filler word and false-start removal
 - Three-tier **input** guardrail: token budget (Tier 1), prompt injection scan — OWASP LLM01 (Tier 2), PII audit — GDPR Article 30 (Tier 3)
 - Three-tier **output** guardrail: structural validation (Tier 1 — blocking), format compliance (Tier 2 — advisory), content integrity vs. transcript (Tier 3 — advisory)
 - Auto-retry loop (up to 2 retries) on Tier-1 output guardrail failures with targeted corrective prompt addendum
@@ -71,7 +73,13 @@ Insurance claims handlers review dozens of call recordings per shift. This agent
           |  generate_summary_from_content()  process_directory()   |
           +---+------------------+------------------+---------------+
               |                  |                  |
-    +---------v--------+ +-------v--------+ +-------v---------+
+    +---------v----------------------------------------------------------+
+    |  Transcript Pre-processor   utils/preprocessor.py                  |
+    |  1. Encoding artefacts (mojibake)   2. Inaudible -> [unclear]      |
+    |  3. Speaker label normalisation     4. Filler word removal         |
+    +---+----------------------------------------------------------------+
+        |
+    +---v--------------+ +-------v--------+ +-------v---------+
     |  Input           | |  LLM Engine    | |  Output         |
     |  Guardrails      | |  summarizer.py | |  Guardrails     |
     |  input_guardrails| |  Groq API      | |  guardrails/    |
@@ -105,8 +113,12 @@ Insurance claims handlers review dozens of call recordings per shift. This agent
   Upload .txt transcript
         |
         v
+  Transcript Pre-processor
+  (encoding fix, speaker labels, filler words, [unclear] markers)
+        |
+        v
   Input Guardrails ---------- BLOCKED? -------> HTTP 400 / error returned
-        | (allowed)
+        | (allowed)                             (token budget, injection, PII)
         v
   LangGraph Pipeline
         |  +----------+     +------------+     +--------+
@@ -228,6 +240,7 @@ Call_summarizer_agent/
 │   │   └── __init__.py
 │   │
 │   └── utils/                    Shared utilities
+│       ├── preprocessor.py       Transcript normalisation (encoding, speakers, fillers)
 │       ├── storage.py            save_summary(), derive_output_path()
 │       ├── transcript.py         load_transcript(), find_transcripts()
 │       ├── validator.py          validate_input_file(), validate_summary()
@@ -260,10 +273,11 @@ Call_summarizer_agent/
 | Component | File(s) | Responsibility |
 |---|---|---|
 | Config | `config.py` | Reads env vars; validates `GROQ_API_KEY` |
+| Pre-processor | `utils/preprocessor.py` | Repairs encoding artefacts, normalises speaker labels, strips fillers — runs before guardrails |
 | LLM Engine | `summarizer.py` | Builds Groq client; manages prompt; exponential-backoff retry |
 | LangGraph | `graph.py` | Three-node DAG: load → summarize → save |
-| Service | `service.py` | Orchestrates both retry loops; single entry point for all callers |
-| Input Guardrails | `input_guardrails/` | Validates transcript before LLM call |
+| Service | `service.py` | Orchestrates pre-processing, both retry loops; single entry point for all callers |
+| Input Guardrails | `input_guardrails/` | Validates cleaned transcript before LLM call |
 | Output Guardrails | `guardrails/` | Validates summary after LLM call |
 | Evaluator | `evaluator.py` | 8-metric quality scoring + agentic feedback prompt builder |
 | Observability | `observability/` | Rotating log handler + LangSmith trace spans |
@@ -742,6 +756,8 @@ Key log entries to watch:
 | Pattern | Meaning |
 |---|---|
 | `LangSmith tracing ENABLED` | Traces are being sent to LangSmith |
+| `Transcript pre-processing:` | List of changes applied by the pre-processor |
+| `Pre-processing applied \| file:` | Pre-processor changed the transcript; count of change types logged |
 | `[INPUT-T1]` | Token budget check result |
 | `[INPUT-T2]` | Injection scan result |
 | `[PII AUDIT]` | PII categories detected |
@@ -857,3 +873,88 @@ Run full guardrail + evaluation suite on final summary
 ```
 
 The overlap prevents facts that span a chunk boundary from being lost. The reduce prompt should specify that all unique facts from each partial summary must be preserved, and the same 1,500-character output schema must be respected.
+
+---
+
+## Transcript Pre-processing
+
+Production call transcripts commonly arrive with quality issues introduced at the recording, ASR, or export stage. The pre-processor (`call_summarizer/utils/preprocessor.py`) runs **before input guardrails** so that the token budget is measured against the text the LLM actually sees, and all downstream components receive a consistent, clean input.
+
+### The Five Fix Categories
+
+#### 1. Encoding Artefacts (mojibake)
+
+**Problem:** The ellipsis character `…` used to mark pauses appears as `â€¦` when a UTF-8 file is read by a tool that assumes Windows-1252 or Latin-1 encoding. Other common cases: curly quotes `"` `"` `'` `'` appearing as multi-character mojibake strings, em/en dashes as `â€"` / `â€"`, pound sign as `Â£`.
+
+**Fix:** A lookup table of 14 mojibake patterns is applied first (before any regex or whitespace normalisation) so corrupted byte sequences are corrected before they can confuse downstream logic. Only the exact known-bad sequences are replaced; no guessing.
+
+```
+â€¦  →  …    (ellipsis / pause marker)
+â€™  →  '    (right single quotation mark)
+â€œ  →  "    (left double quotation mark)
+â€"  →  —    (em dash)
+Â£   →  £    (pound sign)
+```
+
+#### 2. Inaudible / Garbled Audio Markers
+
+**Problem:** ASR platforms and human transcribers use many different conventions to mark segments where the audio was unclear: `[inaudible]`, `(inaudible)`, `***`, `[??]`, `<uu>`. When multiple conventions appear in the same file, the LLM cannot reliably distinguish a gap from actual content.
+
+**Fix:** All inaudible markers are normalised to the single canonical token `[unclear]`. The token is **preserved rather than deleted** — deleting it would cause the LLM to hallucinate bridging content to fill the silence. System prompt Rule 10 instructs the LLM to treat `[unclear]` as a known gap, not invent content for it.
+
+```
+[inaudible]  →  [unclear]
+(inaudible)  →  [unclear]
+***          →  [unclear]
+[??]         →  [unclear]
+<uu>         →  [unclear]
+```
+
+#### 3. Unclear Speaker Attribution
+
+**Problem:** Different transcription tools label turns differently: `Customer:`, `Client:`, `Policyholder:`, `Claimant:`, `Rep:`, `Handler:`, `Adjuster:`, `Speaker 1:`, `S1:`. The LLM must understand who is speaking to correctly populate the `Caller:` line of the summary.
+
+**Fix:** Speaker label normalisation is applied **per line** (not globally) using regex anchored to start-of-line, so a phrase like `"the customer confirmed"` is never mismatched. All caller-side labels are normalised to `Caller:`; all agent-side labels to `Agent:`. The numbered speaker heuristic (`Speaker 1` → `Caller`, `Speaker 2` → `Agent`) handles purely auto-generated transcripts.
+
+```
+Customer:   →  Caller:          Rep:          →  Agent:
+Client:     →  Caller:          Handler:      →  Agent:
+Claimant:   →  Caller:          Adjuster:     →  Agent:
+Speaker 1:  →  Caller:          Speaker 2:    →  Agent:
+S1:         →  Caller:          S2:           →  Agent:
+```
+
+#### 4. Filler Words and False Starts
+
+**Problem:** Natural speech contains filler interjections (`um`, `uh`, `er`, `ah`, `hmm`) and false starts (`"I- I wanted to say"`, `"we- we can help"`). These add tokens to the input without adding information, reducing the effective transcript budget and increasing the chance of the LLM losing focus on genuine facts.
+
+**Fix:** Filler words are matched with word-boundary anchors (`\b`) to avoid accidentally stripping syllables from real words (e.g. `"umbrella"`, `"Ahmed"`). False starts are resolved before filler removal so patterns like `"uh- uh"` are handled correctly. Post-removal cleanup collapses double commas that result from fillers sitting between two comma-delimited items (`"Hello, um, I called"` → `"Hello, I called"`).
+
+```
+"I, um, wanted to, uh, ask about my, um, policy"
+→ "I, wanted to, ask about my, policy"
+
+"I- I wanted to say we- we can help you"
+→ "I wanted to say we can help you"
+```
+
+#### 5. Fragmented Sentences (System Prompt Rule 10)
+
+**Problem:** Incomplete thoughts and mid-sentence line breaks cannot be reliably repaired by text substitution without risking altering facts. Joining sentence fragments heuristically can incorrectly connect turns from different speakers.
+
+**Fix:** This is handled at the prompt level rather than in the pre-processor. System prompt Rule 10 explicitly instructs the LLM:
+
+> *"Production transcripts contain real speech artefacts. Sentences may be fragmented or incomplete; turns may begin mid-thought. Markers such as [unclear] indicate a word or phrase the transcriber could not recover — do not invent content to fill these gaps. Extract the intended meaning from surrounding context and stated facts."*
+
+### Pipeline Position
+
+Pre-processing runs **before input guardrails** for two reasons:
+
+1. **Token budget accuracy:** Mojibake strings inflate the character count (`â€¦` = 4 chars; `…` = 1 char). The Tier-1 token budget guardrail should measure the text the LLM actually sees.
+2. **Injection scan accuracy:** Garbled markers and encoding noise can split or obscure injection pattern matches, leading to false negatives. Cleaning first makes the Tier-2 scan more reliable.
+
+### What is Never Changed
+
+- Amounts, dates, IBANs, reference numbers, names, phone numbers — no factual content is altered.
+- `[unclear]` tokens are added (not removed) to preserve gap awareness.
+- Sentence order and turn structure are never reordered.

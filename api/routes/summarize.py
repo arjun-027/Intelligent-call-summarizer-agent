@@ -22,7 +22,7 @@ from call_summarizer.config import Config
 from call_summarizer.guardrails import run_guardrails
 from call_summarizer.input_guardrails import validate_transcript_input
 from call_summarizer.service import generate_summary_from_content
-from call_summarizer.storage import derive_output_path, save_summary
+from call_summarizer.utils.storage import derive_output_path, save_summary
 from call_summarizer.summarizer import CHAR_LIMIT
 
 from ..schemas import SummarizeResponse, SubmitRequest, SubmitResponse
