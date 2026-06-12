@@ -55,6 +55,10 @@ Insurance claims handlers review dozens of call recordings per shift. This agent
 
 ## Project Architecture
 
+> **Interactive diagram:** Open [architecture_diagram.html](architecture_diagram.html) in any browser for the full layered diagram with all seven pipeline stages including future expansion items.
+>
+> The Mermaid diagram below is the inline GitHub preview of the same architecture.
+
 > **Legend:** Green = implemented · Yellow dashed = future expansion · Pink = human-in-the-loop · Purple = ops/observability
 
 ```mermaid

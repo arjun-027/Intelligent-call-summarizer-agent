@@ -13,6 +13,7 @@ wheels/
 .env
 architecture_diagram.md
 Project_description.txt
+arch_diagram.png
 
 # Generated outputs
 Output_data/

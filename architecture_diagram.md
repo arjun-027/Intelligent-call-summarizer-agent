@@ -33,8 +33,8 @@ graph TD
     subgraph Services ["Core Logic & Service Layer"]
         config["Configuration dataclass<br/>(call_summarizer/config.py)"]:::serviceStyle
         service["Service Orchestrator<br/>(call_summarizer/service.py)"]:::serviceStyle
-        inputGuard["Input Guardrails Engine<br/>(call_summarizer/input_guardrails.py)"]:::serviceStyle
-        outputGuard["Output Guardrails Engine<br/>(call_summarizer/guardrails.py)"]:::serviceStyle
+        inputGuard["Input Guardrails Engine<br/>(call_summarizer/input_guardrails/)"]:::serviceStyle
+        outputGuard["Output Guardrails Engine<br/>(call_summarizer/guardrails/)"]:::serviceStyle
         evaluator["Deterministic Quality Evaluator<br/>(call_summarizer/evaluator.py)"]:::serviceStyle
     end
 
@@ -42,9 +42,9 @@ graph TD
     subgraph GraphPipeline ["LangGraph Execution Pipeline (call_summarizer/graph.py)"]
         stateDef["SummaryState definition<br/>(call_summarizer/models.py)"]:::graphStyle
         langgraphCompile["Compiled LangGraph pipeline"]:::graphStyle
-        loadNode["Node 1: load_node<br/>(call_summarizer/transcript.py)"]:::graphStyle
+        loadNode["Node 1: load_node<br/>(call_summarizer/utils/transcript.py)"]:::graphStyle
         summarizeNode["Node 2: summarize_node<br/>(call_summarizer/summarizer.py)"]:::graphStyle
-        saveNode["Node 3: save_node<br/>(call_summarizer/storage.py)"]:::graphStyle
+        saveNode["Node 3: save_node<br/>(call_summarizer/utils/storage.py)"]:::graphStyle
     end
 
     %% Data and External Interfaces
@@ -114,11 +114,11 @@ graph TD
     2. Invoking the LangGraph pipeline.
     3. Executing the automatic retry loop (up to 2 times) with feedback corrections if Tier-1 structural output guardrails fail.
     4. Saving summaries and running final evaluations.
-*   [call_summarizer/input_guardrails.py](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/input_guardrails.py) checks input safety:
+*   [call_summarizer/input_guardrails/](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/input_guardrails/) checks input safety:
     *   **Tier 1**: Token budget validation (blocks if > 19,708 characters).
     *   **Tier 2**: OWASP prompt injection scanner (blocks on malicious sequences).
     *   **Tier 3**: GDPR PII audit (scans for emails, IBANs, phone numbers, postcodes; logs only).
-*   [call_summarizer/guardrails.py](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/guardrails.py) checks output compliance:
+*   [call_summarizer/guardrails/](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/guardrails/) checks output compliance:
     *   **Tier 1 (Structural)**: Missing headers or format schemas (blocks saving and triggers auto-retry).
     *   **Tier 2 (Format)**: Length and styling anomalies (warning only).
     *   **Tier 3 (Content)**: Verification of amounts, references, and IBANs against source transcript.
@@ -126,6 +126,6 @@ graph TD
 
 ### LangGraph Pipeline
 *   [call_summarizer/graph.py](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/graph.py) structures node transitions on a linear graph (`load` ──► `summarize` ──► `save`).
-*   [call_summarizer/transcript.py](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/transcript.py) loads files into pipeline memory.
+*   [call_summarizer/utils/transcript.py](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/utils/transcript.py) loads files into pipeline memory.
 *   [call_summarizer/summarizer.py](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/summarizer.py) queries the LLM.
-*   [call_summarizer/storage.py](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/storage.py) persists findings to disk.
+*   [call_summarizer/utils/storage.py](file:///f:/bright%20beam_final/Call_summarizer_agent/call_summarizer/utils/storage.py) persists findings to disk.

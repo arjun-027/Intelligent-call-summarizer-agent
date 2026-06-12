@@ -14137,3 +14137,931 @@ Other: None
 2026-06-12 17:28:47 | WARNING  | call_summarizer.utils.validator.validate_summary | Summary validation issues (1): ["Required section missing: 'Next Steps:'"]
 2026-06-12 17:28:47 | WARNING  | call_summarizer.utils.validator.validate_summary | Summary validation issues (1): ["Required section missing: 'Executive Summary:'"]
 2026-06-12 17:28:47 | INFO     | call_summarizer.utils.validator.validate_summary | Summary validated OK (278 chars)
+2026-06-12 18:23:58 | INFO     | call_summarizer.observability.logging.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 18:23:58 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 18:23:58 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.middleware.rate_limiter.__init__ | Rate limiter active — 5 req / 60s window on /api/v1/summarize
+2026-06-12 18:23:58 | INFO     | call_summarizer.observability.logging.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 18:23:58 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 18:23:58 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 18:23:58 | INFO     | api.middleware.rate_limiter.__init__ | Rate limiter active — 5 req / 60s window on /api/v1/summarize
+2026-06-12 18:23:58 | INFO     | call_summarizer.observability.logging.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 18:23:58 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 18:23:58 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | WARNING  | api.middleware.rate_limiter.dispatch | Rate limit exceeded — 5/5 requests in 60s window, retry after 61s
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 429 Too Many Requests"
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 18:23:58 | INFO     | api.middleware.rate_limiter.__init__ | Rate limiter active — 5 req / 60s window on /api/v1/summarize
+2026-06-12 18:23:58 | INFO     | call_summarizer.observability.logging.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 18:23:58 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 18:23:58 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | WARNING  | api.middleware.rate_limiter.dispatch | Rate limit exceeded — 5/5 requests in 60s window, retry after 60s
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 429 Too Many Requests"
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 18:23:58 | INFO     | api.middleware.rate_limiter.__init__ | Rate limiter active — 5 req / 60s window on /api/v1/summarize
+2026-06-12 18:23:58 | INFO     | call_summarizer.observability.logging.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 18:23:58 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 18:23:58 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | WARNING  | api.middleware.rate_limiter.dispatch | Rate limit exceeded — 5/5 requests in 60s window, retry after 60s
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 429 Too Many Requests"
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 18:23:58 | INFO     | api.middleware.rate_limiter.__init__ | Rate limiter active — 5 req / 60s window on /api/v1/summarize
+2026-06-12 18:23:58 | INFO     | call_summarizer.observability.logging.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 18:23:58 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 18:23:58 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | WARNING  | api.middleware.rate_limiter.dispatch | Rate limit exceeded — 5/5 requests in 60s window, retry after 60s
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 429 Too Many Requests"
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 18:23:58 | INFO     | api.middleware.rate_limiter.__init__ | Rate limiter active — 5 req / 60s window on /api/v1/summarize
+2026-06-12 18:23:58 | INFO     | call_summarizer.observability.logging.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 18:23:58 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 18:23:58 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 18:23:58 | INFO     | api.middleware.rate_limiter.__init__ | Rate limiter active — 5 req / 60s window on /api/v1/summarize
+2026-06-12 18:23:58 | INFO     | call_summarizer.observability.logging.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 18:23:58 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 18:23:58 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 18:23:58 | INFO     | api.middleware.rate_limiter.__init__ | Rate limiter active — 5 req / 60s window on /api/v1/summarize
+2026-06-12 18:23:58 | INFO     | call_summarizer.observability.logging.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 18:23:58 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 18:23:58 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: sample.txt, content-type: text/plain
+2026-06-12 18:23:58 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] sample.txt — categories detected: IBAN
+2026-06-12 18:23:58 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for sample.txt — 405 chars, guardrails: PASS, eval: N/A (0%)
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: POST http://testserver/api/v1/summarize "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | httpx._send_single_request | HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 18:23:58 | WARNING  | call_summarizer.summarizer.generate_summary | LLM transient error on attempt 1/4 — retrying in 1.1s: groq 429 rate_limit exceeded
+2026-06-12 18:23:58 | INFO     | call_summarizer.summarizer.generate_summary | Summary generated — 404 chars (attempt 2)
+2026-06-12 18:23:58 | ERROR    | call_summarizer.summarizer.generate_summary | LLM call failed on attempt 1/4 (retryable=False): 401 invalid api key
+2026-06-12 18:23:58 | WARNING  | call_summarizer.summarizer.generate_summary | LLM transient error on attempt 1/4 — retrying in 1.0s: 503 service unavailable
+2026-06-12 18:23:58 | WARNING  | call_summarizer.summarizer.generate_summary | LLM transient error on attempt 2/4 — retrying in 2.3s: 503 service unavailable
+2026-06-12 18:23:58 | WARNING  | call_summarizer.summarizer.generate_summary | LLM transient error on attempt 3/4 — retrying in 4.5s: 503 service unavailable
+2026-06-12 18:23:58 | ERROR    | call_summarizer.summarizer.generate_summary | LLM call failed on attempt 4/4 (retryable=True): 503 service unavailable
+2026-06-12 18:23:58 | WARNING  | call_summarizer.summarizer.generate_summary | LLM transient error on attempt 1/4 — retrying in 1.3s: timeout connection reset
+2026-06-12 18:23:58 | WARNING  | call_summarizer.summarizer.generate_summary | LLM transient error on attempt 2/4 — retrying in 2.2s: timeout connection reset
+2026-06-12 18:23:58 | INFO     | call_summarizer.summarizer.generate_summary | Summary generated — 404 chars (attempt 3)
+2026-06-12 18:23:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: C, score: 0.69 | Factual =100% | Complete=0% | Format C=69% | Hallucin=100% | Professi=100% | Handoff =0% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: True, errors: 0, warnings: 0
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: True, errors: 0, warnings: 0
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: True, errors: 0, warnings: 0
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: True, errors: 0, warnings: 0
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: True, errors: 0, warnings: 0
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: True, errors: 0, warnings: 1
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: False, errors: 4, warnings: 1
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: False, errors: 1, warnings: 0
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: False, errors: 2, warnings: 0
+2026-06-12 18:23:59 | INFO     | call_summarizer.guardrails.runner.run_guardrails | Output guardrails complete — passed: False, errors: 1, warnings: 0
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] test.txt — no PII categories detected
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] test.txt — categories detected: email_address
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] test.txt — categories detected: IBAN
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] test.txt — categories detected: phone_number
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] test.txt — categories detected: UK/IE_postcode
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] test.txt — categories detected: date_of_birth_context
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] test.txt — categories detected: date_of_birth_context
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] test.txt — categories detected: email_address, IBAN, date_of_birth_context
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] f.txt — categories detected: email_address
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] f.txt — categories detected: email_address
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] clean.txt — no PII categories detected
+2026-06-12 18:23:59 | WARNING  | call_summarizer.input_guardrails.runner.validate_transcript_input | [INPUT-T1] big.txt — TRANSCRIPT_TOO_LONG: chars=19033, limit=19032
+2026-06-12 18:23:59 | WARNING  | call_summarizer.input_guardrails.runner.validate_transcript_input | [INPUT-T2] inject.txt — PROMPT_INJECTION_DETECTED: matched: 'ignore all instructions'
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] pii.txt — categories detected: email_address, date_of_birth_context
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] pii.txt — categories detected: email_address
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] clean.txt — no PII categories detected
+2026-06-12 18:23:59 | WARNING  | call_summarizer.input_guardrails.runner.validate_transcript_input | [INPUT-T1] big.txt — TRANSCRIPT_TOO_LONG: chars=19056, limit=19032
+2026-06-12 18:23:59 | WARNING  | call_summarizer.input_guardrails.runner.validate_transcript_input | [INPUT-T2] inject.txt — PROMPT_INJECTION_DETECTED: matched: 'forget everything'
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] <unknown> — no PII categories detected
+2026-06-12 18:23:59 | INFO     | call_summarizer.input_guardrails.tier3_pii._audit_pii | [PII AUDIT] clean.txt — no PII categories detected
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.storage.save_summary | Summary saved: summary.txt (20 chars)
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.storage.save_summary | Summary saved: summary.txt (7 chars)
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.storage.save_summary | Summary saved: summary.txt (11 chars)
+2026-06-12 18:23:59 | WARNING  | call_summarizer.summarizer.validate_summary_length | Summary exceeds character limit: 1501 chars (limit 1500)
+2026-06-12 18:23:59 | WARNING  | call_summarizer.summarizer.validate_summary_length | Summary exceeds character limit: 100 chars (limit 50)
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.transcript.load_transcript | Loaded transcript: call.txt (16 chars)
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.transcript.load_transcript | Loaded transcript: call.txt (28 chars)
+2026-06-12 18:23:59 | ERROR    | call_summarizer.utils.transcript.load_transcript | Transcript not found: C:\Users\new\AppData\Local\Temp\pytest-of-new\pytest-16\test_raises_file_not_found_for0\nonexistent.txt
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.transcript.find_transcripts | Found 2 transcript(s) in C:\Users\new\AppData\Local\Temp\pytest-of-new\pytest-16\test_returns_txt_files_only0
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.transcript.find_transcripts | Found 3 transcript(s) in C:\Users\new\AppData\Local\Temp\pytest-of-new\pytest-16\test_returns_files_sorted_by_n0
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.transcript.find_transcripts | Found 0 transcript(s) in C:\Users\new\AppData\Local\Temp\pytest-of-new\pytest-16\test_returns_empty_list_when_n0
+2026-06-12 18:23:59 | ERROR    | call_summarizer.utils.transcript.find_transcripts | Input directory not found: C:\Users\new\AppData\Local\Temp\pytest-of-new\pytest-16\test_raises_file_not_found_for1\does_not_exist
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.validator.validate_input_file | Input file validated OK: call.txt
+2026-06-12 18:23:59 | WARNING  | call_summarizer.utils.validator.validate_input_file | Input validation failed — file not found: C:\Users\new\AppData\Local\Temp\pytest-of-new\pytest-16\test_missing_file_fails0\nonexistent.txt
+2026-06-12 18:23:59 | WARNING  | call_summarizer.utils.validator.validate_input_file | Input validation issues for call.csv: ["Expected a .txt file, got: '.csv'"]
+2026-06-12 18:23:59 | WARNING  | call_summarizer.utils.validator.validate_input_file | Input validation issues for empty.txt: ['File appears to be empty or too short (0 chars, minimum 50)']
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.validator.validate_input_file | Input file validated OK: call.txt
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.validator.validate_summary | Summary validated OK (278 chars)
+2026-06-12 18:23:59 | WARNING  | call_summarizer.utils.validator.validate_summary | Summary validation issues (1): ['Summary exceeds character limit: 1779 chars (limit 1500)']
+2026-06-12 18:23:59 | WARNING  | call_summarizer.utils.validator.validate_summary | Summary validation issues (1): ["Required section missing: 'Caller:'"]
+2026-06-12 18:23:59 | WARNING  | call_summarizer.utils.validator.validate_summary | Summary validation issues (1): ["Required section missing: 'Next Steps:'"]
+2026-06-12 18:23:59 | WARNING  | call_summarizer.utils.validator.validate_summary | Summary validation issues (1): ["Required section missing: 'Executive Summary:'"]
+2026-06-12 18:23:59 | INFO     | call_summarizer.utils.validator.validate_summary | Summary validated OK (278 chars)

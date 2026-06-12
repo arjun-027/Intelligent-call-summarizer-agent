@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance Call Summariser — Architecture Diagram</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 20px 40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f8f9fa;
+    color: #1a1a1a;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #111; color: #e0e0e0; }
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 6px;
+    color: inherit;
+  }
+  .sub-title {
+    font-size: 12px;
+    color: #666;
+    margin: 0 0 18px;
+  }
+  @media (prefers-color-scheme: dark) {
+    .sub-title { color: #999; }
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin-bottom: 22px;
+    font-size: 12px;
+    color: #555;
+    align-items: center;
+  }
+  @media (prefers-color-scheme: dark) { .legend { color: #aaa; } }
+  .leg-dot {
+    width: 14px; height: 14px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .leg-item { display: flex; align-items: center; }
+
+  .section-header {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 14px 0 7px;
+  }
+  .section-header::before, .section-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+  }
+  @media (prefers-color-scheme: dark) {
+    .section-header { color: #666; }
+    .section-header::before, .section-header::after { background: #333; }
+  }
+
+  .row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .node {
+    border-radius: 8px;
+    padding: 9px 11px;
+    font-size: 12px;
+    line-height: 1.4;
+    border: 1px solid transparent;
+    transition: box-shadow .15s, transform .12s;
+  }
+  .node:hover { box-shadow: 0 2px 10px rgba(0,0,0,.12); transform: translateY(-1px); }
+  .node .title { font-weight: 600; font-size: 12px; margin-bottom: 3px; }
+  .node .sub { font-size: 11px; opacity: .82; }
+  .flex1 { flex: 1; min-width: 160px; }
+  .flex2 { flex: 2; min-width: 220px; }
+  .flex3 { flex: 3; min-width: 100%; }
+
+  .node-impl { background: #e8f5e9; border-color: #66bb6a; color: #1b5e20; }
+  .node-future { background: #fff8e1; border-color: #ffc107; border-style: dashed; color: #5d3f00; }
+  .node-hitl { background: #fce4ec; border-color: #e91e63; color: #880e4f; }
+  .node-ops { background: #ede7f6; border-color: #9c27b0; color: #4a148c; }
+  .node-err { background: #ffebee; border-color: #ef5350; color: #b71c1c; }
+
+  @media (prefers-color-scheme: dark) {
+    .node-impl { background: #1b3a1f; border-color: #4caf50; color: #a5d6a7; }
+    .node-future { background: #3a2f00; border-color: #ffd740; color: #ffe082; border-style: dashed; }
+    .node-hitl { background: #3e0020; border-color: #f48fb1; color: #f8bbd0; }
+    .node-ops { background: #2a1a40; border-color: #ce93d8; color: #e1bee7; }
+    .node-err { background: #3a0a0a; border-color: #ef9a9a; color: #ffcdd2; }
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  .badge-block { background: #ef5350; color: #fff; }
+  .badge-pass  { background: #66bb6a; color: #fff; }
+  .badge-adv   { background: #ffc107; color: #3a2f00; }
+
+  .inner-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .inner-row .node { flex: 1; min-width: 120px; padding: 6px 8px; }
+  .inner-row .node .title { font-size: 11px; }
+  .inner-row .node .sub { font-size: 10px; }
+
+  .arrow-down {
+    text-align: center;
+    font-size: 18px;
+    color: #aaa;
+    margin: 2px 0;
+    line-height: 1.2;
+  }
+  .feedback-note {
+    font-size: 10px;
+    color: #999;
+    text-align: center;
+    font-style: italic;
+    margin: 1px 0 3px;
+  }
+  .connector-wrap {
+    display: flex;
+    gap: 8px;
+    margin: 0 0 2px;
+  }
+  .connector-wrap > div {
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+    color: #999;
+  }
+  hr.divider {
+    border: none;
+    border-top: 1px dashed #ddd;
+    margin: 12px 0 4px;
+  }
+  @media (prefers-color-scheme: dark) {
+    hr.divider { border-color: #333; }
+    .arrow-down { color: #555; }
+    .feedback-note { color: #666; }
+    .connector-wrap > div { color: #666; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Insurance Call Summariser — System Architecture</h1>
+<p class="sub-title">Groq llama-3.1-8b-instant · FastAPI backend · Streamlit UI · LangSmith observability</p>
+
+<div class="legend">
+  <span class="leg-item"><span class="leg-dot" style="background:#66bb6a;border:1px solid #66bb6a"></span>Implemented</span>
+  <span class="leg-item"><span class="leg-dot" style="background:#fff8e1;border:1.5px dashed #ffc107"></span>Future expansion</span>
+  <span class="leg-item"><span class="leg-dot" style="background:#fce4ec;border:1px solid #e91e63"></span>Human-in-the-loop</span>
+  <span class="leg-item"><span class="leg-dot" style="background:#ede7f6;border:1px solid #9c27b0"></span>Ops / observability</span>
+</div>
+
+<!-- ① Ingestion -->
+<div class="section-header">① Ingestion</div>
+<div class="row">
+  <div class="node node-impl flex1">
+    <div class="title">REST API</div>
+    <div class="sub">POST /api/v1/summarize · api/app.py</div>
+  </div>
+  <div class="node node-impl flex1">
+    <div class="title">CLI tool</div>
+    <div class="sub">Batch mode · main.py</div>
+  </div>
+  <div class="node node-impl flex1">
+    <div class="title">Streamlit UI</div>
+    <div class="sub">.txt file upload · ui/app.py</div>
+  </div>
+</div>
+
+<div class="arrow-down">↓</div>
+
+<!-- ② Pre-processing & Security -->
+<div class="section-header">② Pre-processing &amp; security</div>
+<div class="row">
+  <div class="node node-impl flex2">
+    <div class="title">Transcript pre-processor</div>
+    <div class="sub">Mojibake repair · speaker label normalisation (Caller/Agent) · filler word removal · [unclear] canonicalisation — utils/preprocessor.py</div>
+  </div>
+  <div class="node node-future flex1">
+    <div class="title">◈ Hash + cache</div>
+    <div class="sub">SHA-256 content dedup · Redis / in-memory · skip LLM on duplicate transcript</div>
+  </div>
+</div>
+<div class="arrow-down">↓</div>
+<div class="row">
+  <div class="node node-impl flex3">
+    <div class="title">Input guardrails — 3-tier</div>
+    <div class="inner-row">
+      <div class="node node-impl">
+        <div class="title">T1 — Token budget</div>
+        <div class="sub">≤ 19 708 chars · blocks oversized inputs · Tier 1</div>
+        <span class="badge badge-block">blocking</span>
+      </div>
+      <div class="node node-impl">
+        <div class="title">T2 — Injection scan</div>
+        <div class="sub">OWASP LLM01 pattern detection · prompt injection shield</div>
+        <span class="badge badge-block">blocking</span>
+      </div>
+      <div class="node node-impl">
+        <div class="title">T3 — PII audit</div>
+        <div class="sub">GDPR Art. 30 · detects names, IBANs, phones · does not redact (audit only)</div>
+        <span class="badge badge-adv">advisory</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="connector-wrap">
+  <div>↙ BLOCKED → HTTP 400 error response</div>
+  <div>↓ allowed through</div>
+</div>
+
+<!-- ③ Summarisation -->
+<div class="section-header">③ Summarisation</div>
+<div class="row">
+  <div class="node node-future flex1">
+    <div class="title">◈ PII masking</div>
+    <div class="sub">Mask before LLM · restore after · Presidio / AWS Comprehend</div>
+  </div>
+  <div class="node node-impl flex2">
+    <div class="title">LLM engine</div>
+    <div class="sub">Groq llama-3.1-8b-instant · T=0.1 · max 600 tok · few-shot system prompt · summarizer.py · @traceable</div>
+  </div>
+  <div class="node node-future flex1">
+    <div class="title">◈ Map-reduce chunking</div>
+    <div class="sub">Overlapping windows ≤ 4k tok · for transcripts &gt; 19 708 chars · map + reduce LLM calls</div>
+  </div>
+</div>
+<div class="arrow-down">↓</div>
+<div class="row">
+  <div class="node node-impl flex2">
+    <div class="title">Retry / fallback</div>
+    <div class="sub">Exponential backoff · max 3 attempts · handles 429 / 502–504 / timeouts</div>
+  </div>
+  <div class="node node-ops flex1">
+    <div class="title">Rate limiter</div>
+    <div class="sub">Sliding window 30 req/min · matches Groq RPM cap · api/middleware/</div>
+  </div>
+</div>
+<div class="arrow-down">↓</div>
+<div class="row">
+  <div class="node node-impl flex3">
+    <div class="title">Output guardrails — 3-tier</div>
+    <div class="inner-row">
+      <div class="node node-impl">
+        <div class="title">T1 — Structural</div>
+        <div class="sub">Schema section presence · char ≤ 1500 · retry + corrective addendum on fail</div>
+        <span class="badge badge-block">blocking</span>
+      </div>
+      <div class="node node-impl">
+        <div class="title">T2 — Format</div>
+        <div class="sub">Section ordering · caller line format · next steps structure</div>
+        <span class="badge badge-adv">advisory</span>
+      </div>
+      <div class="node node-impl">
+        <div class="title">T3 — Content integrity</div>
+        <div class="sub">Facts vs transcript cross-check · entity verification · guardrails/</div>
+        <span class="badge badge-adv">advisory</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="feedback-note">↺ T1 failure → corrective prompt addendum → retry LLM (max 2 retries)</div>
+<div class="arrow-down">↓</div>
+
+<!-- ④ Evaluation -->
+<div class="section-header">④ Evaluation &amp; quality gate</div>
+<div class="row">
+  <div class="node node-impl flex2">
+    <div class="title">8-metric deterministic evaluator</div>
+    <div class="sub">Grounding 30% · Completeness 20% · Format 20% · Hallucination 10% · Professionalism · Handoff readiness · Precision · Redundancy — evaluator.py · @traceable</div>
+  </div>
+  <div class="node node-future flex1">
+    <div class="title">◈ LLM-as-judge</div>
+    <div class="sub">Tone · contextual quality · handoff readiness · production-only post-generation gate</div>
+  </div>
+</div>
+<div class="arrow-down">↓</div>
+<div class="row">
+  <div class="node node-impl flex2">
+    <div class="title">Agentic eval-feedback loop</div>
+    <div class="sub">Grade &lt; A → targeted regen prompt with evaluation findings → 1 further attempt — service.py</div>
+  </div>
+  <div class="node node-impl flex1">
+    <div class="title">Quality gate</div>
+    <div class="sub">A ≥ 90% · B ≥ 75% · C ≥ 60% · F &lt; 60%</div>
+  </div>
+</div>
+<div class="feedback-note">↺ grade &lt; A → corrective prompt → back to LLM engine (max 1 additional attempt)</div>
+<div class="arrow-down">↓</div>
+
+<!-- ⑤ HITL -->
+<div class="section-header">⑤ Human-in-the-loop</div>
+<div class="row">
+  <div class="node node-hitl flex2">
+    <div class="title">Streamlit review UI</div>
+    <div class="sub">Guardrail findings displayed · quality grade shown · accept / edit / reject workflow — ui/app.py</div>
+  </div>
+  <div class="node node-future flex1">
+    <div class="title">◈ Review queue</div>
+    <div class="sub">Low-confidence items flagged · priority-based agent assignment</div>
+  </div>
+  <div class="node node-future flex1">
+    <div class="title">◈ Feedback capture</div>
+    <div class="sub">Accepted agent edits → few-shot cache → injected into future LLM context</div>
+  </div>
+</div>
+<div class="feedback-note">◈ Future: human corrections feed back to LLM as dynamic few-shot examples (feedback loop)</div>
+<div class="arrow-down">↓</div>
+
+<!-- ⑥ Output -->
+<div class="section-header">⑥ Output</div>
+<div class="row">
+  <div class="node node-impl flex1">
+    <div class="title">File storage</div>
+    <div class="sub">output_data/ directory · .txt summaries · utils/storage.py</div>
+  </div>
+  <div class="node node-impl flex1">
+    <div class="title">API response</div>
+    <div class="sub">JSON: summary + grade + guardrail findings + warnings list</div>
+  </div>
+  <div class="node node-future flex1">
+    <div class="title">◈ PostgreSQL + audit log</div>
+    <div class="sub">Claim ref index · versioned summaries · timestamps · user identity</div>
+  </div>
+  <div class="node node-future flex1">
+    <div class="title">◈ Downstream CRM</div>
+    <div class="sub">Webhook / export · direct claims system push · configurable per org</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ⑦ Ops -->
+<div class="section-header">⑦ Ops &amp; observability</div>
+<div class="row">
+  <div class="node node-ops flex1">
+    <div class="title">Test suite</div>
+    <div class="sub">294 tests · pytest · unit + integration coverage</div>
+  </div>
+  <div class="node node-ops flex1">
+    <div class="title">LangSmith tracing</div>
+    <div class="sub">4 spans · @traceable · validate → LLM → guardrails → eval · observability/tracing.py</div>
+  </div>
+  <div class="node node-future flex1">
+    <div class="title">◈ Prometheus / OpenTelemetry</div>
+    <div class="sub">Latency · token cost · error rate · alerting · dashboards</div>
+  </div>
+  <div class="node node-future flex1">
+    <div class="title">◈ BERTScore / ROUGE-L</div>
+    <div class="sub">Auto-metrics for regression testing on 20-sample eval harness</div>
+  </div>
+</div>
+
+</body>
+</html>
