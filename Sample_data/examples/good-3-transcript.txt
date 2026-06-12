@@ -1,0 +1,75 @@
+Interaction Type:	Call
+Interaction ID:	[CONV_ID_2]
+Transcript Start Time:	[DATE_2] [TIME_3] (UTC+01:00)
+Transcript End Time:	[DATE_2] [TIME_4] (UTC+01:00)
+Transcript Duration:	12:43
+Direction:	Inbound
+Internal Participant(s):	[AGENT_2], [AGENT_3]
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:03	Internal	[AGENT_2]	[COMPANY_1] Claims [AGENT_2] speaking, How can I help?
+00:08	External	Unavailable	I'm just ringing there again. Just reference … my claim.
+00:11	Internal	[AGENT_2]	Yeah, go ahead please.
+00:14	External	Unavailable	It's [CLAIM_NUMBER_1]
+00:16	External	Unavailable	[CLAIM_NUMBER_1_CONT].
+00:16	Internal	[AGENT_2]	Yeah.
+00:18	External	Unavailable	[CLAIM_NUMBER_1_FULL].
+00:26	Internal	[AGENT_2]	And your name, please?
+00:28	External	Unavailable	[CALLER_2].
+00:30	Internal	[AGENT_2]	Okay, [CALLER_2], let me just check now see who it is available for you.
+00:32	External	Unavailable	Okay,
+00:46	External	Unavailable	yes,
+01:00	External	Unavailable	yes.
+01:04	Internal	[AGENT_3]	Thanks. Welcome … [CALLER_2]. You're speaking with [AGENT_3]. How can I help you?
+01:09	External	Unavailable	Hey, how's saying I'm just ringing about a reference, my Tom?
+01:12	Internal	[AGENT_3]	Yeah, I have the reference here. But just before we discussed anything, I just need you to confirm a few details.
+01:13	External	Unavailable	…
+01:19	Internal	[AGENT_3]	For data protection and to confirm your identity, before we proceed, can I get you just to confirm your name, date of birth, address, and the month and the year of the incident, please?
+01:28	External	Unavailable	My name is [CALLER_2_FULL] [DOB_1]. Address is [ADDRESS_1] … [ADDRESS_1_CONT] … … since [DATE_3], my entire [DATE_4].
+01:40	Internal	[AGENT_3]	That's great. And how can I help you there today?
+01:43	External	Unavailable	I'm just ringing up for an update I had up back back yesterday again
+01:48	External	Unavailable	and … just said he said he ring me back today but I heard not ringing most now because I didn't get any updates … …
+01:56	Internal	[AGENT_3]	We did give you a call there [TIME_5]. There was no answer there was no voice mail options so we sent you an email [CALLER_2].
+02:03	External	Unavailable	Is that mean an email what what email address …
+02:08	Internal	[AGENT_3]	Just let me double check that for you
+02:14	Internal	[AGENT_3]	[EMAIL_1]
+02:18	External	Unavailable	All my emails emails changed since that actually.
+02:21	Internal	[AGENT_3]	Oh well, I do apologize. I can update that for you. And I was on the call. Hmm, it's just to let you know that we're still chasing the [ORGANIZATION_1]. We've obviously asked the [ORGANIZATION_1] for some information into the incident, which is pretty normal considering the circumstances surrounding it, But we're still waiting for some.
+02:22	External	Unavailable	Okay,
+02:24	External	Unavailable	okay,
+02:26	External	Unavailable	Okay,
+02:33	External	Unavailable	yeah,
+02:36	External	Unavailable	hello.
+02:39	Internal	[AGENT_3]	Yeah.
+02:40	External	Unavailable	Yeah, I got talk to that … heard that a couple of weeks ago and he said he sent on whatever to the investigation.
+02:45	Internal	[AGENT_3]	Yeah.
+02:49	External	Unavailable	Face, just to whatever you needed. He said it, … said.
+02:53	Internal	[AGENT_3]	So he sent it on for to be signed off, is it?
+02:58	External	Unavailable	Yeah, I think … said investigator. He said whatever you need …
+03:03	Internal	[AGENT_3]	Right, well, we haven't received anything as of yet, [CALLER_2]. I can double check with the other handler, but there's no mention of it … fine that we've received anything.
+03:12	External	Unavailable	Hmm, even though he said it, what would you do … … contact with an investigator or?
+03:18	Internal	[AGENT_3]	Yeah, I'm gonna contact them here now just to see if he don't have any information. But if not, that is the thing that we're just going to have to wait until we do get it.
+03:26	External	Unavailable	Yeah, okay. Do you follow up together regularly or how how often … follow up?
+03:31	Internal	[AGENT_3]	So, so yeah, we do actually, there is a notification on file that we can allow them every 21 days … sort of follow up with them because obviously they're not always un shift … there's different things going on I'm sure the [ORGANIZATION_1] Station that we won't be able to always get them, but yeah, we tried to get them last the [DATE_5]. We has been the most recent one which was only last week.
+03:44	External	Unavailable	Yeah.
+03:52	Internal	[AGENT_3]	Hmm, that we done a follow, which was actually a week ago today. And we haven't received anything.
+03:52	External	Unavailable	Yeah,
+03:56	External	Unavailable	yeah, that was,
+03:57	External	Unavailable	I was talking to and he said he said …
+04:01	Internal	[AGENT_3]	…
+04:01	External	Unavailable	That was two two weeks ago. That for that date, every
+04:06	Internal	[AGENT_3]	Yeah, well, we haven't received anything from them.
+04:07	External	Unavailable	It was
+04:10	External	Unavailable	…
+04:13	Internal	[AGENT_3]	So we will take them up there again, okay? As soon as they will be back in contact with you.
+04:19	External	Unavailable	… got that,
+04:21	External	Unavailable	sure.
+04:22	Internal	[AGENT_3]	Alright, … …
+04:23	External	Unavailable	Yeah, yeah, okay. You ring me again in a couple of days if you hear anything, if he.
+04:28	Internal	[AGENT_3]	Yeah, as soon as we get any account up there, we'll give you a call. … not a problem.
+04:32	External	Unavailable	Yeah, okay.
+04:34	External	Unavailable	Okay, thanks.
+04:34	Internal	[AGENT_3]	Okay.
+04:35	External	Unavailable	… you.
+04:35	Internal	[AGENT_3]	Thanks. Bye bye bye.

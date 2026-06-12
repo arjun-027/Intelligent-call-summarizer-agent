@@ -1,0 +1,2 @@
+EXEC SUMMARY
+ISSUE - It is noted twice that caller accepted the offer and waived the 10 day consideration period

@@ -1,0 +1,107 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_5]
+Transcript Start Time:	[DATE_10] [TIME_9] (UTC+01:00)
+Transcript End Time:	[DATE_10] [TIME_10] (UTC+01:00)
+Transcript Duration:	16:31
+Direction:	Inbound
+Internal Participant(s):	[AGENT_5]
+External Participant(s):	Unavailable
+
+
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	[AGENT_5]	Welcome. Tax Claims. You're speaking to [AGENT_5_FIRST]. How can I help you today?
+00:06	External	Unavailable	Oh hi … hi I you have existing claim and everything is gone Can I talk with [HANDLER_4]? Let letter like no
+00:16	Internal	[AGENT_5]	[HANDLER_4], I am in the same team as him, so I will be able to assist you. Can I get a claims reference from you, please?
+00:24	External	Unavailable	Yes, okay. [CLAIM_NUMBER_5_PART1].
+00:26	Internal	[AGENT_5]	[CLAIM_NUMBER_5_PART2].
+00:28	External	Unavailable	[CLAIM_NUMBER_5_PART3].
+00:32	Internal	[AGENT_5]	One moment for me, please.
+00:37	Internal	[AGENT_5]	Right? For data protection and to confirm your identity, can you confirm your full name for me, please?
+00:46	Internal	[AGENT_5]	Thank you. And can you confirm your date of birth, please?
+00:50	External	Unavailable	[DOB_3].
+00:54	Internal	[AGENT_5]	Thank you. And lastly, just the month and the year of the incident, please. Alright, thank you very much. How is it that I can assist you today?
+00:59	External	Unavailable	The [DATE_11],
+01:05	External	Unavailable	So like, I was in garbage and the garage, like, we have the car already. Two weeks ago. Pick up like, and he said it's gone. He sent it, and he's waiting for the payment. Also, I'm waiting for my payment. Is there? Because I pay for the part separately, Like, And [HANDLER_4_FIRST], that's why I want to talk to the
+01:22	Internal	[AGENT_5]	You.
+01:25	External	Unavailable	Cause he knows, like all those information.
+01:28	Internal	[AGENT_5]	He knows that information. Alright, would you mind holding just a moment for me? Okay, thank you.
+01:33	External	Unavailable	Yes, please.
+01:39	Internal	[AGENT_5]	Hi, thank you so much for your patience while I kept you on hold there so I can confirm.
+01:42	External	Unavailable	Okay.
+01:46	Internal	[AGENT_5]	We we have attempted to pay the the garage there that number we just need to confirm what is the correct that number with them we have left a message for them. I'll call them after this phone call too because we just need to make sure we're paying into the correct account. But I am in a position right now
+02:06	Internal	[AGENT_5]	to transfer the the parts amount that you paid directly for the parts I can reimburse you the [AMOUNT_11] directly into your account That does take
+02:12	External	Unavailable	Huh,
+02:21	External	Unavailable	you have account I think yeah sorry I I think I send it you have the bank details.
+02:26	Internal	[AGENT_5]	… let me, let me just check it. I need to make sure it's correct with you first, so I don't want to pay the wrong money. So just a moment for me.
+02:27	External	Unavailable	Oh …
+02:28	External	Unavailable	please. Yeah,
+02:32	External	Unavailable	yes, yes, that.
+02:59	Internal	[AGENT_5]	So, the bank account details that I have for you, if you can just confirm that it's correct. Is [IBAN_2_PART1].
+03:05	External	Unavailable	Yeah.
+03:09	Internal	[AGENT_5]	[IBAN_2_PART2].
+03:12	External	Unavailable	And I give you another one other that is my business account, like?
+03:16	Internal	[AGENT_5]	Okay, you can give me another one. Yes.
+03:18	External	Unavailable	Yeah, please. Ivan I.
+03:19	Internal	[AGENT_5]	Yeah,
+03:20	Internal	[AGENT_5]	yeah.
+03:22	External	Unavailable	[IBAN_3_PART1].
+03:24	Internal	[AGENT_5]	[IBAN_3_PART1].
+03:26	External	Unavailable	[IBAN_3_PART2].
+03:29	Internal	[AGENT_5]	[IBAN_3_PART2].
+03:31	External	Unavailable	[IBAN_3_PART3].
+03:33	Internal	[AGENT_5]	Yes.
+03:34	External	Unavailable	[IBAN_3_PART4].
+03:37	Internal	[AGENT_5]	[IBAN_3_PART4].
+03:39	External	Unavailable	[IBAN_3_PART5].
+03:41	Internal	[AGENT_5]	[IBAN_3_PART5].
+03:43	External	Unavailable	[IBAN_3_PART6].
+03:45	Internal	[AGENT_5]	[IBAN_3_PART6].
+03:47	External	Unavailable	And you need the bit as well.
+03:49	Internal	[AGENT_5]	No, I don't. I just need to confirm that I've taken this down correctly, sir. It's [IBAN_3_PART1].
+03:53	External	Unavailable	Yes, yes,
+03:56	External	Unavailable	yes.
+03:57	Internal	[AGENT_5]	[IBAN_3_PART2].
+03:59	External	Unavailable	Yes.
+04:00	Internal	[AGENT_5]	[IBAN_3_PART3].
+04:02	External	Unavailable	Yes.
+04:03	Internal	[AGENT_5]	[IBAN_3_PART4].
+04:06	External	Unavailable	Yeah, its corner.
+04:07	Internal	[AGENT_5]	[IBAN_3_PART5].
+04:08	External	Unavailable	Yeah.
+04:09	Internal	[AGENT_5]	[IBAN_3_PART6].
+04:11	External	Unavailable	Yeah, correct. That's all good, yeah.
+04:13	Internal	[AGENT_5]	Okay, fantastic! So I am in the position to offer the reimbursement of [AMOUNT_11] directly into your account. That does take 3 to five days to clear in your account. We are obliged by the regulator under the
+04:29	External	Unavailable	H.
+04:32	Internal	[AGENT_5]	Consumer protection Code to inform you that you have 10 days to accept this offer. You can accept the settlement now, and I can issue the payment immediately. Or I can write to you with Okay, you want to accept right away? All right, fantastic! I'm busy raising that payment for you now, sir.
+04:44	External	Unavailable	Yes, yes, yes, okay.
+04:53	Internal	[AGENT_5]	Is there anything else I can assist you with today?
+04:53	External	Unavailable	Okay
+04:56	External	Unavailable	oh beautiful like … you with contact with a guy about the confirmation yeah
+05:00	Internal	[AGENT_5]	Yes, I'm gonna call. Yes, it's just that they've that number that they've sent us is different to the vat number we have on file and we need to make sure it's correct that we're paying the right account so that that's just why we haven't settled with them as yet but as soon as I get off this phone call with you, I'm going to give them a call just so we can.
+05:02	External	Unavailable	…
+05:20	Internal	[AGENT_5]	Confirm that.
+05:21	External	Unavailable	Can I ask, like, what to be paid for the garage? Just?
+05:22	Internal	[AGENT_5]	…
+05:28	Internal	[AGENT_5]	pardon.
+05:29	External	Unavailable	Can I ask how much would we pay for the … Like, I I just want to be like when I see the guy I have to see him I don't want to to to know exactly you know
+05:40	Internal	[AGENT_5]	Right, I'll, I'll tell you this now. Just a moment for me.
+05:57	Internal	[AGENT_5]	It will be [AMOUNT_12].
+06:02	External	Unavailable	[AMOUNT_12_MISHEARD].
+06:03	Internal	[AGENT_5]	[AMOUNT_12_PARTS] I'll, I'll say it slowly. [AMOUNT_12_PARTS]
+06:09	External	Unavailable	[AMOUNT_12_PARTS] Yeah.
+06:10	Internal	[AGENT_5]	[AMOUNT_12_FINAL].
+06:14	External	Unavailable	Yeah, [AMOUNT_12_SUMMARY] or something. Okay, I think that's the figure. Like, it should be the …
+06:17	Internal	[AGENT_5]	Yes,
+06:23	Internal	[AGENT_5]	yeah,
+06:24	Internal	[AGENT_5]	yeah, okay.
+06:26	External	Unavailable	Optimize one to you for your help. Appreciate it.
+06:29	Internal	[AGENT_5]	You are so very welcome. Is there anything else I can assist you with today, sir?
+06:36	External	Unavailable	Both all good and good, good, all good, good, Yeah, nice one.
+06:38	Internal	[AGENT_5]	Yeah, good. Okay wonderful
+06:40	Internal	[AGENT_5]	I I hope you have a beautiful afternoon sir
+06:41	External	Unavailable	… please.
+06:44	External	Unavailable	Thank you, Thank you very much. I thank you. Good.
+06:46	Internal	[AGENT_5]	Thank you, take care.
+06:48	External	Unavailable	Broadband.
+06:49	Internal	[AGENT_5]	Okay, bye bye.

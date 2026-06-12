@@ -1,0 +1,32 @@
+Interaction Type:	Call
+Interaction ID:	EVAL-003
+Transcript Start Time:	2025-01-09 10:45:22 (UTC+00:00)
+Transcript End Time:	2025-01-09 10:50:34 (UTC+00:00)
+Transcript Duration:	05:12
+Direction:	Inbound
+Internal Participant(s):	Emma Walsh
+External Participant(s):	01 485 7722
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	Emma Walsh	Pemberton Insurance claims, Emma speaking. How can I help?
+00:05	External	01 485 7722	Hello Emma, this is Margaret Byrne calling from Fitzgerald & Associates Solicitors.
+00:10	Internal	Emma Walsh	Hello Margaret, how can I help you today?
+00:13	External	01 485 7722	I'm calling in relation to a claim involving our client, Mr Thomas Reilly. Your reference is PI-2024-65891.
+00:22	Internal	Emma Walsh	Let me just pull that up. And just for verification, can you confirm the date of the incident?
+00:27	External	01 485 7722	Yes, it was the 14th of November 2024.
+00:31	Internal	Emma Walsh	Thank you. Yes, I have the file here. How can I help?
+00:35	External	01 485 7722	We submitted medical reports two weeks ago and we're wondering if there's been any update on the assessment of Mr Reilly's claim.
+00:43	Internal	Emma Walsh	Let me check the notes. Yes, I can see the medical reports were received on the 28th of December. They're currently being reviewed by our medical â€¦ assessor.
+00:53	External	01 485 7722	Do you have a timeframe for when we might expect a response?
+00:57	Internal	Emma Walsh	Typically the medical review takes around 10 working days, so you should hear back within the next week or so.
+01:04	External	01 485 7722	That's helpful. Could you also confirm what the current reserve on the claim is?
+01:09	Internal	Emma Walsh	I'm afraid I can't disclose that information, but I can confirm that liability has been accepted and the claim is progressing.
+01:17	External	01 485 7722	That's fine, I understand. One more thing - could you send any correspondence to our new address? We've moved offices.
+01:24	Internal	Emma Walsh	Of course, what's the new address?
+01:26	External	01 485 7722	It's Fitzgerald & Associates, Unit 12, Blackrock Business Park, Dublin 4. A18 Y2K7.
+01:35	Internal	Emma Walsh	Let me read that back - Unit 12, Blackrock Business Park, Dublin 4, A18 Y2K7.
+01:42	External	01 485 7722	That's correct.
+01:43	Internal	Emma Walsh	I've updated that now. Is there anything else I can help with?
+01:47	External	01 485 7722	No, that's all for now. Thank you Emma.
+01:49	Internal	Emma Walsh	You're welcome. Goodbye.
+01:51	External	01 485 7722	Goodbye.

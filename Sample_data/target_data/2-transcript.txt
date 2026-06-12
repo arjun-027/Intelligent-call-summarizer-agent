@@ -1,0 +1,29 @@
+Interaction Type:	Call
+Interaction ID:	EVAL-002
+Transcript Start Time:	2025-01-08 14:12:33 (UTC+00:00)
+Transcript End Time:	2025-01-08 14:16:18 (UTC+00:00)
+Transcript Duration:	03:45
+Direction:	Outbound
+Internal Participant(s):	James O'Brien
+External Participant(s):	Mobile Number, Ireland
+
+Date/Time	Participant Type	Participant	Text
+00:01	External	Mobile Number, Ireland	Hello?
+00:02	Internal	James O'Brien	Hi, is that Mrs Patricia Gallagher?
+00:04	External	Mobile Number, Ireland	Yes, speaking.
+00:05	Internal	James O'Brien	Hi Patricia, this is James calling from Pemberton Insurance about your vehicle claim. Just to let you know this call may be recorded for training purposes. Is now a good time?
+00:13	External	Mobile Number, Ireland	Yes, that's fine.
+00:15	Internal	James O'Brien	Great. I'm calling with some good news. We've completed our assessment on your claim, reference PI-2024-81156, and I'm pleased to confirm we're approving the repair costs.
+00:26	External	Mobile Number, Ireland	Oh wonderful, that's great news.
+00:28	Internal	James O'Brien	The approved amount is €2,340. Now you have two options - we can pay this directly to you, or we can pay the garage directly once the repairs are complete.
+00:38	External	Mobile Number, Ireland	I think paying the garage directly would be easier actually.
+00:41	Internal	James O'Brien	No problem at all. Just let us know when you've booked it in and we'll arrange payment with them. The repair estimate allows for 3 days, so if you need a courtesy car during that time, let me know and I can arrange that through our partner.
+00:54	External	Mobile Number, Ireland	That would be helpful actually, yes please.
+00:57	Internal	James O'Brien	Perfect, I'll make a note of that. Once you have your repair date, just give us a call and we'll set everything up.
+01:03	External	Mobile Number, Ireland	Brilliant, thank you so much James.
+01:05	Internal	James O'Brien	You're very welcome. I'll send you a confirmation email with all the details. Is the email on file still patriciagallagher@email.ie?
+01:13	External	Mobile Number, Ireland	Yes, that's correct.
+01:15	Internal	James O'Brien	Great. Is there anything else I can help with?
+01:17	External	Mobile Number, Ireland	No, that's everything. Thanks again.
+01:19	Internal	James O'Brien	Take care, goodbye.
+01:20	External	Mobile Number, Ireland	Bye bye.

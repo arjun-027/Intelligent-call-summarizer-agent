@@ -1,0 +1,97 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_1]
+Transcript Start Time:	[DATE_1] [TIME_1] (UTC+01:00)
+Transcript End Time:	[DATE_1] [TIME_2] (UTC+01:00)
+Transcript Duration:	08:54
+Direction:	Inbound
+Internal Participant(s):	[AGENT_1]
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	[AGENT_1]	Hi … claims my name is [AGENT_1_FIRST]. I can I help today?
+00:05	External	Unavailable	Who am I talking to?
+00:07	Internal	[AGENT_1]	My name is [AGENT_1_FIRST]. How can I help you?
+00:09	External	Unavailable	… [AGENT_1_FIRST], how are you? Our claim number, [CALLER_1_FIRST]?
+00:17	Internal	[AGENT_1]	What's the claim number?
+00:19	External	Unavailable	[POLICY_NUMBER_1_PART1].
+00:22	Internal	[AGENT_1]	Yeah.
+00:23	External	Unavailable	[POLICY_NUMBER_1_PART2].
+00:25	Internal	[AGENT_1]	Yeah.
+00:26	External	Unavailable	[POLICY_NUMBER_1_PART3].
+00:29	Internal	[AGENT_1]	So, what's your policy number? Are you looking to? Are you looking to make a claim? Is it?
+00:31	External	Unavailable	What's the pass number?
+00:33	External	Unavailable	That's the number, that is the policy number.
+00:36	Internal	[AGENT_1]	So how can I help you?
+00:38	External	Unavailable	I'll tell you what [AGENT_1_FIRST] … away over 50 years married. I came back and there's a crack, a hairline crack in the slate of our share. Right, so we got a … I put up … on it because I don't want to come through the whole kit. And you know, and we've got a a lab out to have a look at And it said it.
+00:54	Internal	[AGENT_1]	By.
+00:58	External	Unavailable	Can't be repaired. You have to get a new one. Plus, eh, the door's not on. I mean, it's only 4 years old and the doors that are on it could be damaged when he take it off so he gave us a quote of [AMOUNT_1].
+01:10	Internal	[AGENT_1]	…
+01:11	Internal	[AGENT_1]	…
+01:13	External	Unavailable	And that's not including the door or the track.
+01:16	Internal	[AGENT_1]	So what … … you cracked your char …
+01:18	External	Unavailable	Yeah, it's slate chart, …
+01:21	Internal	[AGENT_1]	Okay, no problem. So I have to go through security with you first of all, just for a day of protection purposes need to ask some personal details confirm your today today. Can you confirm your name, address, and date of birth … please?
+01:28	External	Unavailable	Yeah,
+01:32	External	Unavailable	uh, I'm [CALLER_1]. [ADDRESS_1] and the [DOB_1]. And I'm [CALLER_2].
+01:42	External	Unavailable	Same address on [DOB_2] of the
+01:46	Internal	[AGENT_1]	Thank you. So when did when did you notice this was Thomas yesterday was it?
+01:51	External	Unavailable	No, no, about over over a week ago, but [CALLER_2_FIRST] was in it and he thought a share was rocking. I said don't be silly, but when he looked oh my God, I was still in the state shop.
+02:03	Internal	[AGENT_1]	Okay, no problem. I'll just ask you a couple car questions. Go for some details … get your claim registered. What's your contact number? The [PHONE_1].
+02:11	External	Unavailable	Yeah, that's.
+02:15	Internal	[AGENT_1]	… … in our
+02:21	Internal	[AGENT_1]	hmm email address is [EMAIL_1]
+02:25	External	Unavailable	Yes, that's right. Na. Thank you.
+02:27	Internal	[AGENT_1]	Alright, so I
+02:32	Internal	[AGENT_1]	okay.
+02:36	External	Unavailable	We don't know how to do this because we don't really.
+02:38	Internal	[AGENT_1]	That's fine. Don't worry. So I'll just go through everything with you now. Just give me
+02:47	Internal	[AGENT_1]	on the system.
+02:51	Internal	[AGENT_1]	Hmm, let's see here for you. So what you're saying is that you noticed that there was there is a correct. I'm not sure.
+03:06	Internal	[AGENT_1]	Okay, and there's no water damage or anything, is it?
+03:11	External	Unavailable	Well, not at the … because we have duck tape on the crack Comes through the kitchen …
+03:16	Internal	[AGENT_1]	No worries.
+03:17	External	Unavailable	And the man said you try and do it next [DATE_2] … but it's working. Now. I talk you about [AMOUNT_2] or [AMOUNT_3]
+03:24	Internal	[AGENT_1]	Yeah, no, it … expensive for short service and stuff like that.
+03:28	External	Unavailable	Yeah, I nation. It's only 4 years old. It doesn't … crack,
+03:34	External	Unavailable	and there's nothing heavy in the bathroom that would fall on in the she.
+03:36	Internal	[AGENT_1]	…
+03:39	Internal	[AGENT_1]	yeah, it's hard to go. Happened today. Hmm, you see what we asked us for regards to the damage, and just make you aware. And hmm, if you want to go ahead with your claim, your standard access on your policy. [AMOUNT_4]. Those affect your new claims. That if you do go ahead with any claim, just to make you aware, Actually, sorry, there's no access.
+03:41	External	Unavailable	Okay,
+03:57	External	Unavailable	yeah.
+03:59	Internal	[AGENT_1]	[AMOUNT_5] There anywhere I forgot about that. There's no access for that to you don't have to pay an access. Those … claims stuff what we normally do said … access to have a look at it, Say accessor.
+04:07	External	Unavailable	That's …
+04:11	External	Unavailable	yeah
+04:15	External	Unavailable	well … coming on [DATE_3] because we can't have
+04:19	External	Unavailable	[DATE_3] or tic because I'm just terrified it'll be a bigger claim with the kids.
+04:23	Internal	[AGENT_1]	Well, is it not? Is that not next [DATE_2], which is weekday? Still be before then?
+04:28	External	Unavailable	Yeah, he's coming next [DATE_3] or [DATE_2].
+04:30	Internal	[AGENT_1]	Well, our side … before that, so we just like to get a look. We just like to give a look at it so we know what we're doing with. Uh, so look might take photograph report and … that te, I'll still have a look at it and see what we can do to help you, …
+04:34	External	Unavailable	Yeah
+04:43	External	Unavailable	we, we, we are not doing this faulty … you know we wouldn't do anything wrong.
+04:50	Internal	[AGENT_1]	No, no, I'm saying you are. It's just the access … that, like we do with everything, everything, so we'll send some. We'll go. They'll contact you tomorrow or [DATE_4] ah, just to arrange inspection I'll, we'll get a look at it and just let us on a report and then we'll see, we'll see what we can do to help you obvious, we can confirm any cover … we look at that report, so
+04:51	External	Unavailable	Oh, all.
+04:54	External	Unavailable	Yeah, I know
+04:56	External	Unavailable	I
+05:10	Internal	[AGENT_1]	… you. Wait, … I'll send you an email. … confirm this information. You are calling for Accident silent. Yeah, I'll send you an email. Now, confirm this information with the next steps of your claim. … your claims. … information will be on that to you if you need get in contact with us.
+05:11	External	Unavailable	Yeah,
+05:13	External	Unavailable	we have covered. We are covered, actually.
+05:29	Internal	[AGENT_1]	For any reason, but I can give you a claim number today. … … take your time.
+05:33	External	Unavailable	Yeah, yeah.
+05:35	Internal	[AGENT_1]	The claim number is [CLAIM_NUMBER_1].
+05:39	External	Unavailable	[CLAIM_NUMBER_1_PARTIAL] Hold on, two quick.
+05:40	Internal	[AGENT_1]	Well,
+05:41	Internal	[AGENT_1]	uh, yeah. [CLAIM_NUMBER_1_PARTS] And then [CLAIM_NUMBER_1_FINAL].
+05:49	External	Unavailable	[CLAIM_NUMBER_1_FINAL]. That's a claim number.
+05:52	Internal	[AGENT_1]	Yeah,
+05:54	Internal	[AGENT_1]	…
+05:55	External	Unavailable	We're probably your first customer this morning. You not be … first.
+05:59	Internal	[AGENT_1]	Uh yeah but just … company called [COMPANY_1]. They will … they'll contact you … on's account just to arrange that inspection
+06:11	External	Unavailable	Yeah, well, you definitely get them out, you know, before this chap comes.
+06:14	Internal	[AGENT_1]	Yeah, like I said, they will contact you in the next 24 to 48 hours.
+06:18	External	Unavailable	Ah, thank you. Nice, and then once the man comes out,
+06:22	External	Unavailable	things that
+06:23	Internal	[AGENT_1]	Yeah, 100%.
+06:25	External	Unavailable	Thank you, thank you.
+06:26	Internal	[AGENT_1]	No worries, have a good day. Enjoy your weekend. Bye bye.
+06:28	External	Unavailable	Happy,
+06:32	External	Unavailable	bye bye bye bye.

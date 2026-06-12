@@ -1,0 +1,13 @@
+Summary (Claims)
+Subject:
+Discussion on Overpayment of Solicitor Fees
+
+Executive Summary:
+The third party solicitor, [CALLER_4] from [COMPANY_3], called regarding an overpayment issue related to a claim settlement cheque.
+• The third party solicitor received a cheque for [AMOUNT_3] instead of the agreed reduced fee of [AMOUNT_6].
+• The third party solicitor was advised to lodge the cheque and refund the overpayment.
+• The refund should be sent to the [LOCATION_5] address with the claim number quoted.
+
+Next Steps
+[COMPANY_1]: None
+Other: Third party solicitor to lodge the cheque and send the overpayment refund to the [LOCATION_5] address with the claim number quoted.

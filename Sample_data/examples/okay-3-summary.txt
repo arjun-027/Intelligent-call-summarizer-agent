@@ -1,0 +1,13 @@
+Summary (Claims)
+Subject:
+Chasing payment for settled claim
+
+Executive Summary:
+The customer, [CALLER_4_FIRST] from [COMPANY_2], called to chase a payment for a settled claim. The payment of [AMOUNT_7] was supposed to be made on [DATE_8] but has not been received.
+• Customer provided claim number [CLAIM_NUMBER_3] and additional reference [CLAIM_NUMBER_3_PART2].
+• Payment was supposed to be made electronically.
+• Customer suspects an issue with their bank details or the payment process.
+
+Next Steps
+[INSURANCE_COMPANY_1]: [AGENT_3_FIRST] to speak with [HANDLER_2] about the payment issue and arrange a callback to the customer.
+Other: Customer to await callback from [HANDLER_2] for further clarification.

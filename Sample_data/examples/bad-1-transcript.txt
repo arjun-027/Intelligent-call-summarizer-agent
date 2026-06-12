@@ -1,0 +1,108 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_1]
+Transcript Start Time:	[DATE_1] [TIME_1] ([TIMEZONE_1])
+Transcript End Time:	[DATE_1] [TIME_2] ([TIMEZONE_1])
+Transcript Duration:	08:01
+Direction:	Inbound
+Internal Participant(s):	[AGENT_1]
+External Participant(s):	[PHONE_1]
+
+Date/Time	Participant Type	Participant	Text
+00:03	Internal	[AGENT_1]	Good morning at Speaking. How may I help you?
+00:06	External	[PHONE_1]	Hi, good morning [AGENT_1_FIRST]. It's [CALLER_1] ins.
+00:10	Internal	[AGENT_1]	Uh huh.
+00:12	External	[PHONE_1]	Hmm, just come back about case, sir, for [POLICYHOLDER_1].
+00:16	Internal	[AGENT_1]	Yes, do you have our reference our front?
+00:17	External	[PHONE_1]	Dot
+00:18	External	[PHONE_1]	uh it's [CLAIM_NUMBER_1].
+00:21	Internal	[AGENT_1]	Uh huh.
+00:23	External	[PHONE_1]	It's [CLAIM_NUMBER_1_FULL]
+00:27	External	[PHONE_1]	yes.
+00:30	Internal	[AGENT_1]	Eh, just for … protection, need to ask some personal information to verify your entity. Is that okay?
+00:36	External	[PHONE_1]	Yeah.
+00:37	Internal	[AGENT_1]	Hmm, can you confirm the name of our policy holder for support?
+00:42	External	[PHONE_1]	[POLICYHOLDER_1]
+00:44	Internal	[AGENT_1]	And the date of the incident?
+00:48	External	[PHONE_1]	Of [MONTH_1]
+00:49	External	[PHONE_1]	[DAY_1].
+00:51	Internal	[AGENT_1]	And who, what's the name of the claim?
+00:57	External	[PHONE_1]	He didn't get us up when he emailed this.
+00:59	Internal	[AGENT_1]	All right,
+01:06	Internal	[AGENT_1]	he's the name of your client. S.
+01:09	External	[PHONE_1]	Uh, we're acting from [COMPANY_1] and their policy holders at [POLICYHOLDER_2] and [POLICYHOLDER_3].
+01:18	Internal	[AGENT_1]	No problem, how can I help you?
+01:20	External	[PHONE_1]	Hmm, you emailed It was …
+01:24	External	[PHONE_1]	asking for their policy
+01:27	External	[PHONE_1]	recording and stuff, and
+01:31	External	[PHONE_1]	they sent it on to us, … I was just wanting to get a bit more background too, because that was the first
+01:38	External	[PHONE_1]	they're aware of it. Agenda, we're aware of it. And so it was really just to get a bit more background too because their policy obviously would be for [POLICYHOLDER_2]. And so I I don't see it there's being a a due insurance type scenario with a home insurance that insurance type, I think you know, we don't have a common.
+01:42	Internal	[AGENT_1]	Right.
+01:58	External	[PHONE_1]	Policy holder.
+02:01	Internal	[AGENT_1]	Yeah, it's just to establish, hmm, the more relevant insurer in the matter, and just to see if there's any exclusions or endorsements.
+02:11	External	[PHONE_1]	… but there wouldn't be, wouldn't be a common policy holder ticket … do …
+02:16	External	[PHONE_1]	year.
+02:17	Internal	[AGENT_1]	Yeah, the dog was. Yeah, our policy holder was walking the dog time.
+02:24	External	[PHONE_1]	He's responsible at the time
+02:27	External	[PHONE_1]	for the dogs and
+02:29	External	[PHONE_1]	the address, but
+02:32	External	[PHONE_1]	more sure that.
+02:32	Internal	[AGENT_1]	That's, yeah, that's what we want … established. So if there's potential … insurance involved.
+02:33	External	[PHONE_1]	Yeah,
+02:39	External	[PHONE_1]	… Well their their policy would be the household policy for them and but not him.
+02:47	External	[PHONE_1]	So we have personal liability cover. What, what type of dog was it? The only union? It's the dangerous dogs …
+02:56	Internal	[AGENT_1]	No, it's not a dangerous. Know we've established that.
+02:59	External	[PHONE_1]	… and so it would provide
+03:02	External	[PHONE_1]	personal I for
+03:07	External	[PHONE_1]	… obviously if they weren't charged … all … the time.
+03:12	Internal	[AGENT_1]	Are you able to provide a copy of the policy word in [CALLER_1_FIRST] just … we can really any a insurance
+03:15	External	[PHONE_1]	Well, I can't
+03:17	External	[PHONE_1]	well look I I don't see I don't see that the internet's not a insurance you different different policy holders
+03:25	Internal	[AGENT_1]	Yeah, I know what you're saying, but it's just … off to
+03:25	External	[PHONE_1]	So it … be a case. It be a case is saying you'd be saying you'd be bringing them in as a co defend
+03:32	External	[PHONE_1]	for some reason. That would be the only thing because there's nothing I mean, I I I know
+03:36	Internal	[AGENT_1]	It's just … owner of the dog when he just certainly, no liability on their policy.
+03:45	External	[PHONE_1]	Well that, that would be different that she and the material … be say at the minute the reservation is rights because they weren't made a … … claim, so
+03:56	External	[PHONE_1]	I can confirm, and I can send you an email. There is a
+04:01	External	[PHONE_1]	personal that they cover under their policy. But if they weren't charged it though … see where allow believe it would set and [POLICYHOLDER_1_FIRST] was control. Did you rate two [POLICYHOLDER_2_FIRST]?
+04:18	Internal	[AGENT_1]	Yeah, we've wrote them a few times and they haven't replied. And then em,
+04:23	Internal	[AGENT_1]	our policy holder was able to get us the insurance details, so that's why we … email the Gen.
+04:29	External	[PHONE_1]	And
+04:30	External	[PHONE_1]	as I said, that Magenta are only getting this night from your letter, so … obviously be a reservation of rights under their policy. Do you know when you first wrote to or when did the letter claim go to use?
+04:43	Internal	[AGENT_1]	I'm gonna have to ask you to send something then … … some writing, [CALLER_1_FIRST] because we are not involve. We're not hmm,
+04:50	Internal	[AGENT_1]	informed if you're interested in this phony by phone.
+04:54	External	[PHONE_1]	Correct.
+04:54	Internal	[AGENT_1]	Before I give any more information, I have an e email or something
+04:58	External	[PHONE_1]	No worries, I send to somebody from the little information that we have. I don't see … on
+05:07	External	[PHONE_1]	They want dog, It's …
+05:11	External	[PHONE_1]	and
+05:12	External	[PHONE_1]	I drop your note down.
+05:14	Internal	[AGENT_1]	Yeah, if you … it's it only need to get a copy of the policy working to real … any involvement.
+05:18	External	[PHONE_1]	I, well, … no, I've I've no authority to give you a copy. The wouldn't, as I said to standard can tell you it's a standard, so policy with that, They come for personal,
+05:32	External	[PHONE_1]	with the technical exclusion, which would be as long it's not a dangerous dog.
+05:39	External	[PHONE_1]	They will have, they will have liability cover under this policy, whether the insures.
+05:39	Internal	[AGENT_1]	Oh.
+05:49	External	[PHONE_1]	Is up in terms of notification, No notification and close, But thereafter, as I say, I don't see it, They're not a common policy holder, … like, it's a dual insurance. I think it's a case. It's being a potential code defending.
+06:05	Internal	[AGENT_1]	… … we she'd reading correspondence up yourself over getting my copy policy or with me gentle?
+06:06	External	[PHONE_1]	Dependent you
+06:14	External	[PHONE_1]	the same agenda.
+06:16	Internal	[AGENT_1]	Right, but you don't have authority to release the copy of the policy, So where do we get the authority for that?
+06:17	External	[PHONE_1]	Jack for …
+06:19	External	[PHONE_1]	No, well, I couldn't.
+06:22	External	[PHONE_1]	What do you need? What, what, why would you need to see the wording on the … They're not your policy holder. Why would you need to see the wording? I mean, I I would you.
+06:29	Internal	[AGENT_1]	Well, that's just the way.
+06:32	External	[PHONE_1]	But they're not a
+06:32	Internal	[AGENT_1]	Any other … basically works you know to real any involvement?
+06:37	External	[PHONE_1]	But it's not, it's not the policy covered to the liability that would be the issue
+06:43	External	[PHONE_1]	cause I … tell you they have a policy household policy which provides personal liability And as I said, agent will be … on reservation rights for notification today.
+06:55	External	[PHONE_1]	The issue I say is, is being that they're separate.
+06:56	Internal	[AGENT_1]	Yeah.
+07:00	External	[PHONE_1]	Policy holders to … with, as I said it's not the same policy holder. One with the Home … Policy on the Head Plan Policy or something like that. So it's not a to me it's not a dull insurance you there may be a few feel issues and I have … you feel … [POLICYHOLDER_2_FIRST] … have a … answer on the liability front.
+07:21	External	[PHONE_1]	But that would put them as it says being separate dependents to your policy holder,
+07:27	External	[PHONE_1]	you know.
+07:27	Internal	[AGENT_1]	Yeah, send me an email confirming your interest, and I'll come back to that.
+07:31	External	[PHONE_1]	Well, that
+07:33	External	[PHONE_1]	okay.
+07:34	Internal	[AGENT_1]	Alright.
+07:35	External	[PHONE_1]	Alright.
+07:36	Internal	[AGENT_1]	Thanks, then. Okay, bye.
+07:36	External	[PHONE_1]	Cheers, bye.

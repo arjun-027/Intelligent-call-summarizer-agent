@@ -1,0 +1,7 @@
+Exec Summary
+ISSUE - Should say that handler confirmed payment would be issued and transferred to customers account within the next day or two
+
+ISSUE - not sure if IBAN should be noted on the file for Data Protection / GDPR purposes? - Compliance would need to confirm same?
+
+Next Steps -
+ISSUE - Should say Handler to process payment to customers account

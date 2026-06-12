@@ -1,0 +1,72 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_4]
+Transcript Start Time:	[DATE_5] [TIME_7] ([TIMEZONE_4])
+Transcript End Time:	[DATE_5] [TIME_8] ([TIMEZONE_4])
+Transcript Duration:	08:19
+Direction:	Inbound
+Internal Participant(s):	[AGENT_5], [AGENT_6]
+External Participant(s):	[PHONE_3]
+
+Date/Time	Participant Type	Participant	Text
+00:06	External	[PHONE_3]	Hello.
+00:08	Internal	[AGENT_5]	Claims, Could I?
+00:09	External	[PHONE_3]	Hello.
+00:10	Internal	[AGENT_5]	Hello, you're through to [COMPANY_3] Claims. Could I take your claim reference number, please?
+00:14	External	[PHONE_3]	Claim reference number is [CLAIM_NUMBER_4_PART1]
+00:18	External	[PHONE_3]	[CLAIM_NUMBER_4_PART2]
+00:20	External	[PHONE_3]	[CLAIM_NUMBER_4_PART3].
+00:25	Internal	[AGENT_5]	It's showing.
+00:25	External	[PHONE_3]	[CLAIM_NUMBER_4_PART4]
+00:27	Internal	[AGENT_5]	[CLAIM_NUMBER_4_PART4] Okay,
+00:28	Internal	[AGENT_5]	thank you. Hold on, please.
+00:34	Internal	[AGENT_6]	Hello, actually, [AGENT_6_FIRST] speaking. How can I help?
+00:37	External	[PHONE_3]	No, who am I speaking to?
+00:39	Internal	[AGENT_6]	… is [AGENT_6_SHORT].
+00:41	External	[PHONE_3]	Good, I phoned by an engineer there this morning. … [ENGINEER_1], I think you called up.
+00:46	Internal	[AGENT_6]	Okay.
+00:47	External	[PHONE_3]	… he's using. He's using this number because I want to ring him back here so I can't get help him so but he he's offer me money for the ki and then he tells me that you can't find one here no earned what I had, but I have fine. Well, … … actually a dealer, that's fine, one.
+00:52	Internal	[AGENT_6]	Alright, okay.
+01:07	External	[PHONE_3]	… I know, and he's very one in [LOCATION_1]. She has same age as mis Atlantic. Mine is a [MILEAGE_1].
+01:16	External	[PHONE_3]	…
+01:17	Internal	[AGENT_6]	Okay.
+01:18	External	[PHONE_3]	And it is, he asked me what did I want to settle it? So and I could not figure out … can … got me between And no word … because when … said you couldn't find one here and I was hoping and I couldn't find one … myself. So it was automated going offer me this money to replace my care.
+01:35	External	[PHONE_3]	They offered me … was,
+01:37	External	[PHONE_3]	but I
+01:38	Internal	[AGENT_6]	Yeah, I can see here [CALLER_4] that [ENGINEER_1] has asked for this offer he made to be reviewed. So another engineer will have … look to see if it can be increased. If you can, If you wanna send me, see that example you have from [LOCATION_2], I can give you an email address if you want to send it over, and then I can, I can show it to the engineer.
+01:48	External	[PHONE_3]	Well
+01:55	External	[PHONE_3]	I'm not good. I
+01:57	External	[PHONE_3]	I know good don't see like that stuff there I suppose my I know know none of it. I'm
+02:05	Internal	[AGENT_6]	Have you have you maybe a family member or you could do it for you?
+02:09	External	[PHONE_3]	I'm busy. Is gonna let him around to access themselves. Could they do it … access?
+02:16	Internal	[AGENT_6]	I'm not sure if the branch would be able to really help you with that, but what I could do was I was gonna say [CALLER_4], I could send you a text message
+02:25	Internal	[AGENT_6]	that would have instructions on how to standard purse and maybe you could maybe even like a relative or or a friend who has a computer ony
+02:25	External	[PHONE_3]	Yeah,
+02:28	External	[PHONE_3]	right.
+02:34	External	[PHONE_3]	Well, it says it says to me what would eBay what … you sell … And … guy only came … figure it in my head it didn't really really look … it but as when I figure out that you can get the same car here, like I wanted to myself and I can, and I wonder what I was gonna do and I thought to myself right they're gonna ask me offer me … money and like the other day I don't know if you
+02:54	External	[PHONE_3]	I was worried about accent. Well, it wasn't accent. I was my bid … half three 4:00 o'clock in the morning and the place was racing a foreigner. And I came round the corner and into my care private care part and wrapped it.
+03:09	External	[PHONE_3]	That's why I'm, I'm at the loss and he's walking about here today. Laugh head … he walk a past me and … please tell me not to touch him and he's working about here. Looking me laughing.
+03:19	External	[PHONE_3]	No, I'm not. I'm not in prime. Not, I'm actually not interesting. And [ENGINEER_1] come back and offer me bad money from here. They got everything done to M. And when I buy it and all care now I have to do the same all over. It's gonna be, I'm gonna be able to pocket whatever we,
+03:33	External	[PHONE_3]	but Best Care that was
+03:36	External	[PHONE_3]	… well, a family relations in. It's come across one. She's actually between [LOCATION_3] [LOCATION_2]. … … [VEHICLE_COLOR_1] [VEHICLE_MODEL_1] with [MILEAGE_2] on her. So, and she's up [AMOUNT_2].
+03:50	External	[PHONE_3]	… … [AMOUNT_2_EXACT].
+03:51	Internal	[AGENT_6]	Okay,
+03:53	Internal	[AGENT_6]	that's okay. Right, I think the best way to try and get this increased, An offer that you'd be more satisfied with would be if I send you a message to your mobile that has instructions on how you can send over that example that you've seen. And if you can get a family member or a friend to do it for you, We can get the engineer who's reviewing the offer to have a look at that and take that.
+04:12	External	[PHONE_3]	Uh huh.
+04:13	Internal	[AGENT_6]	Consideration.
+04:15	External	[PHONE_3]	Yeah.
+04:16	Internal	[AGENT_6]	Is that okay?
+04:17	External	[PHONE_3]	Like the end of the day. The guys try expend that today. And [ENGINEER_1] phone. I know he is understandable all, but I spent a lot of money in that care. She's, she's actually be standing me a lot, lot, lot, a lot more than that.
+04:30	External	[PHONE_3]	She,
+04:32	External	[PHONE_3]	but as I said the … I only want the same as I had on my street.
+04:32	Internal	[AGENT_6]	Okay.
+04:38	External	[PHONE_3]	And to replace that, what he offered, I have no chance of replacement, so I haven't.
+04:44	Internal	[AGENT_6]	No, I understand that. Is there a number, the one you're ringing me off, you one ending [PHONE_3_SUFFIX], right?
+04:50	External	[PHONE_3]	Yeah, that is correct.
+04:52	Internal	[AGENT_6]	I'll send you some instructions here how you can send that example over, just to make sure that the engineer can take that into consideration. Then, when they're looking at this offer again, for you increase it, okay?
+05:02	External	[PHONE_3]	Right, no.
+05:04	Internal	[AGENT_6]	So realistically, you should maybe hear something right about the reviewed offer. Probably be [DAY_REFERENCE_1] or [DAY_REFERENCE_2] next week.
+05:12	External	[PHONE_3]	It's not, it's not, it's not been. Aw, … … I just want me. I want basically a car as soon as I had, so that's what I'm
+05:18	Internal	[AGENT_6]	Yeah, no, I understand exactly. I understand exactly where you're coming from, right? Don't worry. Hmm,
+05:24	Internal	[AGENT_6]	I'll just send you this instruction here now. And if you can send that over, I'll get it to the engineer as soon as possible, okay?
+05:30	External	[PHONE_3]	Okay, then. Thank you very much. Okay? Okay, okay, okay. Bye bye.
+05:32	Internal	[AGENT_6]	Oh, that's right. Have a good one.

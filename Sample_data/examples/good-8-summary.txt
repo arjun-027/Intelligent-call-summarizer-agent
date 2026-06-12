@@ -1,0 +1,5 @@
+Call Type:
+NB
+
+Outcome:
+Customer called regarding an issue with an online QTE payment. No payment was taken, and the QTE was still valid. Customer confirmed details and opted for PIF. Policy starts on [DATE_1]. Premium is [AMOUNT_1] FC, including free legal expense, free injury driver, free class cover, and free comprehensive drive. Customer will receive a payment link and has 30 days to provide NCB. DOCS will be issued within 5 working days. Policy number is [POLICY_NUMBER_1].

@@ -1,0 +1,51 @@
+Interaction Type:	Call
+Interaction ID:	[INTERACTION_ID_1]
+Transcript Start Time:	[DATE_1] [TIME_1] (UTC+01:00)
+Transcript End Time:	[DATE_1] [TIME_2] (UTC+01:00)
+Transcript Duration:	13:16
+Direction:	Inbound
+Internal Participant(s):	[AGENT_1]
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:03	Internal	[AGENT_1]	Hi, you're through to [COMPANY_1]. How can I help?
+00:06	External	Unavailable	Hi, how's it going there? My car insurance is up for renewal, and I'm just wondering if we could do a better price on it for me.
+00:13	Internal	[AGENT_1]	Well, I can definitely look at it for you. So I've got some details here in front of me. Confirm your name, address, and date of birth.
+00:17	External	Unavailable	Yeah,
+00:19	External	Unavailable	yeah, my name is [CUSTOMER_1]. Address is [ADDRESS_1]. [POSTCODE_1]. And the date of birth is [DATE_2].
+00:30	Internal	[AGENT_1]	That's perfect, [CUSTOMER_1_FIRST]. And can I just make sure our details are correct? So is your email address still [EMAIL_1]
+00:39	External	Unavailable	Yeah.
+00:40	Internal	[AGENT_1]	Lovely. And is your telephone number still [PHONE_1]?
+00:47	External	Unavailable	Yeah, …
+00:49	Internal	[AGENT_1]	And then finally, we may contact you occasionally about access products and services for offers and competitions. Is that okay?
+00:56	External	Unavailable	No, updated.
+00:59	Internal	[AGENT_1]	Not a problem at all. Let's get a look at …
+01:12	Internal	[AGENT_1]	so the [DATE_3] …
+01:16	Internal	[AGENT_1]	the price that was sent out
+01:20	Internal	[AGENT_1]	was [AMOUNT_1]
+01:23	External	Unavailable	Yeah, that's it, yeah.
+01:25	Internal	[AGENT_1]	Now on the renewal notice of [CUSTOMER_1_FIRST], there was a statement of fact. Is all the information still … or is … you need to update or change?
+01:33	External	Unavailable	No, it should. I be the …
+01:49	Internal	[AGENT_1]	Excellent! We've got all the driver numbers as well, perfect. And now you are getting across over … … fee. Go ahead.
+01:53	External	Unavailable	Huh
+01:55	External	Unavailable	im sorry
+01:58	External	Unavailable	just just wanted to check how many drivers are on that Is it just myself in the war? Is it somebody else? Is there somebody else in there is?
+02:03	Internal	[AGENT_1]	No, there's just a 2 of you.
+02:05	External	Unavailable	… thank you.
+02:09	Internal	[AGENT_1]	And you're getting a crossover discount of [AMOUNT_2] for have more than one policy in the household and
+02:15	External	Unavailable	Yes.
+02:19	Internal	[AGENT_1]	Last year you paid [AMOUNT_3] so it's come down about for you it's good to see. And there's been no claims around. Hang fantastic.
+02:24	External	Unavailable	Yeah.
+02:32	Internal	[AGENT_1]	… just give me one moment. I'll work out our best price.
+02:35	External	Unavailable	No bother, thank you.
+03:02	Internal	[AGENT_1]	Okay, [CUSTOMER_1_FIRST], the best price I can do for you this year is [AMOUNT_4] that's with my own discount of [AMOUNT_5] so [AMOUNT_4_REPEAT]
+03:15	External	Unavailable	Right, okay now I'm just masking for the Master Ringing Shell and they they gave me a cote of [AMOUNT_6] with with another another provider so I think I'll probably I'll probably have to go with that one if, unless I mean, I prepared to stay with … obviously but em, if, if you know if it can come down more more.
+03:23	Internal	[AGENT_1]	Oh.
+03:35	External	Unavailable	Unfortunately I think I'll just have to to go with the other the other provider
+03:42	Internal	[AGENT_1]	Yeah, so your policy isn't set up too automatically renew, so just come the end of the policy, it'll stop. Is there anything else I can help with?
+03:48	External	Unavailable	Yeah,
+03:50	External	Unavailable	no, that's everything. That's everything I'll, I'll get back to the other credit. Well, isn't it?
+03:55	Internal	[AGENT_1]	Not a problem at all. You have a good day now.
+03:57	External	Unavailable	That's brilliant! Thanks for your help.
+03:58	Internal	[AGENT_1]	Bye bye.
+03:59	External	Unavailable	Bye bye.

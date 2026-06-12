@@ -1,0 +1,57 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_2]
+Transcript Start Time:	[DATE_2] [TIME_3] ([TIMEZONE_2])
+Transcript End Time:	[DATE_2] [TIME_4] ([TIMEZONE_2])
+Transcript Duration:	10:20
+Direction:	Inbound
+Internal Participant(s):	[AGENT_2]
+External Participant(s):	Unavailable
+
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	[AGENT_2]	To Claims [AGENT_2_FIRST] speaking, how can I help you?
+00:05	External	Unavailable	Hi, … could you help me with a client, please?
+00:07	Internal	[AGENT_2]	Yeah, what's your reclaim number, please?
+00:09	External	Unavailable	I was talking to your colleague, sorry, sorry. [CLAIM_NUMBER_2].
+00:15	Internal	[AGENT_2]	Yeah.
+00:17	External	Unavailable	[CLAIM_NUMBER_2_SUFFIX].
+00:20	External	Unavailable	The problem I have is I was talking to [COLLEAGUE_1], your colleague earlier.
+00:20	Internal	[AGENT_2]	Perfect.
+00:25	External	Unavailable	Sorry he he got the engineer's report he said yeah go ahead we'll pay for the damage yeah
+00:34	External	Unavailable	and I I went back I went back to the garage and I said yeah go ahead with that walk you guys what something insurance … paying … he gues no that was that was for the cash price so we're trying to give me another estimate now for for the job so I wondering what, what do we do
+00:34	Internal	[AGENT_2]	Huh
+00:52	Internal	[AGENT_2]	okay so I need to do about a data protection here first can you just confirm your name for me?
+00:56	External	Unavailable	[CALLER_2].
+00:58	Internal	[AGENT_2]	Perfect, and just the date of the incident there again?
+01:00	External	Unavailable	Oh, [DATE_3].
+01:03	Internal	[AGENT_2]	Perfect. And just to confirm your deity, can I have your address, please?
+01:06	External	Unavailable	[ADDRESS_1].
+01:11	Internal	[AGENT_2]	Perfect, one minute. Just click we review the file here just give me a second.
+01:15	External	Unavailable	Okay.
+01:42	Internal	[AGENT_2]	Alright, so I can see you're speaking to [COLLEAGUE_1_SHORT]. As you said, my colleague there and he he sent you an email there to advise you that the costs have been agreed at [AMOUNT_1] c … had for the repairs
+01:46	External	Unavailable	Yes,
+01:52	External	Unavailable	yes, that's it. And I rang I rang [GARAGE_CONTACT_1] the fellow that's fixing …
+01:58	External	Unavailable	and he says to me oh no no that was a cash price I'll have to give you another estimate. So I was just wondering, what do we deal? Like, I'm being wondering.
+02:05	Internal	[AGENT_2]	What do you, what do you mean it was a cash price?
+02:08	External	Unavailable	That's what he told me. He said that that was for the cash price. It's not for.
+02:12	External	Unavailable	You're gonna have to get another estimate off me. That's exactly what he said.
+02:17	External	Unavailable	You thought I was paying cash.
+02:17	Internal	[AGENT_2]	…
+02:19	Internal	[AGENT_2]	well it it shouldn't matter if you're paying cash or through insurance it still should be the same price.
+02:19	External	Unavailable	Because the drive,
+02:24	External	Unavailable	well, this is what you're saying to me.
+02:25	Internal	[AGENT_2]	Oh well, you they've agreed the cost to that estimate so you'd have to send on the new estimate but I don't know if our engineers will agree costs … the price that he's already agreed to. These costs at a cash price.
+02:35	External	Unavailable	Right,
+02:37	External	Unavailable	I understand. So it's a whole regular role. Again, I'm waiting. Need a month for this to be sorted. Now it's starting again.
+02:43	Internal	[AGENT_2]	Right, we're ready sorted here, but it's your garage that's sent to.
+02:45	External	Unavailable	I know, I understand that. I understand that. That's why I ring … to ask me what obviously what I meant to deal like.
+02:51	Internal	[AGENT_2]	Yeah, so if he's saying that's not the right estimate, you would need to get the correct estimate from him and send it on to us, and our engineers will have a look at it then.
+03:01	External	Unavailable	Okay.
+03:03	Internal	[AGENT_2]	Alright, and then once we have that estimate, we can get that reviewed by the engineers. But I can't see them approving of. It's higher than that one there, cause there should be no difference. If it's cash with the insurance, it still should be the same price.
+03:13	External	Unavailable	Well, I understand that this is, I don't know, we had us wrecked. I just want my car fixed and I can open my bloody window. This is madness.
+03:14	Internal	[AGENT_2]	For repairs, you know,
+03:23	Internal	[AGENT_2]	so if you get that estimate and get it get get it reviewed as soon as I can for you.
+03:28	External	Unavailable	Okay, thank you.
+03:29	Internal	[AGENT_2]	Alright, thank you.
+03:30	External	Unavailable	… …
+03:31	Internal	[AGENT_2]	Alright, bye bye.

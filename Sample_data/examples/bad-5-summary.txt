@@ -1,0 +1,16 @@
+Subject:
+Customer inquiry about claim status and cash settlement
+
+Executive Summary:
+The caller inquired about the status of a property claim from [DATE_7] and opted for a cash settlement.
+Key points:
+* The claim number is [CLAIM_NUMBER_5].
+* The builder's report was received late last week.
+* The quotation from the builder is [AMOUNT_3].
+* The customer chose a cash settlement, which amounts to [AMOUNT_5] after deducting the excess of [AMOUNT_4].
+* The customer agreed to the 10-day consideration period.
+* The customer provided their IBAN for the bank transfer: [IBAN_1_FULL].
+
+Next Steps
+[INSURANCE_COMPANY_1]: Request the payment to be processed and transferred to the customer's account within the next day or two.
+Other: None.

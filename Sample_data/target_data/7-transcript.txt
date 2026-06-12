@@ -1,0 +1,34 @@
+Interaction Type:	Call
+Interaction ID:	EVAL-007
+Transcript Start Time:	2025-01-11 09:47:33 (UTC+00:00)
+Transcript End Time:	2025-01-11 09:55:55 (UTC+00:00)
+Transcript Duration:	08:22
+Direction:	Inbound
+Internal Participant(s):	Declan Fitzgerald
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	Declan Fitzgerald	Pemberton Insurance claims, Declan speaking.
+00:05	External	Unavailable	Yes, hello. I need to speak to someone about my claim. This is the fourth time I've called.
+00:11	Internal	Declan Fitzgerald	I'm sorry to hear that. Can I take your reference number?
+00:14	External	Unavailable	It's PI-2024-83321. My name is Frances Howard.
+00:19	Internal	Declan Fitzgerald	Thank you Mrs Howard. Let me just verify - can you confirm your postcode?
+00:23	External	Unavailable	BT9 7AW. Look, I've been waiting six weeks for someone to come and assess the damage to my roof. Every time I call I'm told someone will call me back and no one ever does.
+00:34	Internal	Declan Fitzgerald	I do apologise for that. Let me look at your file and see what's happening.
+00:40	Internal	Declan Fitzgerald	I can see here that an assessor was scheduled for the 12th of December but... it looks like that was cancelled.
+00:48	External	Unavailable	Cancelled? No one told me it was cancelled. I took a day off work to be there.
+00:53	Internal	Declan Fitzgerald	I'm really sorry, I can see there's no note here explaining why. That shouldn't have â€¦ happened.
+00:59	External	Unavailable	This is completely unacceptable. I've got a tarp on my roof and it's the middle of winter. I need this sorted.
+01:06	Internal	Declan Fitzgerald	I completely understand your frustration. Unfortunately I don't have access to the assessor's diary from here to rebook it for you.
+01:14	External	Unavailable	Well who does?
+01:16	Internal	Declan Fitzgerald	That would be our property claims team. They're not available at the moment but I can â€¦
+01:21	External	Unavailable	Not available? What do you mean not available?
+01:24	Internal	Declan Fitzgerald	They're in a team meeting until 3 o'clock. What I can do is flag this as urgent and make sure someone calls you back today.
+01:32	External	Unavailable	I've heard that before.
+01:34	Internal	Declan Fitzgerald	I understand. I'm going to put a note on the file myself and email the team manager directly. I'll make sure this is followed up.
+01:42	External	Unavailable	Fine. But if I don't hear from someone by 5 o'clock I'm making a formal complaint.
+01:47	Internal	Declan Fitzgerald	That's absolutely your right. Is this number the best one to reach you on?
+01:51	External	Unavailable	Yes, it's my mobile.
+01:53	Internal	Declan Fitzgerald	OK. I do apologise again for the experience you've had. Someone will be in touch today.
+01:59	External	Unavailable	We'll see. Goodbye.
+02:01	Internal	Declan Fitzgerald	Goodbye.

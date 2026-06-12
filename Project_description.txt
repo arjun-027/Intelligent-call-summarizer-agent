@@ -1,0 +1,119 @@
+Build an AI-powered Call Summarisation Tool
+Build an application that generates structured summaries from insurance call transcripts, demonstrating your approach to GenAI development and production-ready code. Your application should:
+
+Accept call transcript files as input (samples provided)
+Use an LLM to generate a structured summary
+Output results in the required output format specified below
+Implementation Choices
+You have complete freedom to choose:
+
+Model: LLMs from OpenAI, Anthropic, Google Gemini, or any other suitable model
+Interface: Command-line, web application, API service - whatever best demonstrates your capabilities
+Programming Language: We generally use Python but you should use the language you're most comfortable in
+Architecture: Design the system structure that makes sense for the problem (we like keeping things simple)
+Documentation
+A quick README.md at the root of your project with clear instructions for another developer:
+
+How it works
+How to set up the environment
+How to run it
+Sample Call Transcripts
+We have provided two sets of transcripts:
+
+Training Examples (20 transcripts with summaries and feedback)
+10 "good" examples showing high-quality summaries
+5 "okay" examples showing minor issues and the feedback identifying them
+5 "bad" examples showing major issues and the feedback identifying them
+You can use these to understand the expected output format, quality bar, and common failure modes.
+
+Test Transcripts (10 raw transcripts, no summaries provided)
+Your application will be evaluated on its output for these transcripts
+These cover a range of call types and complexity levels
+Note on Transcript Quality
+These transcripts are generated from speech-to-text systems and may contain:
+
+Encoding artifacts such as â€¦ appearing where pauses or unclear speech occurred
+Garbled or incomplete words where the audio was unclear
+Fragmented sentences and incomplete thoughts
+Unclear speaker attribution in some cases
+Filler words and false starts that are typical of natural speech
+Your solution should aim to extract accurate information despite these quality issues, production transcripts often have these characteristics.
+
+Required Output Format
+Caller: [Name if known], [relationship to claim], [direction]
+
+Subject:
+[One-line description of what the call was about]
+
+Executive Summary:
+[Paragraph explaining what happened on the call and why]
+- [Key detail or fact from the call]
+- [Key detail or fact from the call]
+- [Additional details as needed]
+
+Next Steps:
+[COMPANY_NAME]: [Action to be taken by the company]
+Other: [Action to be taken by other parties, or "None"]
+Conditional Sections
+Include these sections at the end of your output only when relevant to the call. Do not include sections that weren't discussed.
+
+Liability Summary:
+[Only if liability was discussed]
+
+Negotiation Summary:
+[Only if negotiation occurred]
+
+
+Vehicle Damage:
+Vehicle Status: [Status]
+Towage: [Details or "None"]
+Car hire: [Details or "None"]
+
+
+Injury:
+Treatment: [Details of injury discussion]
+
+
+Property:
+[Details of property damage discussion]
+Format Rules
+Caller line: Include relationship (policyholder, third party representative, solicitor, family member, etc.) and call direction (inbound/outbound)
+Subject: Single line, concise description
+Executive Summary: Opening paragraph plus bullet points for key details
+Next Steps: Always include company action and "Other" (use "None" if no action required)
+Conditional sections: Only include if that topic was actually discussed on the call
+Character limit: Total summary must be ≤ 1,500 characters
+What Makes a Good Call Summary?
+Every generated summary must pass these five quality checks. Use these questions as a pass/fail checklist when evaluating your outputs:
+
+Can I identify the customer's issue/query, and what actions were taken?
+The summary clearly captures why the call happened and what was done about it. A reader shouldn't have to guess at the core purpose of the conversation.
+Are critical facts (amounts, dates, names, etc.) accurate?
+Any specific details extracted from the transcript must be correct. The summary should not invent, misstate, or omit important factual information.
+Would another customer agent understand what happened and/or what to do next?
+The summary provides enough context for handoff. Someone picking up this case should be able to continue without re-listening to the call.
+Is it professional enough that it could be shared with the customer?
+The tone and language are appropriate for external communication. No internal jargon, casual language, or potentially embarrassing content.
+Is the character count within the field limit (≤ 1,500 characters)?
+The summary must be less than or equal to 1,500 characters to fit within downstream system constraints.
+Common Summarisation Issues
+Based on real production issues, watch out for:
+
+Wrong caller identification
+Labelling a third-party solicitor as "customer", or missing that the caller is the policyholder's father rather than the policyholder
+Wrong company/party names
+Getting the caller's company name wrong, or confusing which company insures whom
+Hallucinated confirmations
+Stating "customer confirmed bank details" when they didn't, or claiming a waiver was confirmed when it wasn't mentioned
+Misidentified facts
+Wrong reference numbers, incorrect email addresses, misspelled names
+Missing critical details
+Omitting callback phone numbers, IBANs, email addresses, or settlement waiver confirmations
+Irrelevant sections
+Including "Liability Summary: None" when liability wasn't discussed at all
+Redundant information
+Stating the same fact twice in different sections
+Misunderstood relationships
+Confusing who insures whom, or which party owns the dog/vehicle/property
+Dataset
+Download here

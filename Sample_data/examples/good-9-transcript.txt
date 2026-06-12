@@ -1,0 +1,87 @@
+Interaction Type:	Call
+Interaction ID:	[INTERACTION_ID_1]
+Transcript Start Time:	[DATE_1] [TIME_1] (UTC+01:00)
+Transcript End Time:	[DATE_1] [TIME_2] (UTC+01:00)
+Transcript Duration:	09:25
+Direction:	Inbound
+Internal Participant(s):	[AGENT_1]
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:04	Internal	[AGENT_1]	Hi there, … FedEx Secure Insurance. How can I help?
+00:07	External	Unavailable	Hi, I'm just wondering about changing my policy. It's currently to pay it in full by having the money to pay it in full this year, So I just want to change it to instalments.
+00:16	Internal	[AGENT_1]	Yeah, that's no problem at all. Alright, I believe I pa … front to me, we can you confirm your name, please?
+00:22	External	Unavailable	It's [CUSTOMER_1].
+00:24	Internal	[AGENT_1]	And [CUSTOMER_1_FIRST], and your date of birth and address, please?
+00:27	External	Unavailable	It's [DATE_2] and it's [ADDRESS_1].
+00:30	Internal	[AGENT_1]	That's, and is your email still [EMAIL_1]
+00:36	External	Unavailable	Yeah, that's it.
+00:37	Internal	[AGENT_1]	And the phone number is [PHONE_1].
+00:42	External	Unavailable	Yeah, that's it.
+00:43	Internal	[AGENT_1]	Okay, thank you. Alright …
+00:46	Internal	[AGENT_1]	it's your renews ju … in 19 days man is there any details we need the update or changes here or should everything still be the exact same?
+00:54	External	Unavailable	No, everything should still be the same, yeah.
+00:57	Internal	[AGENT_1]	Let me see here.
+01:11	Internal	[AGENT_1]	Right, may I have your driver number …
+01:15	Internal	[AGENT_1]	and we have your name driver [NAMED_DRIVER_1] That's Grand. You just wanna break this down, then into the monthly instalment option.
+01:23	External	Unavailable	Yeah, I just I don't have the money … She's paying …
+01:25	Internal	[AGENT_1]	No, that's … … Five, but I never pay full … big grudge, but I
+01:29	External	Unavailable	Oh, I did last year, but it was brilliant. Now I didn't have to worry about it all year, but unfortunately sure it can't be happening.
+01:33	Internal	[AGENT_1]	No, not
+01:35	Internal	[AGENT_1]	no. I know what you mean. Alright so like when you do it this so so you'll first will pay a 15% deposit of [AMOUNT_1] and then after that the there's nine monthly instalments that come to [AMOUNT_2]
+01:46	External	Unavailable	Yeah.
+01:52	Internal	[AGENT_1]	… do need to let you know those name off … installments dos include a 6.7% interest that o … [AMOUNT_3] so the total payable by the end of the year is [AMOUNT_4]
+02:10	External	Unavailable	Yeah, that's okay.
+02:12	Internal	[AGENT_1]	Right, that's go. You got a light ban there?
+02:15	External	Unavailable	An Iban, Oh, just give me a few minutes.
+02:17	Internal	[AGENT_1]	Yeah, … need … for the direct debit, No problem.
+02:20	External	Unavailable	It's have to open up me off.
+02:21	Internal	[AGENT_1]	Okay.
+02:41	External	Unavailable	Yeah, so it's [IBAN_1]
+02:44	External	Unavailable	[IBAN_1_CONT]
+02:45	Internal	[AGENT_1]	Yeah.
+02:46	External	Unavailable	[IBAN_1_CONT]
+02:48	Internal	[AGENT_1]	Yeah.
+02:49	External	Unavailable	[IBAN_1_CONT]
+02:50	Internal	[AGENT_1]	Yeah.
+02:51	External	Unavailable	[IBAN_1_CONT]
+02:54	External	Unavailable	[IBAN_1_CONT]
+02:56	Internal	[AGENT_1]	Yeah.
+02:57	External	Unavailable	[IBAN_1_CONT]
+02:59	External	Unavailable	[IBAN_1_CONT]
+03:01	Internal	[AGENT_1]	So just to repeat that of written [IBAN_1_FULL].
+03:14	External	Unavailable	Yeah.
+03:14	Internal	[AGENT_1]	That's go And do you mind pay the deposit … let or collected 5 days after the renewal date?
+03:20	External	Unavailable	No, I just … now. Send, don't worry about it.
+03:22	Internal	[AGENT_1]	That's grand. And is it a Visa or Master Care? … there?
+03:25	External	Unavailable	Visa
+03:27	Internal	[AGENT_1]	Okay, right. Bear with me. I'll set up a payment line here.
+03:30	External	Unavailable	Yes, worries.
+03:38	External	Unavailable	He accepted.
+03:40	External	Unavailable	… security is on.
+03:43	Internal	[AGENT_1]	Okay, whenever you're ready, if you type into the key of the phone, you're speaking on the long 16 digit card number please.
+03:49	External	Unavailable	…
+03:59	Internal	[AGENT_1]	Okay, and can you tell me the name on the … … please?
+04:02	External	Unavailable	It's [CARD_NAME_1].
+04:05	Internal	[AGENT_1]	[CARD_NAME_1]?
+04:08	External	Unavailable	Yes.
+04:08	Internal	[AGENT_1]	Right, that's gone. And can you tell me the expired it, I'll type … myself, please.
+04:14	External	Unavailable	The [CARD_EXPIRY_1].
+04:16	Internal	[AGENT_1]	And you type on the 3 digits TV, please.
+04:23	Internal	[AGENT_1]	Okay, thank you. … some process now for this payment of [AMOUNT_1].
+04:26	External	Unavailable	…
+04:30	Internal	[AGENT_1]	Yeah, that's gone for you. Thank you I to look at as your policy actually renewed and your documents will come on like in the post on the next 5 working days.
+04:30	External	Unavailable	…
+04:38	External	Unavailable	yeah, perfect.
+04:40	Internal	[AGENT_1]	Okay,
+04:42	Internal	[AGENT_1]	let me just double check when the first payment normally due. Let me see.
+04:45	External	Unavailable	I think it's [MONTH_1]. … was looking at the policy.
+04:47	Internal	[AGENT_1]	But it was on the documents that you get, yeah, the [DATE_3].
+04:51	External	Unavailable	Yeah, I've got one. Yeah, for my renewal or something. I think I got it … month ago. I just went to do it and I went down my head.
+04:53	Internal	[AGENT_1]	Oscar
+04:57	Internal	[AGENT_1]	No worries at all. Well, it's that … … then, or was there anything else at all?
+05:01	External	Unavailable	Not, it's yet. I just wanted to switch … payment.
+05:04	Internal	[AGENT_1]	Oh, that's sc. That's you sort of thing. Alright, well thanks for your time.
+05:06	External	Unavailable	Perfect, thank you very much for all your help.
+05:08	Internal	[AGENT_1]	Alright, take care. Bye.
+05:10	External	Unavailable	Bye.

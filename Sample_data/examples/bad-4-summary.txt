@@ -1,0 +1,21 @@
+Subject:
+Customer seeking review of settlement offer for vehicle replacement
+
+Executive Summary:
+The customer called to discuss the settlement offer for their vehicle replacement, expressing dissatisfaction with the current offer and providing details of a comparable vehicle. Key points from the call include:
+• Customer provided claim reference number [CLAIM_NUMBER_4].
+• Customer mentioned their vehicle has [MILEAGE_1] and found a comparable vehicle in [LOCATION_2].
+• Customer expressed dissatisfaction with the initial settlement offer and requested a review.
+• I offered to send instructions for submitting the example vehicle details to assist in the review process.
+• Customer mentioned the comparable vehicle is priced at [AMOUNT_2].
+
+Next Steps
+[INSURANCE_COMPANY_1]: Send instructions to the customer on how to submit the example vehicle details for review. Ensure the engineer reviews the new information and considers it in the revised offer.
+Other: Customer to provide details of the comparable vehicle with the help of a family member or friend.
+
+Negotiation Summary:
+The customer was dissatisfied with the initial settlement offer and provided details of a comparable vehicle priced at [AMOUNT_2]. I assured the customer that the offer would be reviewed and potentially increased based on the new information provided.
+
+Vehicle Damage:
+Vehicle Status: The customer's vehicle has [MILEAGE_1] and they are seeking a replacement of similar value.
+Car hire: No car hire details were discussed.

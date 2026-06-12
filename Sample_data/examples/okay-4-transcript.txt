@@ -1,0 +1,67 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_4]
+Transcript Start Time:	[DATE_9] [TIME_7] (UTC+01:00)
+Transcript End Time:	[DATE_9] [TIME_8] (UTC+01:00)
+Transcript Duration:	04:28
+Direction:	Inbound
+Internal Participant(s):	[AGENT_4]
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:03	Internal	[AGENT_4]	… Speaking Claims. How can I help you?
+00:06	External	Unavailable	Okay, I have a message there … contact [HANDLER_3] with the reference of [CLAIM_NUMBER_4_PART1]
+00:13	External	Unavailable	[CLAIM_NUMBER_4_PART2]
+00:15	External	Unavailable	[CLAIM_NUMBER_4_PART3]
+00:16	External	Unavailable	[CLAIM_NUMBER_4_PART4].
+00:19	Internal	[AGENT_4]	Okay, I go into the claim. Just bear with me.
+00:21	External	Unavailable	Thanks.
+00:23	Internal	[AGENT_4]	No problem.
+00:25	Internal	[AGENT_4]	Can I get your name, please? First?
+00:26	External	Unavailable	Yeah, [CALLER_5_FIRST] [CALLER_5].
+00:30	Internal	[AGENT_4]	And [CALLER_5], for data protection, I need to verify your identity for, So, I just need you to confirm your address on the month and year of the accident, please.
+00:39	External	Unavailable	Hmm, yeah. It was, eh, yeah, sorry. My address is [ADDRESS_3] and it would have only been there last month.
+00:48	Internal	[AGENT_4]	… look at that. Perfect, Just allow me a second here. I just want to see
+00:56	Internal	[AGENT_4]	left. Not, I just want to have a look.
+01:02	Internal	[AGENT_4]	You was contacting it to the offer, I think on the vehicle, so just bear with me.
+01:24	Internal	[AGENT_4]	He sent out a letter to himself … don't have the email. Did he email you copy of the letter?
+01:29	External	Unavailable	No, no, I haven't got any email anyways. I just waiting to hear.
+01:31	Internal	[AGENT_4]	Now it's sent … the post. It was only sent yesterday, so you wouldn't get it probably until next week. Any, it's eh, I'll put forward the offer anyway in the call see if you gonna great it's hmm the pre accident value is [AMOUNT_8] em, the policy excess is [AMOUNT_9].
+01:33	External	Unavailable	Ah yeah, yeah,
+01:44	External	Unavailable	yeah,
+01:47	External	Unavailable	seventeen.
+01:48	External	Unavailable	Yeah, yeah, yeah, yeah.
+01:50	Internal	[AGENT_4]	So that leaves [AMOUNT_10] If you're okay to accept the offer, you just need to tell me you do and you waive a 10 day consideration period. So it take it, … yes, is that correct?
+01:53	External	Unavailable	Yeah,
+01:56	External	Unavailable	oh, I am. … yeah, that's fine. That's fine. Yeah,
+02:02	External	Unavailable	no, no. It's okay. No, no, that's fine. That's why I'm
+02:06	Internal	[AGENT_4]	Right, and then the only thing I need for is maybe I don't know. Can you confirm your … on the call to me?
+02:12	External	Unavailable	Uh, just give me one minute now. Just give me one minute. I just, that's the one. That's the long one. One second. That's the long number on the back of the bank card, is it?
+02:13	Internal	[AGENT_4]	Did you already? You might have already given them this.
+02:17	Internal	[AGENT_4]	You already gave them to us.
+02:23	Internal	[AGENT_4]	Now, I think they've already been emailed in, I think.
+02:24	External	Unavailable	Alright,
+02:27	External	Unavailable	yeah. You know I I sent over all of the information like
+02:30	Internal	[AGENT_4]	[BANK_1] account that right?
+02:32	External	Unavailable	Yeah, yeah, yeah.
+02:33	Internal	[AGENT_4]	The engineer last year, digit [ACCOUNT_NUMBER_1_PARTIAL].
+02:39	External	Unavailable	No, it's [ACCOUNT_NUMBER_1_CORRECT].
+02:45	Internal	[AGENT_4]	Eh, this email came from you [EMAIL_3]
+02:51	External	Unavailable	Yeah, oh, sorry. That were you referring to my bank and line number? You, sorry, I haven't a clue off that yet. Sorry, I got mixed up there on the card itself. I apologize.
+02:55	Internal	[AGENT_4]	Your, I,
+03:02	Internal	[AGENT_4]	yeah, yeah, your … cause that's the sort code and the account number the the number on your card won't work for us issue the payment. Yeah, so …
+03:08	External	Unavailable	Yeah, yeah, yeah, sorry. Give me a second. I'll look in the itch and see if I can find the ite.
+03:12	Internal	[AGENT_4]	Yeah, no, I just wanna make sure it's correct cause I'm missing nine grand to it, you know, so just over and nine grand.
+03:17	External	Unavailable	Yeah, yeah, yeah.
+03:19	Internal	[AGENT_4]	I think it's right because you you've sent it to us
+03:19	External	Unavailable	Ivan is, uh, yeah, yeah, [ACCOUNT_NUMBER_1_CORRECT]. Is it? Yeah.
+03:24	Internal	[AGENT_4]	Yeah, so [IBAN_1].
+03:28	External	Unavailable	Yeah, [IBAN_1_FULL].
+03:33	Internal	[AGENT_4]	That's it, yeah, grand.
+03:34	External	Unavailable	Yeah, yeah, sorry. Sorry about it. … got mixed up. I I don't have labels next what they are have … w down the page.
+03:40	Internal	[AGENT_4]	Yeah, fine. That's okay. That's brand. If with all the bank details … enough there the issue payment on it, … it's no problem.
+03:41	External	Unavailable	…
+03:43	External	Unavailable	brilliant!
+03:47	External	Unavailable	Oh yes, thank you very much.
+03:49	Internal	[AGENT_4]	Thank you. Have a nice day. See, help.
+03:51	External	Unavailable	You too, bye. …
+03:52	Internal	[AGENT_4]	Cheers, bye.

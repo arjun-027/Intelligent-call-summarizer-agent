@@ -1,0 +1,64 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_3]
+Transcript Start Time:	[DATE_6] [TIME_5] (UTC+01:00)
+Transcript End Time:	[DATE_6] [TIME_6] (UTC+01:00)
+Transcript Duration:	07:52
+Direction:	Inbound
+Internal Participant(s):	[AGENT_3]
+External Participant(s):	[PHONE_2]
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	[AGENT_3]	Good morning, N Speaking, How may I help?
+00:06	External	[PHONE_2]	Hi Mister Murter, I'm actually looking to speak to [HANDLER_2] if she's available.
+00:11	Internal	[AGENT_3]	Right, she's not … at moment. Can help her take a message for her?
+00:15	External	[PHONE_2]	Yeah, I'm actually just chasing a case. Here. It's [CALLER_4_FIRST] here from [COMPANY_2]. Hmm, we had a case here that hmm, was settled. And hmm, we had forwarded on through the hmm third parties call. And she did say to me away back in [DATE_7] that she was making a payment directly in.
+00:20	Internal	[AGENT_3]	Char,
+00:30	Internal	[AGENT_3]	right.
+00:35	External	[PHONE_2]	Our account by backs, but they're saying that they still haven't received it, so I'm just, hmm, I'm just chasing it up here. Yeah, your claim. The claim number is [CLAIM_NUMBER_3_PART1].
+00:37	Internal	[AGENT_3]	Right,
+00:39	Internal	[AGENT_3]	card, right?
+00:41	Internal	[AGENT_3]	Hi. You give the number now look at that for you. No problem at all.
+00:47	Internal	[AGENT_3]	Uh hmm.
+00:48	External	[PHONE_2]	[CLAIM_NUMBER_3_PART2].
+00:50	Internal	[AGENT_3]	Uh huh.
+00:53	External	[PHONE_2]	[CLAIM_NUMBER_3_PART3]. That's it, Sorry.
+00:54	Internal	[AGENT_3]	That's okay, no problem at all,
+00:57	Internal	[AGENT_3]	uh.
+00:57	External	[PHONE_2]	Sorry, I was, I was, I I got the stor cause I was listening to the music reinvent and the thought.
+01:04	Internal	[AGENT_3]	… of
+01:08	Internal	[AGENT_3]	it. What was the case was?
+01:13	External	[PHONE_2]	It is, uh, a [CLAIMANT_1]. A minor. Hmm, you insured is hmm [INSURED_1]?
+01:24	Internal	[AGENT_3]	Change, it was going to, wasn't?
+01:26	External	[PHONE_2]	Yeah, uh huh.
+01:28	Internal	[AGENT_3]	Hmm.
+01:29	External	[PHONE_2]	It was for the sum off [AMOUNT_7].
+01:32	Internal	[AGENT_3]	[AMOUNT_7]
+01:35	External	[PHONE_2]	Yeah, yeah.
+01:37	Internal	[AGENT_3]	I, a.
+01:39	External	[PHONE_2]	She said she had raised the payment and that the day that email was the [DATE_8], but they're saying they've never received it, so
+01:41	Internal	[AGENT_3]	Year
+01:47	Internal	[AGENT_3]	you … that's tell him it's gone, right? But I'm gonna know the whole clarify.
+01:52	External	[PHONE_2]	It has gone.
+01:55	Internal	[AGENT_3]	See, we issue checks here.
+01:58	External	[PHONE_2]	Yeah.
+01:58	Internal	[AGENT_3]	And there's a problem with them. There we marker put against it in our system so it goes out date … been canceling or something like that
+02:02	External	[PHONE_2]	Right, uh huh,
+02:06	External	[PHONE_2]	yeah.
+02:06	Internal	[AGENT_3]	So this is going as an electronic payment … … check as you said … there under … so I don't know if that means there's been a problem.
+02:11	External	[PHONE_2]	Yeah,
+02:15	External	[PHONE_2]	with our our bank, yeah.
+02:15	Internal	[AGENT_3]	Bank … there … I don't know, but like we're looking that I'll speak to [HANDLER_2_FIRST]. She … about this morning.
+02:20	External	[PHONE_2]	Right, yeah.
+02:23	Internal	[AGENT_3]	I'll have a chat with her. She get what's the best … to get you hold hold on you on jar there
+02:28	External	[PHONE_2]	Hmm, on this number here. If she rings me back in this number here, Hmm,
+02:33	External	[PHONE_2]	and see yeah cause they're saying it could be maybe something to do with our bank details or or whatever if it's went by there wasn't sent to us. Was it maybe? No, well, we would. Our finance would have told us anyway, so the way is
+02:43	Internal	[AGENT_3]	No, no, it was an electronic.
+02:46	Internal	[AGENT_3]	Yeah no it's it's going … exchange Give me that number there it doesn't … … our system.
+02:50	External	[PHONE_2]	It's [PHONE_2_FULL].
+02:54	Internal	[AGENT_3]	Uh huh.
+02:54	External	[PHONE_2]	[PHONE_2_PARTS].
+02:59	Internal	[AGENT_3]	[PHONE_2_REPEAT].
+03:02	External	[PHONE_2]	Yeah.
+03:03	Internal	[AGENT_3]	Leave, I.
+03:05	External	[PHONE_2]	That's great, thanks very much for that, [AGENT_3_FIRST]. Okay, no worries. Thank you. Bye bye bye.
+03:07	Internal	[AGENT_3]	Okay, no problem. Okay, [AGENT_3_FIRST], thanks. Cheers, Bye bye.

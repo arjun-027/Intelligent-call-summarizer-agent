@@ -1,0 +1,47 @@
+Interaction Type:	Call
+Interaction ID:	[CONV_ID_1]
+Transcript Start Time:	[DATE_1] [TIME_1] (UTC+01:00)
+Transcript End Time:	[DATE_1] [TIME_2] (UTC+01:00)
+Transcript Duration:	02:35
+Direction:	Outbound
+Internal Participant(s):	[AGENT_1]
+External Participant(s):	Mobile Number, Ireland
+
+Date/Time	Participant Type	Participant	Text
+00:01	External	Mobile Number, Ireland	Yes.
+00:01	Internal	[AGENT_1]	Oh hey [CALLER_1], it's [AGENT_1] just ringing back from [COMPANY_1].
+00:03	External	Mobile Number, Ireland	…
+00:04	External	Mobile Number, Ireland	yes.
+00:05	Internal	[AGENT_1]	Nine. Okay, time, yeah.
+00:07	External	Mobile Number, Ireland	Yeah.
+00:08	Internal	[AGENT_1]	Perfect, just today. No, the call might be recorded. Okay? For training. Following complaints. You're happy for me to proceed. And so, the reason I'm ringing is we have reviewed your vehicle damage claim and approved repair costs. Hmm it it's actually suitable for a cash settlement then which means
+00:13	External	Mobile Number, Ireland	Yes.
+00:28	Internal	[AGENT_1]	I can issue a payment for the agreed repair amount.
+00:32	External	Mobile Number, Ireland	Okay.
+00:33	Internal	[AGENT_1]	And if you want to work it out with the garage and pay them directly, then whenever you book it in for repairs.
+00:40	External	Mobile Number, Ireland	Yeah, we can do that. So, what's the okay, so
+00:41	Internal	[AGENT_1]	Yeah.
+00:44	External	Mobile Number, Ireland	Hmm, okay. So what's the repair amount? What the garage told me of? What is it?
+00:49	Internal	[AGENT_1]	I'll check and see. I just want to compare it with their quotation.
+00:52	External	Mobile Number, Ireland	I don't data me email.
+00:55	Internal	[AGENT_1]	So their quote was [AMOUNT_1] and then after we reviewed it the amount that was approved then was [AMOUNT_2]
+01:12	External	Mobile Number, Ireland	Yeah, so what What are the options? I'm not really familiar. The first time happened to me. So one option if you transfer the money and I will pay to the garage.
+01:20	Internal	[AGENT_1]	Yeah, alternatively you can make arrangements with the the garage to book it in and they invoice [COMPANY_1].
+01:28	External	Mobile Number, Ireland	Okay.
+01:31	Internal	[AGENT_1]	And … pay the garage directly.
+01:35	External	Mobile Number, Ireland	Okay,
+01:36	External	Mobile Number, Ireland	sounds a bit more convenient to me, to be honest.
+01:39	Internal	[AGENT_1]	For which one, sorry?
+01:41	External	Mobile Number, Ireland	The second one, so
+01:42	Internal	[AGENT_1]	The second one, yeah, that's fine. Hmm, I can send you confirmation that the calls are approved. If you wanna contact the garage, to make arrangements to book it in.
+01:53	External	Mobile Number, Ireland	Yeah, … it comes.
+01:54	Internal	[AGENT_1]	After it's repaired, then they can invoice [COMPANY_1], and then we'll pay the garage. Then now there was a two day repair approved So if hire is required, was it's being fixed. And if the garage can't provide the hired vehicle, you can let us know when it's due to go in. And we can set that up through [COMPANY_2].
+02:14	Internal	[AGENT_1]	…
+02:14	External	Mobile Number, Ireland	Oh, okay. Okay yeah I I would see I will see if I really need that and yeah, I have to get to work, but I will. I will have a chat with them. See what
+02:22	Internal	[AGENT_1]	Yeah,
+02:25	Internal	[AGENT_1]	I have a chat with the guys in my garage. Sure, no problem. Look, I'll drop you an email now, okay?
+02:27	External	Mobile Number, Ireland	Okay,
+02:29	External	Mobile Number, Ireland	okay, Very good. Thank you so much.
+02:30	Internal	[AGENT_1]	No problem at all. You're welcome. Thank you. Bye.
+02:31	External	Mobile Number, Ireland	Thanks. Bye bye bye
+02:34	External	Mobile Number, Ireland	by

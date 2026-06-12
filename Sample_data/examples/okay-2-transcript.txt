@@ -1,0 +1,84 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_2]
+Transcript Start Time:	[DATE_3] [TIME_3] (UTC+01:00)
+Transcript End Time:	[DATE_3] [TIME_4] (UTC+01:00)
+Transcript Duration:	08:47
+Direction:	Inbound
+Internal Participant(s):	[AGENT_2]
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:03	Internal	[AGENT_2]	Hello [AGENT_2_FIRST] speaking, how can I help you?
+00:07	External	Unavailable	I, hmm, I'm ringing up regarding …
+00:11	External	Unavailable	eh, a came. That's, I've been ongoing for almost 10 or 11 months.
+00:14	Internal	[AGENT_2]	Yeah,
+00:16	Internal	[AGENT_2]	yeah. … you have the claim reference number so I can bring the details up there?
+00:20	External	Unavailable	Yeah, [CLAIM_NUMBER_2_PART1]
+00:24	External	Unavailable	[CLAIM_NUMBER_2_PART2]
+00:27	External	Unavailable	[CLAIM_NUMBER_2_PART3].
+00:29	Internal	[AGENT_2]	Thanks. And can I just get your name, please?
+00:32	External	Unavailable	My name is [CALLER_3].
+00:35	Internal	[AGENT_2]	… [CALLER_3_FIRST] just for data protection. Can you just confirm the date of the accident and your home address, please?
+00:41	External	Unavailable	Uh, my home address is [ADDRESS_2] And the date of the accident. … … go back into the calendar here? I think it was around the [DATE_4] or something.
+00:52	Internal	[AGENT_2]	Yeah, can you just confirm?
+00:55	Internal	[AGENT_2]	Yeah, perfect. Yeah, yeah. Details to me, [CALLER_3_FIRST]. How can I help you today?
+00:59	External	Unavailable	Hmm, so I submitted some expenses that I thought I'd be able to claim for. Right and I I've actually contacted you about five times and I've never got anything back. I just get told like they'll contact me and no one ever get back to me at all.
+01:05	Internal	[AGENT_2]	Yes,
+01:10	Internal	[AGENT_2]	okay. Yeah,
+01:13	Internal	[AGENT_2]	… you haven't been reimbursed for any of those expenses that you sent in?
+01:18	External	Unavailable	No.
+01:19	Internal	[AGENT_2]	Alright, bear with me one second.
+01:20	External	Unavailable	I I haven't even got contact no one's contacted me like I don't know where I stand know what's going on
+01:23	Internal	[AGENT_2]	Oh
+01:25	Internal	[AGENT_2]	yeah, shouldn't be the case. Yeah, can you?
+01:26	External	Unavailable	Okay,
+01:28	External	Unavailable	just to let you know, like say if I I started doing my neck with killing me after the accident I started doing bd is and it really helps but if I stop exercising, I get pain again so I wanna, I don't know what what I can do can't do. Can I pay this or not? Is it off my own bat or where I stand it?
+01:35	Internal	[AGENT_2]	Yeah,
+01:44	Internal	[AGENT_2]	yeah. Look, are you are you sorry are you are you looking to client for compensation for for your in increases along with your medical expenses or is it just your expenses that you are looking … claim for?
+01:56	External	Unavailable	I, I just I don't know what what I'm entitled to or not entitled to my point.
+02:00	Internal	[AGENT_2]	Yeah, if, if, if you're in … a result of the accents, you're entitled to to pursue a claim for em general damages for for compensation for your pay and suffering along. So, eh, your your expenses also so, em, that, that, that is an option for you. Like, if you want to do that, like, I can speak to the handle on it and try and get through to them now
+02:20	Internal	[AGENT_2]	to see if they can discuss with you if that's okay.
+02:24	External	Unavailable	Yeah, like I I just like I'd love to get this all closed out and done, so like
+02:28	Internal	[AGENT_2]	Yeah, yeah, I understand. And can you bear with me one second? I'll just see if the hand is available. If I can just pop you on hold for a second, or
+02:34	External	Unavailable	Yeah.
+02:35	Internal	[AGENT_2]	Thanks,
+02:38	Internal	[AGENT_2]	sorry, sorry, thanks for holding em just [HANDLER_1] He's actually just on a call there at the moment, but I'm just looking through the file. I know obviously I can see receipt that you sent in previously in relation to … and and medical expensive so just in relation to like I said the other option of also … for compensation for an injure like it that's
+02:58	Internal	[AGENT_2]	that's an option that you wanna take kind of how we would process the claim is if we make you an offer for your in increase we would settle it all alongside with your medical expenses as well so we wouldn't issue them separately if you know anything.
+03:12	Internal	[AGENT_2]	Eh,
+03:13	Internal	[AGENT_2]	so like, is that something you're looking to claim for as well, like I said, the compensation for injuries?
+03:20	External	Unavailable	Hmm, I don't even understand what that means. Like, you know, hmm.
+03:25	Internal	[AGENT_2]	Yeah, you, you, you, you pay … two options. So we would have sent you a letter previously, just in relation to this … This … have been gone back to [DATE_5] last year. So a person that's involved in the car accent that they've been injured they can claim kind of two two way they can claim em either they can claim just for out the pocket expenses like your medical bills, and then that's … or you can claim for your medical bills,
+03:45	Internal	[AGENT_2]	close compensation for in that were suffered so you're you're maybe entitled the claim for actual monetary compensation for your injuries. Your payment suffer kind of as of the action,
+03:57	Internal	[AGENT_2]	your two two options on the c.
+04:01	External	Unavailable	Yeah, like I I don't want any I don't want to be getting like extra money for things that I'm not entitled to anything, you know, so I'm happy to.
+04:08	Internal	[AGENT_2]	No, no, no. I said you you may be entitled to but you, you as yourself you, you have to make that decision whether you're, you're looking to make a claim for compensation for increase alongside medical expenses or whether it's just medical expenses or looking to claim for?
+04:22	External	Unavailable	I, I, I … the medical expense as well cause I'm not like I'm not I I am working fine and I left. There's no problems … you know.
+04:25	Internal	[AGENT_2]	Okay,
+04:27	Internal	[AGENT_2]	yes
+04:30	Internal	[AGENT_2]	yeah no that that's perfect What would I be able to confirm? Just, … I think we usually payment you previously to the vehicle claim. So we issued a payment to, eh, I just wanna check your bank account details that we have here. So we have a bank of account that we issued the the to … to previously. So if that fill your account for any payments to be
+04:39	External	Unavailable	Yeah,
+04:50	External	Unavailable	it is. Yeah.
+04:51	Internal	[AGENT_2]	Yeah, perfect. So em, I have received here it looks like … eh, just over [AMOUNT_6] as you're out of pocket expenses, that kind of match up where what you have or is there any other expenses that you still have to send in?
+04:52	External	Unavailable	Yeah
+05:06	External	Unavailable	uh see I I have done a second batch of yer cases but I don't know how I entitled to get that
+05:13	Internal	[AGENT_2]	Yeah, yeah. Well, you might as well email them in to us Like what I can do is I know you haven't received a response yet but I'll speak to [HANDLER_1_FIRST] … Han on it and I'll ask to to review the phone expenses and get back to you if that's okay
+05:14	External	Unavailable	…
+05:25	Internal	[AGENT_2]	Em, so if you have an extra battery?
+05:25	External	Unavailable	Yeah,
+05:26	External	Unavailable	what? What's your name again?
+05:28	Internal	[AGENT_2]	…
+05:30	External	Unavailable	River
+05:31	Internal	[AGENT_2]	Oh, I …
+05:33	External	Unavailable	What's your email address? Because the last day … email, it doesn't look like me.
+05:33	Internal	[AGENT_2]	Yeah,
+05:35	Internal	[AGENT_2]	yeah,
+05:37	Internal	[AGENT_2]	no, … won't be deal with it so I can give you the general email limitation that the file, the claims email if you wanna take it down.
+05:44	External	Unavailable	Yeah.
+05:45	Internal	[AGENT_2]	Yeah, so it's just [EMAIL_2]
+05:51	External	Unavailable	Accidentally.
+05:52	Internal	[AGENT_2]	Yeah, and if you just put the client number and the subject line, it'll come through to your file, and then I'll speak tomorrow once he's available and ask him to get back to you then to try and settle off the the expenses achievement court then okay.
+06:04	External	Unavailable	Yeah, that would be great.
+06:07	External	Unavailable	Yeah, fine. Thanks very much.
+06:08	Internal	[AGENT_2]	Yeah, no problem. Thanks for calling.
+06:11	Internal	[AGENT_2]	Thanks, take care.
+06:11	External	Unavailable	Thank you. Bye.

@@ -1,0 +1,32 @@
+Interaction Type:	Call
+Interaction ID:	EVAL-010
+Transcript Start Time:	2025-01-12 10:08:55 (UTC+00:00)
+Transcript End Time:	2025-01-12 10:16:07 (UTC+00:00)
+Transcript Duration:	07:12
+Direction:	Inbound
+Internal Participant(s):	Eimear Collins
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	Eimear Collins	Pemberton Insurance, Eimear speaking. How can I help?
+00:05	External	Unavailable	Hi there, I'm calling about my home insurance claim. The reference is PI-2024-55123.
+00:12	Internal	Eimear Collins	OK, let me find that. Can you give me your name please?
+00:15	External	Unavailable	Yes, it's Alan Murphy.
+00:17	Internal	Eimear Collins	Thank you Alan. I'm just searching for that reference... hmm, it's not coming up. Can you double check the number for me?
+00:25	External	Unavailable	Oh, hang on, let me look at the letter again... sorry, I've read it wrong. It's PI-2024-55132. I mixed up the last two â€¦ digits.
+00:35	Internal	Eimear Collins	No problem, let me try that one. Yes, here it is. And just to verify, can you confirm your postcode?
+00:42	External	Unavailable	D14 T2Y8.
+00:45	Internal	Eimear Collins	Perfect, thank you. I can see your claim for the burst pipe damage. How can I help?
+00:50	External	Unavailable	I just wanted to check when the repairs are going to start. The drying company finished last week but I haven't heard anything since.
+00:58	Internal	Eimear Collins	Let me have a look at the notes. OK, I can see the drying certificate was received on the 8th. Your claim handler has approved the repair works up to €12,400.
+01:10	External	Unavailable	Right, so what happens now?
+01:12	Internal	Eimear Collins	Now we need to instruct the contractor. I can see a note here that we were waiting for your â€¦ availability. Are you able to be at the property to let them in?
+01:22	External	Unavailable	Yes, I'm working from home at the moment so any day suits me really.
+01:26	Internal	Eimear Collins	Perfect. I'll pass that on and our contractor should be in touch within the next 48 hours to arrange a start date.
+01:33	External	Unavailable	Great. Do you know how long the repairs usually take for this kind of thing?
+01:37	Internal	Eimear Collins	For the scope of work here - replastering, painting, and replacing the damaged flooring - I'd estimate around 5 to 7 working days.
+01:46	External	Unavailable	OK, that's not too bad. Thanks for your help.
+01:49	Internal	Eimear Collins	No problem. Is there anything else?
+01:51	External	Unavailable	No, that's all.
+01:52	Internal	Eimear Collins	OK, take care. Bye.
+01:53	External	Unavailable	Bye.

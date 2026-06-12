@@ -1,0 +1,14 @@
+Summary (Claims)
+Subject:
+Engineer report follow-up for vehicle coverage
+
+Executive Summary:
+The customer called to follow up on an engineer's report sent by his son, [POLICYHOLDER_4], to get their vehicle back on cover.
+• Customer provided reference number [CLAIM_NUMBER_3].
+• Confirmed son's details: [POLICYHOLDER_4], [ADDRESS_2].
+• I located the engineer's report and will refer it back to the engineer handling the case.
+• Confirmation will be sent to [POLICYHOLDER_4]'s email: [EMAIL_1].
+
+Next Steps:
+[INSURANCE_COMPANY_1]: Refer the engineer's report back to the engineer handling the case and confirm if the vehicle can go back on cover. Notify the customer via email.
+Other: Await confirmation from [INSURANCE_COMPANY_1] regarding the vehicle coverage status.

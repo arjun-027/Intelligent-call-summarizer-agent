@@ -1,0 +1,102 @@
+Interaction Type:	Call
+Interaction ID:	[CONV_ID_3]
+Transcript Start Time:	[DATE_6] [TIME_6] (UTC+01:00)
+Transcript End Time:	[DATE_6] [TIME_7] (UTC+01:00)
+Transcript Duration:	36:33
+Direction:	Inbound
+Internal Participant(s):	[AGENT_4], [AGENT_5]
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:03	Internal	[AGENT_4]	[AGENT_4] speaking, how can I help?
+00:06	External	Unavailable	Yes, hmm, I have my card … claim in for to … car repaired and the assessor was out. And so for I was wondering why long it's going to take for the the card to be taken to be repaired.
+00:23	Internal	[AGENT_4]	No problem. Do you have a claim reference number there?
+00:26	External	Unavailable	Sorry.
+00:27	Internal	[AGENT_4]	Do you have a claim reference number there?
+00:30	External	Unavailable	I just got my own policy number here in front of me.
+00:33	Internal	[AGENT_4]	Perfect, You wanna pull that in for me?
+00:36	External	Unavailable	Yes, [POLICY_NUMBER_1]
+00:41	External	Unavailable	[POLICY_NUMBER_1_CONT].
+00:48	Internal	[AGENT_4]	Think I missed a digit there. Hmm, do you want to call it out again for me?
+00:53	External	Unavailable	Sorry.
+00:54	Internal	[AGENT_4]	Do you want to call that out again for me? I think I've listed a.
+00:57	External	Unavailable	Okay, the policy number [POLICY_NUMBER_1_FULL].
+01:01	External	Unavailable	[POLICY_NUMBER_1_A]
+01:03	External	Unavailable	[POLICY_NUMBER_1_B]
+01:05	External	Unavailable	[POLICY_NUMBER_1_C]
+01:08	External	Unavailable	[POLICY_NUMBER_1_D].
+01:12	Internal	[AGENT_4]	Perfect, I do. I have it here by what I'll do, I'll pop you in quickly. Hold and see if I can get you a claim handler if that's okay.
+01:19	External	Unavailable	Yes, thank you.
+01:21	Internal	[AGENT_4]	Thank you.
+01:26	Internal	[AGENT_5]	welcome to the claims department. … … [AGENT_5] speaking hello youre through to the claims department here at [COMPANY_1]
+01:28	External	Unavailable	Hello.
+01:32	External	Unavailable	Yes I was trying to find out who I'm … would be taken in for to repaired I'm … Comprehens.
+01:39	Internal	[AGENT_5]	Okay,
+01:41	Internal	[AGENT_5]	no problem. Do you happen to have your claim number?
+01:44	External	Unavailable	Sorry.
+01:45	Internal	[AGENT_5]	Do you have a claim number?
+01:47	External	Unavailable	No, I don't. No, I don't have … front. Me.
+01:50	Internal	[AGENT_5]	Okay, do you know the registration of your vehicle?
+01:52	External	Unavailable	I do. [REGISTRATION_1].
+02:00	External	Unavailable	… says reserve last week. And I was just wondering when he's going to taken in.
+02:10	Internal	[AGENT_5]	Okay, and just for data protection and to confirm your identity, can I just ask your name, please?
+02:15	External	Unavailable	Sorry.
+02:16	Internal	[AGENT_5]	Can I just ask your name?
+02:18	External	Unavailable	[CALLER_3] …
+02:20	Internal	[AGENT_5]	Okay, and just when did the accident happen? Could you recall the date? Even the month and year would be sufficient.
+02:23	External	Unavailable	Who,
+02:25	External	Unavailable	uh, wait. No, I'll be able to tell you. Now. Have a note with somewhere.
+02:41	External	Unavailable	Give me a moment.
+02:45	External	Unavailable	It happened [DATE_7] [TIME_8].
+02:49	External	Unavailable	Uh, the week before last, eh?
+02:52	Internal	[AGENT_5]	No problem. And
+02:54	Internal	[AGENT_5]	finally, just your date of birth, then just your date of birth as well, then just
+02:55	External	Unavailable	[DOB_2].
+02:59	External	Unavailable	Sorry.
+03:00	Internal	[AGENT_5]	Can I just take your date of birth as well, please?
+03:02	External	Unavailable	[DOB_2_FULL].
+03:05	Internal	[AGENT_5]	Okay, so
+03:13	Internal	[AGENT_5]	yeah, so the assessor was … with you. They've read a note today that your vehicle is a possible repair, and we need to compare an estimate for it.
+03:21	External	Unavailable	Yeah.
+03:24	Internal	[AGENT_5]	Hmm
+03:30	Internal	[AGENT_5]	is is the vehicle drivable at the moment, sir yourself?
+03:32	External	Unavailable	Yes, it is. It's going into your, it's mostly paperwork.
+03:36	Internal	[AGENT_5]	Okay,
+03:38	Internal	[AGENT_5]	would it be?
+03:38	External	Unavailable	It's going into your garage to be refer.
+03:41	Internal	[AGENT_5]	It's going into one of our garages. … let's just see here.
+03:46	Internal	[AGENT_5]	And have they given you … a garage to take it to or anything just not?
+03:50	External	Unavailable	No, no, … is no, no.
+03:52	Internal	[AGENT_5]	No problem, … me a sec. I'm just gonna take a look here and see what's the closest guards to you there.
+04:03	External	Unavailable	I thought they picked it up at the house. And, … give me a careful. It's in.
+04:09	Internal	[AGENT_5]	Well, if it's drivable, they will just ask you to break it down for an estimate. If your vehicle is not drivable, then they would supply you with car hire.
+04:18	Internal	[AGENT_5]	So what, what we need to do is get it in for the estimate. If the mechanic turns around and says to you then that it it shouldn't be drivable then we can obviously discuss getting you on … car higher. They'll be able to determine that once they conducted an estimate on it.
+04:34	Internal	[AGENT_5]	So, I just need to check here. So, …
+04:38	Internal	[AGENT_5]	your home address, and you're based in [LOCATION_1]. Is that correct?
+04:41	External	Unavailable	Yes.
+04:59	Internal	[AGENT_5]	You got close to that,
+05:02	Internal	[AGENT_5]	…
+05:13	Internal	[AGENT_5]	Okay, now the closest one we've got is towards [LOCATION_2]. There, over in the [LOCATION_3].
+05:22	External	Unavailable	Yeah.
+05:23	Internal	[AGENT_5]	Uh, would that be suitable with yourself? Uh, I don't think there's anything further.
+05:31	External	Unavailable	You … came out to the … cer and he looked at the damage.
+05:35	Internal	[AGENT_5]	Yeah, he's just an independent assessor that we appointed to come out. Now, what they've decided is the vehicle is repairable,
+05:43	Internal	[AGENT_5]	So what we need to do is get it in for an estimate now into the garage itself.
+05:43	External	Unavailable	Yeah,
+05:49	External	Unavailable	okay.
+05:50	Internal	[AGENT_5]	So, uh, let me see …
+05:56	Internal	[AGENT_5]	Yeah, so we've got the [COMPANY_2] there on the [LOCATION_4].
+06:02	External	Unavailable	Yeah, well, … can send me out a letter to directions, and when … have to bring it there, I'll be glad to do that.
+06:09	Internal	[AGENT_5]	Yeah, not a problem. What I'll do then is I I'll contact them now I'll get it set up on our end I'll ask them to make contact with you then to set a time and date to get you in for the estimate.
+06:21	External	Unavailable	Okay.
+06:22	Internal	[AGENT_5]	And then they'll be able to take it from there for you. … just if they'll act on our behalf, then is that okay?
+06:27	External	Unavailable	Yes, that's okay, Yeah.
+06:29	Internal	[AGENT_5]	Okay, I'll get straight onto that now. Free straight after this call.
+06:32	External	Unavailable	Okay, thank you very much.
+06:33	Internal	[AGENT_5]	Not a problem, just … you take care of yourself.
+06:35	External	Unavailable	Long time hanging on.
+06:38	Internal	[AGENT_5]	Is unfortunately sorry about that now.
+06:39	External	Unavailable	Yeah, thank you very much.
+06:43	Internal	[AGENT_5]	You take care of yourself now.
+06:45	External	Unavailable	Bye bye.
+06:46	Internal	[AGENT_5]	… you. Bye bye.

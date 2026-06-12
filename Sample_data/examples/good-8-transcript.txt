@@ -1,0 +1,83 @@
+Interaction Type:	Call
+Interaction ID:	[INTERACTION_ID_1]
+Transcript Start Time:	[DATE_1] [TIME_1] (UTC+01:00)
+Transcript End Time:	[DATE_1] [TIME_2] (UTC+01:00)
+Transcript Duration:	06:04
+Direction:	Inbound / Outbound
+Internal Participant(s):	[AGENT_1]
+External Participant(s):	Mobile Number, [COUNTRY_1]
+
+Date/Time	Participant Type	Participant	Text
+00:02	External	Mobile Number, [COUNTRY_1]	Hello.
+00:04	Internal	[AGENT_1]	Hi, this is [AGENT_1] giving a call from [COMPANY_1].
+00:08	External	Mobile Number, [COUNTRY_1]	Hi, how are you?
+00:09	Internal	[AGENT_1]	Just a quick call, The servers and interest or questions online code.
+00:14	External	Mobile Number, [COUNTRY_1]	I tried to
+00:16	External	Mobile Number, [COUNTRY_1]	follow through with the quote
+00:18	External	Mobile Number, [COUNTRY_1]	yesterday and something wouldn't work on the payment side of things, And then I went to pay again, and it said that I'd already paid for this
+00:27	External	Mobile Number, [COUNTRY_1]	thing, but then I never got any emails or anything, so you wouldn't mind checking that for me. It didn't come out of my account, but it wouldn't let me go through again, so
+00:34	External	Mobile Number, [COUNTRY_1]	I don't know what happened.
+00:36	Internal	[AGENT_1]	… … I have a look here for you
+00:44	Internal	[AGENT_1]	to just verify for data protection? You just confirm your name, address, and date of birth for us, please.
+00:48	External	Mobile Number, [COUNTRY_1]	Yeah, that's [CUSTOMER_1] [DATE_2] [ADDRESS_1]. Or it could be [ADDRESS_2].
+00:57	Internal	[AGENT_1]	Yeah, it's … at [ADDRESS_2].
+00:59	External	Mobile Number, [COUNTRY_1]	Yeah, that's my rental property, so
+01:06	Internal	[AGENT_1]	Grand. Looks like it's all still here. I don't think it. There is no payment taken anyway. Em, it's still sitting as … as the quote, it's up to yourself. If you're happy enough to go ahead with that, we can run through and get it set up for you. Take us under five months.
+01:21	External	Mobile Number, [COUNTRY_1]	Yeah, I like. So think it was just maybe, yes. Say, I tried to put it through and then it just wouldn't let me do it again, so I might just do it on my laptop. Then when I get home.
+01:29	Internal	[AGENT_1]	No worries, it's all. It's up to yourself. We have all that, the information.
+01:31	External	Mobile Number, [COUNTRY_1]	Yeah, I just want to have my card with me right now, so.
+01:35	Internal	[AGENT_1]	Grand, it's, it's grand. I can still. Are you looking to do it as a payment in full or monthly?
+01:39	External	Mobile Number, [COUNTRY_1]	In full.
+01:41	Internal	[AGENT_1]	… the I can fill, run through it and set it up and then send you a payment, like if you like.
+01:45	External	Mobile Number, [COUNTRY_1]	Yeah, yeah, let's do that.
+01:47	Internal	[AGENT_1]	No worries when as a Gen need the insurance they … start fortunate
+01:52	External	Mobile Number, [COUNTRY_1]	It runs out tomorrow, so
+01:57	Internal	[AGENT_1]	So you … this start get the start straight away from the [DATE_3] or from the [DATE_4].
+02:03	External	Mobile Number, [COUNTRY_1]	Yeah, from the [DATE_4], I think is how it work.
+02:05	Internal	[AGENT_1]	From the just one second pass, but no worries.
+02:10	Internal	[AGENT_1]	So what we'll do is we'll just run through the details. … quote double check ours, accur have a good deal … under 5 minutes here. 5, 10 minutes for yourself. Can you confirm the information that you submitted online? As accurate. You read the assumptions, and you agree with those, or is there anything else that you need to change?
+02:25	External	Mobile Number, [COUNTRY_1]	No, I think it's so … unless he, you … tips to get it down any further.
+02:31	Internal	[AGENT_1]	I can … look at it as well, no.
+02:33	External	Mobile Number, [COUNTRY_1]	If you don't mind, that'd be great.
+02:35	Internal	[AGENT_1]	And then as well, I'll get you an email send … after the phone call, just regarding some of the regulatory information that you have on the policy. You can have a read through out as well on your own time. Finally, would you like to opt under receiving your policy related documentation? Digit … And some of our products would just replace some documents you normally get by post with the digital version.
+02:51	External	Mobile Number, [COUNTRY_1]	Yeah, that's …
+02:54	Internal	[AGENT_1]	Perfect. So for yourself, you need, are you a resident of [COUNTRY_1] from Berth?
+03:00	Internal	[AGENT_1]	Perfect. And the regular card there is [VEHICLE_REG_1].
+03:06	External	Mobile Number, [COUNTRY_1]	That's the one.
+03:08	Internal	[AGENT_1]	Do I go one there? Petrol and … Basically, it's just Social Domestic Unleashed. Driving to from workplace.
+03:15	External	Mobile Number, [COUNTRY_1]	Yeah.
+03:17	Internal	[AGENT_1]	Policy there expires for you tomorrow. You're on there. You've got a your name driver as well so it's [NAMED_DRIVER_1].
+03:24	External	Mobile Number, [COUNTRY_1]	Yeah, yeah, I added inline as well.
+03:28	Internal	[AGENT_1]	Perfect. You have down there that you have 5 years claim free driving and your own name.
+03:33	External	Mobile Number, [COUNTRY_1]	Yeah.
+03:33	Internal	[AGENT_1]	And that was all earned in [COUNTRY_1].
+03:37	Internal	[AGENT_1]	Perfect no problem
+03:39	Internal	[AGENT_1]	for yourself and your name driver then just legally binding question so is your self name driver have any claims convictions to dis qualifications or health conditions
+03:50	Internal	[AGENT_1]	so we do have we … a discount the best price I can get it down to be coming in at [AMOUNT_1]. So [AMOUNT_1]. That's full comprehensive there, free legal expense, free injury driver, free class, cover, free comprehensive drive, and all their cars are included. So that'll be the best we can get it down to [AMOUNT_1]. And that'll be your full comprehensive.
+03:57	External	Mobile Number, [COUNTRY_1]	Yeah,
+04:08	External	Mobile Number, [COUNTRY_1]	yeah, that sounds good.
+04:10	Internal	[AGENT_1]	… … have enough to go ahead with that or any further questions?
+04:12	External	Mobile Number, [COUNTRY_1]	Yeah,
+04:13	External	Mobile Number, [COUNTRY_1]	yeah, as long as you can get it on a payment link, … that's perfect.
+04:16	Internal	[AGENT_1]	Yeah, no worries. So last thing, then there is a call off period. So if you … to cancel your policy, you can't be by given super … with the
+04:26	Internal	[AGENT_1]	Bear with me. Second perfect. I grand.
+04:27	External	Mobile Number, [COUNTRY_1]	You go.
+04:30	Internal	[AGENT_1]	You can cancel your pa within the first 14 working days from your starting date. Given super value notice, we'll give you a full refund on the premium that you've paid.
+04:39	Internal	[AGENT_1]	And then, so [DATE_4] of the tenth. Then starting straight away on that day Grant. So I've got your new policy number here and I've got the documentation request. So it's just your 5 years claim for. So it's just your no claims discount that we're looking to request from you. We give you 30 days to send it on this from your starting date just to stop on a chance of the policy cancelling. So I'll send you a
+04:39	External	Mobile Number, [COUNTRY_1]	Yeah.
+04:59	Internal	[AGENT_1]	All that out now we email as well.
+05:01	External	Mobile Number, [COUNTRY_1]	Okay, British, and I'll just send it over then.
+05:03	Internal	[AGENT_1]	Em,
+05:04	Internal	[AGENT_1]	so I'll put that a policy number. It's [POLICY_NUMBER_1] in the email, and that will as well show then the documentation. So we have … email address for that you can send your … discount in. I'll note that on the email, and I'll send you the weed link as well that you can use to pay for your policy.
+05:18	External	Mobile Number, [COUNTRY_1]	Okay
+05:20	External	Mobile Number, [COUNTRY_1]	and do I I can just request that after my previous and s
+05:25	Internal	[AGENT_1]	Yeah, yeah, we give you 30 days from your starting dad anyway. So you just send it under our email address, and then you put the subject of the emails. That new policy number, just we know where it's coming from.
+05:30	External	Mobile Number, [COUNTRY_1]	Oh, that's perfect.
+05:34	External	Mobile Number, [COUNTRY_1]	Okay, great. Perfect, couple of days.
+05:37	Internal	[AGENT_1]	So you'll be all good to go there from the [DATE_4]. Once you've made that payment, that'll issue your certain disk. It'll be posted out within 5 working days there from today then. So, oh Nat, all good to go. You any further questions? Are you happy enough with everything there?
+05:49	External	Mobile Number, [COUNTRY_1]	No, that's all good. What's your name? No, just in case, I need to give you a bills.
+05:52	Internal	[AGENT_1]	My own name is [AGENT_1]. I have it all noted down here, so it's no problem.
+05:56	External	Mobile Number, [COUNTRY_1]	Okay, brilliant! Good stuff. That's perfect.
+05:59	Internal	[AGENT_1]	Perfect, all the best.
+05:59	External	Mobile Number, [COUNTRY_1]	Thanks, Thank you. Bye bye bye bye bye bye.
+06:03	Internal	[AGENT_1]	By

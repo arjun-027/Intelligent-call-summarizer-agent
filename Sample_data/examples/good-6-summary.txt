@@ -1,0 +1,5 @@
+Call Type:
+MTA
+
+Outcome:
+Customer called to inquire about changing vehicle on policy. Current temporary cover expires on [DATE_1]. New vehicle registration [VEHICLE_REG_1], valued at [AMOUNT_1], standard right-hand drive, no modifications, kept on driveway overnight. FC cover confirmed. Due to age and 1 year NCB, a 25% risk load applied. Quoted [AMOUNT_2] for cover until renewal on [DATE_2]. Option to pay upfront or add to last instalment, increasing it to [AMOUNT_3]. Customer undecided and will consider options. Quote details saved.

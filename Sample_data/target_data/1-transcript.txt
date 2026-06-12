@@ -1,0 +1,26 @@
+Interaction Type:	Call
+Interaction ID:	EVAL-001
+Transcript Start Time:	2025-01-08 09:23:15 (UTC+00:00)
+Transcript End Time:	2025-01-08 09:27:38 (UTC+00:00)
+Transcript Duration:	04:23
+Direction:	Inbound
+Internal Participant(s):	Sarah Mitchell
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	Sarah Mitchell	Good morning, Pemberton Insurance claims, Sarah speaking. How can I help?
+00:06	External	Unavailable	Hi there, my name is David Chen. I'm calling about a claim I submitted last week.
+00:11	Internal	Sarah Mitchell	Of course, can I take your claim reference number please?
+00:14	External	Unavailable	Yes, it's PI-2024-78432.
+00:18	Internal	Sarah Mitchell	Thank you. And just for data protection, can you confirm your date of birth and postcode?
+00:23	External	Unavailable	Sure, it's 15th March 1985, and the postcode is BT7 3GH.
+00:29	Internal	Sarah Mitchell	Perfect, thank you David. I can see your claim here for the water damage to your kitchen. How can I help today?
+00:35	External	Unavailable	I just wanted to check on the status. I haven't heard anything since I submitted it.
+00:40	Internal	Sarah Mitchell	Let me have a look for you. Right, I can see the claim was received on the 3rd of January and it's currently with our assessor. They should be in touch within the next 48 hours to arrange a visit.
+00:52	External	Unavailable	Oh great, that's good to know. Do you know roughly how long the whole process takes?
+00:57	Internal	Sarah Mitchell	Typically once the assessor has visited, we aim to have a decision within 5 working days. Then if approved, payment is usually within 3 to 5 days after that.
+01:07	External	Unavailable	That's really helpful, thank you.
+01:09	Internal	Sarah Mitchell	Is there anything else I can help with today?
+01:11	External	Unavailable	No, that's everything. Thanks very much.
+01:14	Internal	Sarah Mitchell	You're welcome. Have a lovely day. Goodbye.
+01:16	External	Unavailable	Bye.

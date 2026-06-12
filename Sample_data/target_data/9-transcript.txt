@@ -1,0 +1,34 @@
+Interaction Type:	Call
+Interaction ID:	EVAL-009
+Transcript Start Time:	2025-01-11 14:55:12 (UTC+00:00)
+Transcript End Time:	2025-01-11 15:01:45 (UTC+00:00)
+Transcript Duration:	06:33
+Direction:	Inbound
+Internal Participant(s):	Cian McCarthy
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	Cian McCarthy	Pemberton Insurance, Cian speaking. How can I help?
+00:05	External	Unavailable	Hi, it's Karen Donoghue. I received a letter about a settlement offer on my claim?
+00:11	Internal	Cian McCarthy	Hi Karen. Yes, let me pull up your file. Can you give me the reference number?
+00:15	External	Unavailable	PI-2024-79245.
+00:18	Internal	Cian McCarthy	Thank you. And just to confirm your identity, can you give me your date of birth and address?
+00:23	External	Unavailable	5th of September 1990. 47 Maple Drive, Galway.
+00:28	Internal	Cian McCarthy	Perfect. Yes, I can see we've sent you a settlement offer for your vehicle claim. Did you have any questions about it?
+00:35	External	Unavailable	Well, the offer was for €8,750 for the write-off. I just wanted to check that's the full amount?
+00:42	Internal	Cian McCarthy	Yes, that's the pre-accident value we've assessed, and there's no excess on your policy, so €8,750 is the full settlement amount.
+00:51	External	Unavailable	OK, that seems fair. I've looked at similar cars and that's about right.
+00:56	Internal	Cian McCarthy	Great. Are you happy to accept the offer?
+00:58	External	Unavailable	Yes, I'd like to accept.
+01:00	Internal	Cian McCarthy	Perfect. Now, under the Consumer Protection Code, I need to let you know that you have 10 days to consider this offer. However, if you're happy to proceed today, you can waive that cooling-off period and I can process the payment â€¦ immediately.
+01:14	External	Unavailable	Yes, I'm happy to waive the 10 days. I'd like to get it sorted.
+01:18	Internal	Cian McCarthy	That's no problem. I'll just need you to confirm verbally that you're waiving the 10-day consideration period and accepting the settlement of €8,750.
+01:27	External	Unavailable	Yes, I confirm I'm waiving the 10-day period and I accept the €8,750 settlement.
+01:33	Internal	Cian McCarthy	Thank you Karen. Let me just confirm your bank details for the payment. We have an account with Bank of Ireland, sort code 90-12-34, account ending 5678?
+01:45	External	Unavailable	Yes, that's correct.
+01:47	Internal	Cian McCarthy	Perfect. I've processed that now. The payment will be in your account within 3 to 5 working days.
+01:53	External	Unavailable	Brilliant, thank you so much.
+01:55	Internal	Cian McCarthy	You're welcome. Is there anything else I can help with?
+01:57	External	Unavailable	No, that's everything.
+01:58	Internal	Cian McCarthy	OK, take care Karen. Goodbye.
+02:00	External	Unavailable	Bye.

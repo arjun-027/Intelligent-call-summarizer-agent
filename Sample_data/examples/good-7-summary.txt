@@ -1,0 +1,1 @@
+Customer queried renewal price. Original renewal price was [AMOUNT_1], with a crossover discount of [AMOUNT_2]. Last year's premium was [AMOUNT_3]. Offered BP of [AMOUNT_4] with an additional discount of [AMOUNT_5]. Customer declined and decided to go with another provider offering [AMOUNT_6]. Policy will not automatically renew.

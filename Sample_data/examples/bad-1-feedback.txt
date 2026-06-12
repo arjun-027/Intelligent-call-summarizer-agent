@@ -1,0 +1,4 @@
+Better synopsis - but still not quite accurate
+caller is [CALLER_1] from [COMPANY_2] not [COMPANY_1]
+his client is [POLICYHOLDER_3] and [POLICYHOLDER_2] not [POLICYHOLDER_1]
+Liability summary is incorrect - the caller was not calling to discuss a dog owned by our policyholder - they insure the owners of the dog.

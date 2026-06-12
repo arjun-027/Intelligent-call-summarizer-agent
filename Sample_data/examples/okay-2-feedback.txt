@@ -1,0 +1,3 @@
+Subject says "customer inquiry" when it was the Third party calling
+The Third party did not confirm their bank details on the call.
+Email address should be [EMAIL_CLAIMS]

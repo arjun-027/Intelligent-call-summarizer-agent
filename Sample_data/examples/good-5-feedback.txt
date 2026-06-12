@@ -1,0 +1,4 @@
+Call content is inaccurate - is is noted that a Customer [CALLER_4] called - this is in correct it was a Third Party Solicitor
+Not a claims settlement - it was third party costs
+Check should be cheque
+Customer received a check - should be Third Party Solicitor received cheque

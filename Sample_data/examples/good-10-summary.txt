@@ -1,0 +1,5 @@
+Call Type:
+NB
+
+Outcome:
+Customer called to accept a QTE for car insurance. Policy details confirmed: [YEAR_1] right-hand drive diesel car, [ENGINE_SIZE_1] engine, valued at [AMOUNT_1], 10,000km/year, SDP use, FC cover. Customer has 2 years NCB, no modifications, no claims or convictions. Policy includes free car hire, legal expenses, injury cover, comprehensive driving of all cars, glass cover, MRES, and key insurance for [AMOUNT_2]. Total premium [AMOUNT_3], with a [AMOUNT_4] discount applied. Customer opted for monthly instalments: [AMOUNT_5] deposit, followed by 9 instalments of [AMOUNT_6]. Policy set up WIE, but payment pending IBAN details. Customer advised to provide IBAN and deposit at local branch or call back. Customer insured to drive vehicle immediately. DOCS to be issued within 5 days.

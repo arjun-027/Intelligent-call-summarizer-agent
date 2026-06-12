@@ -1,0 +1,206 @@
+Interaction Type:	Call
+Interaction ID:	[INTERACTION_ID_1]
+Transcript Start Time:	[DATE_1] [TIME_1] (UTC+01:00)
+Transcript End Time:	[DATE_1] [TIME_2] (UTC+01:00)
+Transcript Duration:	18:38
+Direction:	Inbound
+Internal Participant(s):	[AGENT_1]
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	[AGENT_1]	Hi, you're through the accident insurance. My name's [AGENT_1]. How can I help?
+00:06	External	Unavailable	How are you doing? I was in there yesterday to the [LOCATION_1] Ranch. Is this the [LOCATION_1] Ranch?
+00:11	Internal	[AGENT_1]	No, you're through to the contact center.
+00:14	External	Unavailable	I'm trying to get through to the call with … I've got a quote. I have a quotation number here if that's any help.
+00:19	Internal	[AGENT_1]	Yeah, I
+00:19	External	Unavailable	I want to accept. I, I want to accept the quarterly, you know what I mean, the part.
+00:23	Internal	[AGENT_1]	F,
+00:24	Internal	[AGENT_1]	If you wish I can do that with you over the phone or if you would prefer, I can see if I can get someone from the [LOCATION_1] branch. You try and give you a call back within the next day or two.
+00:33	External	Unavailable	… if if you can do it there I I I need to get … cover now right what I mean
+00:40	Internal	[AGENT_1]	Yeah, not a problem.
+00:44	Internal	[AGENT_1]	Do you have a week reference there?
+00:47	External	Unavailable	[QUOTE_REF_1]
+00:51	External	Unavailable	[QUOTE_REF_1_CONT]
+00:55	Internal	[AGENT_1]	This is for car insurance. Is that correct, sir?
+00:58	External	Unavailable	That.
+01:00	Internal	[AGENT_1]	So just for data protection purposes, I need to ask some personal details to confirm your identity before we proceed. So, can I just take your name, address and your date of birth, please?
+01:06	External	Unavailable	Okay,
+01:10	External	Unavailable	[CUSTOMER_1] [ADDRESS_1]
+01:14	External	Unavailable	[DATE_2]
+01:17	External	Unavailable	[DATE_3].
+01:48	Internal	[AGENT_1]	Sorry about this. It's just taking a few moment, no.
+01:50	External	Unavailable	…
+02:01	Internal	[AGENT_1]	So, you were speaking with an agent there. They've merged your no claims bonus from your
+02:08	Internal	[AGENT_1]	policy. Okay, you hadn't bought the card just as yet, but you were.
+02:09	External	Unavailable	Yeah.
+02:15	Internal	[AGENT_1]	Checking on a claim to see if it was still sorted. Is that correct?
+02:20	External	Unavailable	Yeah, yeah.
+02:26	Internal	[AGENT_1]	Okay, and has the claim been settled?
+02:30	External	Unavailable	Oh, claim. I haven't. I haven't gotten any claim. I I just got a call call on insurance.
+02:43	External	Unavailable	Bye.
+02:54	Internal	[AGENT_1]	Okay, just bear with me then a moment.
+03:05	Internal	[AGENT_1]	Sorry about this. I'm just trying to get up these messages again just to see what it was, the person I was speaking about, alright?
+03:13	External	Unavailable	It wasn't Sky to me. I went … to get a quote on insurance.
+03:16	Internal	[AGENT_1]	Yeah no but I just want to see what their their notes mean okay
+03:21	External	Unavailable	Oh yeah, right.
+03:26	Internal	[AGENT_1]	Okay not a problem. So you're you're just looking to in this now you … and what is over the phone okay, let me get that quotation up then for you, alright?
+03:31	External	Unavailable	Yeah, yeah,
+03:36	External	Unavailable	right.
+03:36	Internal	[AGENT_1]	And it's for the [VEHICLE_MAKE_1].
+03:39	External	Unavailable	Yeah, …
+03:40	Internal	[AGENT_1]	Perfect
+03:46	Internal	[AGENT_1]	so I'm just gonna run through some of the information what he will ask a serious questions about you and your vehicle and it can take around 10 minutes or so. Do you have enough time now … speak?
+03:57	External	Unavailable	Yeah.
+03:58	Internal	[AGENT_1]	Perfect.
+04:03	Internal	[AGENT_1]	And [CUSTOMER_1_FIRST], it's just yourself on the policy because we can't have it. Any name drivers when you're mooring over your bonus.
+04:17	Internal	[AGENT_1]	And when do you need the policy to start from?
+04:21	External	Unavailable	Well, from now, …
+04:23	Internal	[AGENT_1]	From now, you've purchased the car … all now, then?
+04:26	External	Unavailable	Yeah.
+04:27	Internal	[AGENT_1]	Yeah, so we'll start it now at [TIME_3] for you, just to give you a better time to get it all set up and go through any questions. Yeah, and you have love in [COUNTRY_1] since birth.
+04:33	External	Unavailable	Oh, that's fine. Yeah,
+04:38	External	Unavailable	sorry.
+04:39	Internal	[AGENT_1]	You have lived in [COUNTRY_1] from birth.
+04:42	External	Unavailable	Yes, I have, Yeah.
+04:43	Internal	[AGENT_1]	Perfect. And let's see here,
+04:48	Internal	[AGENT_1]	just in case the call drops. The number is [PHONE_1].
+04:54	External	Unavailable	Yeah.
+04:55	Internal	[AGENT_1]	Perfect. And it's the [VEHICLE_REG_1]. … sorry, [VEHICLE_REG_1_FULL] [VEHICLE_MAKE_1]. It's a [YEAR_1] diesel and it's a [ENGINE_SIZE_1] liter engine you had the value down here the [AMOUNT_1].
+05:09	External	Unavailable	Yeah,
+05:13	External	Unavailable	yeah.
+05:14	Internal	[AGENT_1]	You purchased the vehicle this month.
+05:16	External	Unavailable	Yeah.
+05:17	Internal	[AGENT_1]	The it's a standard yeah it's a standard right hand drive
+05:19	External	Unavailable	Just today,
+05:23	External	Unavailable	yeah.
+05:23	Internal	[AGENT_1]	The car hasn't been modified in any way.
+05:26	External	Unavailable	Cool.
+05:27	Internal	[AGENT_1]	You've it down here that you'll do around 10000km per year.
+05:31	External	Unavailable	Yeah, average. Yeah, aver …
+05:32	Internal	[AGENT_1]	Yeah, you're looking for social, domestic and pleasure purposes only excluding commuting to and from work.
+05:38	External	Unavailable	Yeah.
+05:39	Internal	[AGENT_1]	And you are the owner and the registered owner of the vehicle.
+05:45	External	Unavailable	Yeah.
+05:46	Internal	[AGENT_1]	And you're looking for comprehensive cover.
+05:48	External	Unavailable	Yeah.
+05:49	Internal	[AGENT_1]	So with the comprehensive, we will pay for the loss or damage to your vehicle caused by accident, fire theft. This also covers your legal liability dollars, up to thirty million in the case of property damage, and unlimited in the case of injury.
+06:02	External	Unavailable	Right.
+06:02	Internal	[AGENT_1]	No, you hold a full [COUNTRY_1] license.
+06:06	External	Unavailable	Okay, yeah.
+06:07	Internal	[AGENT_1]	And you paid that license for more than 10 years?
+06:10	External	Unavailable	…
+06:11	Internal	[AGENT_1]	You've already provided us with your driver number there, I see.
+06:15	External	Unavailable	Yeah sand other part
+06:16	Internal	[AGENT_1]	Yeah, and you're you're using your own no claims bonus from your
+06:21	Internal	[AGENT_1]	… insurance
+06:23	External	Unavailable	Yeah, I think that's
+06:24	Internal	[AGENT_1]	Perfect,
+06:27	Internal	[AGENT_1]	and your current policy on your van expires on the [DATE_4].
+06:32	External	Unavailable	Yeah.
+06:33	Internal	[AGENT_1]	And [CUSTOMER_1_FIRST], you're the main driver of the vehicle.
+06:36	External	Unavailable	Okay.
+06:37	Internal	[AGENT_1]	Perfect so how many years claims free driving does the main driver have in their own name So we have down here 2 years.
+06:44	External	Unavailable	Yeah.
+06:46	Internal	[AGENT_1]	You earned your your no claims bonus in your own vehicle.
+06:51	External	Unavailable	Yeah.
+06:54	Internal	[AGENT_1]	You earned it all in [COUNTRY_1].
+06:56	External	Unavailable	Sorry.
+06:57	Internal	[AGENT_1]	You earned it all in [COUNTRY_1],
+07:02	Internal	[AGENT_1]	and your current provider is [PROVIDER_1].
+07:05	External	Unavailable	Yeah.
+07:06	Internal	[AGENT_1]	Perfect. Now have any of the following had any accidents or claims in the last 5 years? Or have you any pending, Irrespective, of blame?
+07:14	External	Unavailable	No I, I had a act like
+07:18	External	Unavailable	last year.
+07:21	Internal	[AGENT_1]	Sorry.
+07:22	External	Unavailable	I had an accent … year, but it's been better.
+07:25	Internal	[AGENT_1]	Okay, and have you or any of your drivers had any penalty points, including fixed points or any pending?
+07:32	External	Unavailable	No.
+07:33	Internal	[AGENT_1]	Been convicted of any modern offences or have any criminal convictions or prosecutions pending relating to motor vehicle in the last 7 years?
+07:42	External	Unavailable	No.
+07:42	Internal	[AGENT_1]	Been disqualify from driving or obtaining a license in the last 7 years?
+07:46	External	Unavailable	No.
+07:47	Internal	[AGENT_1]	Do you or any other driver included on this proposal have any health or fitness conditions or use of medication or drugs? It must be notified on a driving license application.
+07:57	External	Unavailable	No.
+07:58	Internal	[AGENT_1]	And the following questions and information you provider legally binding and relate to the last 10 years have you or any of your name drivers on this proposal? Had a proposal of motor insurance refused?
+08:09	External	Unavailable	No.
+08:10	Internal	[AGENT_1]	Had a policy of insurance cancelled by an insurer, excluding cancellation due to non payment or premium.
+08:15	External	Unavailable	No.
+08:16	Internal	[AGENT_1]	Had a policy insurance cancelled by an insured duty, failure to make a payment on time.
+08:21	External	Unavailable	No.
+08:22	Internal	[AGENT_1]	And do you any special terms, conditions or restrictions imposed on a policy? Been asked to pay an increased premium by an insurer?
+08:29	External	Unavailable	Oh.
+08:29	Internal	[AGENT_1]	And have you had an insurance company refuse your declined insurance?
+08:34	External	Unavailable	No.
+08:34	Internal	[AGENT_1]	… sorry, refusal, decline a claim. I do apologize.
+08:39	External	Unavailable	No.
+08:39	Internal	[AGENT_1]	And have you had an insurance company refuse to offer renewal terms?
+08:44	Internal	[AGENT_1]	And you do have an all policy. Add our, at your home address with [PROVIDER_2]. That's your van policy.
+08:51	External	Unavailable	Yeah.
+08:52	Internal	[AGENT_1]	Perfect, so we are giving you your 2 years no claims bonus there, it's 60% Okay, you have your insured excess at [AMOUNT_2]. And a voluntary excess at [AMOUNT_3]. Making your standard excess [AMOUNT_4]. That is reduced by [AMOUNT_5] if an acc approved repair is used in the event of acclaimed because you have an … policy.
+08:57	External	Unavailable	Bye.
+09:12	Internal	[AGENT_1]	With [COMPANY_1], we have given you a crossover discount there of [AMOUNT_6] with a comprehensive cover. You do get free car … plus free legal expenses, free injury cover and free comprehensive driving of all cars. You also have glass cover on there. You've also included motor rescue and key insurance for [AMOUNT_7]. And with that,
+09:32	Internal	[AGENT_1]	we will give you 24 hour breakdown assistance In the uk and [COUNTRY_1]. Covering both roadside and driveway assistance. It also covers the towing of your vehicle within the Island of [COUNTRY_1]. To the nearest repair your destination. Your home or destination that comes with sorry,
+09:51	Internal	[AGENT_1]	parts and fuel are not covered. That also comes with the key insurance. So if your keys are lost all in or damage we will provide you with update [AMOUNT_8] towards the cost of key and lock replacements. Where teir of keys and locks are not covered the policy now is coming on at [AMOUNT_9]
+10:11	Internal	[AGENT_1]	for you. And the previous agent you were speaking of, give you a discount error of [AMOUNT_10]. You're happy to set this policy up with … today.
+10:21	External	Unavailable	Yeah.
+10:21	Internal	[AGENT_1]	And how would you like to set it up? Do you want to go by monthly instalments or pay in full?
+10:26	External	Unavailable	… want … …
+10:27	Internal	[AGENT_1]	Monthly instalment, so we will take a deposit payment today from here for [AMOUNT_11] and then you'll have nine monthly instalments of [AMOUNT_12].
+10:39	External	Unavailable	Okay, yeah, that's fine.
+10:40	Internal	[AGENT_1]	Alright, now as you know, when you do pay monthly instalments, there has someone … added to the policy that will be for [AMOUNT_13] that has already been broken down and to your monthly instalments for you but it does make a total amount payable [AMOUNT_14] for the year
+10:58	External	Unavailable	Okay.
+10:59	Internal	[AGENT_1]	Okay and you're still happy enough to int this policy with us
+11:02	External	Unavailable	Yeah.
+11:03	Internal	[AGENT_1]	Perfect.
+11:13	External	Unavailable	Seven.
+11:14	Internal	[AGENT_1]	Yeah, I'm still here. So I will just advise that there … no. I was just typing … the date you needed the policy to start from. So there is a 14 day cooling off period. So if you cancel within the first 14 working days from the date of inception, you will be refunded to full premium paid. If you cancel after the 14 working days, you will be charged for the period that you have been insured. And
+11:16	External	Unavailable	…
+11:21	External	Unavailable	okay.
+11:34	Internal	[AGENT_1]	Fund any balance after a [AMOUNT_15] administration fee has been deducted provided no claims have been made. You can find full policy documents including further information on cancellation exclusions on our website and your local branch. Or we can post you your a copy and you must return your certificate of insurance and desk if you do cancel. Alright, so we're gonna
+11:54	Internal	[AGENT_1]	set this up today by monthly instalment she said okay and your 2 year's name driving experience We don't need that because we're gonna take that from your previous policy, alright? And I will just advise them that I will post your certificate and policy schedule on payment details.
+11:58	External	Unavailable	Yeah, okay,
+12:07	External	Unavailable	okay.
+12:15	Internal	[AGENT_1]	You can upload any outstanding documents on my as a dot i e forward slash upload or drop the … your local branch please send it any outstanding documents within 30 days. Our … your policy may be cancelled. You don't need to do that. As I said, we're gonna carry them over because we're mirroring your bonus. Okay, now
+12:34	Internal	[AGENT_1]	I'm just taking down your new policy number here.
+12:40	Internal	[AGENT_1]	Okay,
+12:50	Internal	[AGENT_1]	now just at the moment, [CUSTOMER_1_FIRST], I need to take your IB details from you. Okay,
+12:59	Internal	[AGENT_1]	do you have them? You don't. Not a problem. Let me just go … your all policy, okay? And see if I can get that for you.
+12:59	External	Unavailable	I don't have, I don't have no.
+13:11	Internal	[AGENT_1]	… reason,
+13:17	Internal	[AGENT_1]	do you pay your dollar one bye
+13:20	Internal	[AGENT_1]	monthly instalments as well?
+13:22	External	Unavailable	Sorry.
+13:23	Internal	[AGENT_1]	Do you pay your bank insurance by monthly instalments?
+13:26	External	Unavailable	… I, I, I paid that fully when I, when I paid …
+13:30	External	Unavailable	…
+13:31	Internal	[AGENT_1]	Yeah,
+13:43	Internal	[AGENT_1]	okay, so without the i Band, we can't set up the policy.
+13:51	External	Unavailable	Yeah, but I can. I pay the installment I didn't send in the the I, I ring in the Ivan to the office in the morning.
+13:54	Internal	[AGENT_1]	…
+13:57	Internal	[AGENT_1]	so it won't let me take any payment. Now, the policy has been set up.
+14:03	External	Unavailable	The … has been set up.
+14:04	Internal	[AGENT_1]	It has been set up for you there. So what you would have to do tomorrow is take the ibn and the deposit amount done to the local branch. Or give us a call back, or I can arrange a call back with he.
+14:07	External	Unavailable	Right,
+14:20	External	Unavailable	well, I can bring it in in the morning, like, but I might cover to drive the car, you know what I mean?
+14:23	Internal	[AGENT_1]	Yes.
+14:25	External	Unavailable	I've covered. Yeah, that's fine. I can. I went first thing in the morning with the Ivan and the pay.
+14:25	Internal	[AGENT_1]	…
+14:30	Internal	[AGENT_1]	so I will just advise you. Okay, if the payment hasn't made within the next few days, the policy laps down, so yeah, it's probably, yeah.
+14:36	External	Unavailable	That's fine, that's fine. I went in on, I can pay it now like, I have the card here, but I don't have the ib number, what I mean
+14:40	Internal	[AGENT_1]	…
+14:43	Internal	[AGENT_1]	yeah. It just won't let me go further without the IB details first. I'm sorry.
+14:48	External	Unavailable	Okay, okay, but I covered to drive.
+14:51	Internal	[AGENT_1]	Yeah, you, you are insured to drive the vehicle.
+14:54	External	Unavailable	Okay, alright. Thank you very much, Okay?
+14:55	Internal	[AGENT_1]	You're welcome. Is there anything else I can help you with before you go today?
+14:59	External	Unavailable	Oh, that's fine. Thank you. Thanks for your help.
+15:01	Internal	[AGENT_1]	Not a problem. Thank you for your time. Do you want to take your new policy number?
+15:02	External	Unavailable	Alright, thanks.
+15:06	External	Unavailable	… actually
+15:11	External	Unavailable	no, I I, I, I have the quotation number … … staff …
+15:18	Internal	[AGENT_1]	Yeah, yeah, no, that's absolutely fine.
+15:21	External	Unavailable	Okay, alright. Thanks. Thank you.
+15:23	Internal	[AGENT_1]	Not a problem. Thank you for your time, and
+15:28	Internal	[AGENT_1]	hopefully we'll speak with you tomorrow.
+15:30	External	Unavailable	Okay, alright. Thanks and thanks again.
+15:32	Internal	[AGENT_1]	Thank you. Bye.

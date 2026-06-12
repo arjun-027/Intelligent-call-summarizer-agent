@@ -1,0 +1,4 @@
+Not a customer calling - it was our policyholder's father - name [CALLER_3] not noted on summary
+Spelling mistakes in [POLICYHOLDER_4_LAST] - its a surname so spelling is [POLICYHOLDER_4_LAST_CORRECT]
+reference noted incorrectly its [CLAIM_NUMBER_3_CORRECT]
+email address incorrect- used [EMAIL_1_WRONG_WORD] instead of [EMAIL_1_CORRECT_WORD]

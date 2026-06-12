@@ -1,0 +1,78 @@
+Interaction Type:	Call
+Interaction ID:	[CONV_ID_4]
+Transcript Start Time:	[DATE_8] [TIME_9] (UTC+01:00)
+Transcript End Time:	[DATE_8] [TIME_10] (UTC+01:00)
+Transcript Duration:	04:55
+Direction:	Inbound
+Internal Participant(s):	[AGENT_6]
+External Participant(s):	[PHONE_1]
+
+Date/Time	Participant Type	Participant	Text
+00:03	Internal	[AGENT_6]	Good afternoon, Clear Apartment. [AGENT_6] Speaking, how can I help you?
+00:08	External	[PHONE_1]	[AGENT_6] it's [CALLER_4] [COMPANY_3]. Sorry to trouble you again. Let me explain why I'm phoning. Do you remember this the case of [CLAIMANT_1] and waiting? I wait for the check from [LOCATION_5]. Right, they have just arrived in and the reason they just thinking I'm going to pick up the phone rather than try and email you about this is do you remember I had charged I had sent you?
+00:11	Internal	[AGENT_6]	Yes,
+00:13	Internal	[AGENT_6]	no, We thought you all.
+00:15	Internal	[AGENT_6]	Okay,
+00:18	Internal	[AGENT_6]	yes.
+00:28	External	[PHONE_1]	For the original fee, and then you obviously tried to to get me down the bit and then we'd come up with it was slightly less the insurance company have sent me the original a check that would be the original.
+00:32	Internal	[AGENT_6]	Yes.
+00:40	External	[PHONE_1]	Fee, as opposed to the
+00:40	Internal	[AGENT_6]	Uh, I wonder I wonder if that my look, … could be my fault. It was give us a claim number. Uh, give us a claim number.
+00:44	External	[PHONE_1]	As opposed to be in between one
+00:47	External	[PHONE_1]	the the the claim number is Hmm. Hold on. What is your claim number? [CLAIM_NUMBER_2] Does that sound right? [CLAIM_NUMBER_2_A] Like [CLAIM_NUMBER_2_B]?
+00:53	Internal	[AGENT_6]	Uh huh.
+00:56	Internal	[AGENT_6]	Uh huh.
+00:57	External	[PHONE_1]	[CLAIM_NUMBER_2_C]
+01:00	External	[PHONE_1]	[CLAIM_NUMBER_2_D]. The difference is very minimal, to be honest. Hmm, let me see. I think I originally had charged. Hmm, let me see what it was. Yes, my original thing was for an overall sum of [AMOUNT_3] and that included my original fee of [AMOUNT_4] from I and then we
+01:00	Internal	[AGENT_6]	Uh huh.
+01:20	External	[PHONE_1]	I had spoken and I had come down to [AMOUNT_5] which would have been [AMOUNT_6] but I got the check for [AMOUNT_3] And it's just taking so long to come in, [AGENT_6]. I'm really just, you know, the idea of having to send it back to me with dread.
+01:32	Internal	[AGENT_6]	I know, I know.
+01:35	Internal	[AGENT_6]	Hmm, see, it's coming up here as [AMOUNT_7].
+01:41	External	[PHONE_1]	Working
+01:43	External	[PHONE_1]	no, no, that's not right.
+01:46	Internal	[AGENT_6]	Do you know what to do?
+01:49	Internal	[AGENT_6]	Not the check, right?
+01:51	External	[PHONE_1]	Uh hmm.
+01:51	Internal	[AGENT_6]	Hmm, because you don't wanna, it's easier to wait on a free time coming rather than
+01:58	Internal	[AGENT_6]	thousand. Do you know what I mean?
+02:01	External	[PHONE_1]	We see that submit, though I wouldn't be waiting for anything because I have been, you know, in a sense, on, on, on my first bill, I've been exactly paid on the second one. I've been, hmm, I've been slightly, so no, no. On the second one, I've been overpaid. Like that's the point, you know so I I ended up getting what I asked you for originally is what I'm saying.
+02:11	Internal	[AGENT_6]	Short term
+02:13	Internal	[AGENT_6]	overpaid,
+02:21	Internal	[AGENT_6]	oh.
+02:21	External	[PHONE_1]	I, I'm being very almost spoon … here to tell you … I know, remember this next time across your path. So I'm sort of setting, you know, I could, you know, on the one, you know, but it's just, I am aware that I spoke to you and I said that I would take hmm, [AMOUNT_8] less. And I
+02:24	Internal	[AGENT_6]	You're so nice. Was really nice,
+02:31	Internal	[AGENT_6]	…
+02:41	External	[PHONE_1]	I got a check that gives me that from [AMOUNT_8], so I don't know. Like, what, what do you want me to do?
+02:46	Internal	[AGENT_6]	Hmm, what you can do is lodge it and just refund
+02:51	Internal	[AGENT_6]	the
+02:52	Internal	[AGENT_6]	over payment.
+02:54	External	[PHONE_1]	Okay, and who do I send the overpayment then to?
+02:57	Internal	[AGENT_6]	Hmm, if you send it to [LOCATION_5], The [LOCATION_5] address should be on there with [LOCATION_6] … [LOCATION_7].
+03:04	External	[PHONE_1]	… actually on it, but let me see. What is that? They came about? A letter or anything. They were just in the post [LOCATION_6].
+03:10	Internal	[AGENT_6]	Is there nothing even at the top of the?
+03:12	External	[PHONE_1]	All it says is there, sir, madam Re, but it's on … You know that check. You know where you attach the check from the bottom of it. We attach settlement check in favor of call.
+03:13	Internal	[AGENT_6]	Check,
+03:17	Internal	[AGENT_6]	yeah, yeah, …
+03:22	Internal	[AGENT_6]	and so if
+03:24	Internal	[AGENT_6]	[LOCATION_7_FULL] [LOCATION_5] think it's [LOCATION_5] [LOCATION_5_CODE].
+03:30	External	[PHONE_1]	Okay.
+03:31	Internal	[AGENT_6]	Hmm, and quote that number that you quoted me.
+03:35	External	[PHONE_1]	Uh huh.
+03:36	Internal	[AGENT_6]	And I'll put a renew on the line that was, hmm,
+03:40	Internal	[AGENT_6]	paid the
+03:42	Internal	[AGENT_6]	the incorrect amount
+03:44	Internal	[AGENT_6]	I wonder, has not been made has done.
+03:47	External	[PHONE_1]	And it's, you know, it's completely unless to ask you, it would have be okay. You wouldn't at this stage authorized just what I've been given.
+03:55	Internal	[AGENT_6]	Hmm, two because it's been so past.
+03:57	External	[PHONE_1]	Right,
+04:00	External	[PHONE_1]	no, that's okay. No, that's okay. Well, I got to say …
+04:02	Internal	[AGENT_6]	But our calls are recorded.
+04:05	External	[PHONE_1]	Yeah, no, no, that's fine. No, no. Well, look what I'll do then I'll hmm, I'll send back the check. You know, it's one of the, I think it's probably got one of these things that.
+04:07	Internal	[AGENT_6]	H,
+04:13	Internal	[AGENT_6]	no, would you not? No, I can lodge it and refund this.
+04:18	External	[PHONE_1]	Oh yes, that's what I mean. We send a check from from us to … for that.
+04:20	Internal	[AGENT_6]	Yeah, yeah, no don't
+04:22	Internal	[AGENT_6]	cause I don't want to waiting any longer on that
+04:24	External	[PHONE_1]	Yeah,
+04:25	External	[PHONE_1]	yeah, no. Fair enough. Okay, Okay, no, that's Grand Termon. All right, that's perfect. Okay, alright. Thanks a lot.
+04:30	Internal	[AGENT_6]	All right, sorry about that. Okay, thank you. Bye bye.

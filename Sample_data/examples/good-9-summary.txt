@@ -1,0 +1,5 @@
+Call Type:
+Finance
+
+Outcome:
+Customer requested to change payment method from PIF to instalments. Confirmed details and set up DD with 15% deposit of [AMOUNT_1] and nine monthly instalments of [AMOUNT_2], including 6.7% interest. Total payable [AMOUNT_3]. Deposit paid by Visa. Policy renewed, DOCS to be issued within 5 working days. First instalment due on [DATE_1].

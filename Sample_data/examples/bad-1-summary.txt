@@ -1,0 +1,21 @@
+Summary (Claims)
+Subject:
+Discussion on liability and policy details for [POLICYHOLDER_1] case
+
+Executive Summary:
+The caller from [COMPANY_1] inquired about the liability and policy details for a claim involving [POLICYHOLDER_1]. The discussion focused on establishing the relevant insurer and the specifics of the policy coverage.
+- Caller verified details of the policyholder and incident.
+- Discussed the involvement of a dog and the personal liability cover under the household policy.
+- Clarified that the dog is not classified as dangerous.
+- Caller mentioned the need for policy wording to determine any exclusions or endorsements.
+- Agreed to send an email confirming their interest and involvement.
+
+Next Steps:
+[INSURANCE_COMPANY_1]: Await email confirmation from the caller and review the policy wording to determine any involvement.
+Other: Caller to send an email confirming their interest and involvement in the case.
+
+Liability Summary:
+The caller sought to clarify the liability involving a dog owned by the policyholder. It was established that the dog is not dangerous, and the caller mentioned that the household policy provides personal liability cover. The caller indicated that there might be a need to consider the policyholder as a co-defendant due to separate policyholders.
+
+Negotiation Summary:
+The caller and I discussed the need for policy wording to determine any exclusions or endorsements. The caller agreed to send an email confirming their interest and involvement in the case.

@@ -1,0 +1,46 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_3]
+Transcript Start Time:	[DATE_4] [TIME_5] ([TIMEZONE_3])
+Transcript End Time:	[DATE_4] [TIME_6] ([TIMEZONE_3])
+Transcript Duration:	03:09
+Direction:	Inbound
+Internal Participant(s):	[AGENT_3], [AGENT_4]
+External Participant(s):	[PHONE_2]
+
+Date/Time	Participant Type	Participant	Text
+00:01	Internal	[AGENT_4]	Hello [AGENT_4_FIRST] speaking, How can I help?
+00:05	External	[PHONE_2]	Hello [AGENT_4_FIRST], my name is [CALLER_3]. My son sent an engineer's report in. Yes, this morning. I just wondered if.
+00:13	Internal	[AGENT_4]	Okay,
+00:14	Internal	[AGENT_4]	no. … can give you a reference number. Is it go?
+00:17	External	[PHONE_2]	It's [CLAIM_NUMBER_3].
+00:20	Internal	[AGENT_4]	A one … No worries, I'll have a
+00:25	Internal	[AGENT_4]	t for tango, a for alpha, b for Bravo.
+00:28	External	[PHONE_2]	… for tango, a for … b for Bravo.
+00:32	Internal	[AGENT_4]	… me one second.
+00:38	Internal	[AGENT_4]	Hold on … second. It's not bringing up for me. So I
+00:44	External	[PHONE_2]	T for tango, a for indigo, b for bravo, t … [CLAIM_NUMBER_3_SUFFIX].
+00:46	Internal	[AGENT_4]	Yeah,
+00:49	Internal	[AGENT_4]	I Okay, yes, got I sorry about that. … what's going on this morning?
+00:53	External	[PHONE_2]	…
+00:57	Internal	[AGENT_4]	Alright, can you confirm for me your son's name address and there for me?
+01:02	External	[PHONE_2]	[POLICYHOLDER_4] [ADDRESS_2].
+01:08	Internal	[AGENT_4]	Oh, perfect.
+01:11	Internal	[AGENT_4]	… authorized and all that, perfect. Yes, you've got the engineer report that.
+01:17	Internal	[AGENT_4]	Just see if it's chemo.
+01:22	Internal	[AGENT_4]	… return … today.
+01:25	External	[PHONE_2]	Yeah its Fx
+01:25	Internal	[AGENT_4]	And this is just for us to get it back on cover.
+01:28	External	[PHONE_2]	Yeah.
+01:29	Internal	[AGENT_4]	Okay,
+01:30	Internal	[AGENT_4]	let me see who was dealing with. What I'll do is, I'll get this referred back to the engineer who was dealing with your case, and then they'll be able to confirm if it is okay to go back on cover.
+01:40	External	[PHONE_2]	They just send me your name or?
+01:40	Internal	[AGENT_4]	…
+01:43	Internal	[AGENT_4]	yeah, They'll let us. They'll let us know, and then we can come back to you then. Hmm, so I'll get your ha to get that done for you today, and then it shouldn't take to know.
+01:50	External	[PHONE_2]	Yeah, …
+01:53	External	[PHONE_2]	I think they normally email the … like kind … so that they must have his email normally
+01:58	Internal	[AGENT_4]	Yes we do have a email for [POLICYHOLDER_4_FIRST] there it we have [EMAIL_1]
+02:04	External	[PHONE_2]	…
+02:06	Internal	[AGENT_4]	Yes, no worries at all. I will pick your hand and get them to get that done for you. And let you, no, … by
+02:12	External	[PHONE_2]	Lovely, thank.
+02:13	Internal	[AGENT_4]	Alright, no worries at all. Thank you.
+02:16	Internal	[AGENT_4]	Thank you. Bye bye.

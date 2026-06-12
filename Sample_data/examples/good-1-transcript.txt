@@ -1,0 +1,72 @@
+Interaction Type:	Call
+Interaction ID:	[CONVERSATION_ID_1]
+Transcript Start Time:	[DATE_1] 4:53:19 PM (UTC+00:00)
+Transcript End Time:	[DATE_1] 5:01:18 PM (UTC+00:00)
+Transcript Duration:	07:59
+Direction:	Inbound
+Internal Participant(s):	[AGENT_1], [AGENT_2]
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:03	Internal	[AGENT_1]	Hello speaking, how can I help?
+00:07	External	Unavailable	Hi, good afternoon. This is [CALLER_1] calling from [INSURANCE_COMPANY_1]. This call is in relation to remote team. Can I give you a reference number there for you?
+00:15	Internal	[AGENT_1]	Yes, go ahead.
+00:16	External	Unavailable	And before I could process further, I would like to … all recorded for training quality con, and record purposes. Will that be okay?
+00:22	Internal	[AGENT_1]	Yeah, no problem.
+00:23	External	Unavailable	And your reference number, there is [CLAIM_NUMBER_1]
+00:28	External	Unavailable	five two
+00:31	External	Unavailable	415.
+00:37	Internal	[AGENT_1]	Don't bother … I FedEx. You through.
+00:41	External	Unavailable	Thank you.
+00:46	Internal	[AGENT_2]	Hi you for the [AGENT_2] here in the [COMPANY_1] Claims Team. How can I help?
+00:49	External	Unavailable	Hi, good afternoon. This is [CALLER_1] calling from [INSURANCE_COMPANY_1]. This call is in relation to remote claim. Uh, can I give you a reference number there for you?
+00:58	Internal	[AGENT_2]	Definitely.
+01:00	External	Unavailable	And sorry.
+01:02	Internal	[AGENT_2]	Of course, yeah. Call it out, yeah.
+01:03	External	Unavailable	And before I could proceed further, I would like to … all calls are recorded for training. Call to control and record purposes. Will that be okay?
+01:10	Internal	[AGENT_2]	Of course.
+01:11	External	Unavailable	And the reference number, there is [CLAIM_NUMBER_1].
+01:14	Internal	[AGENT_2]	Yeah.
+01:16	External	Unavailable	[CLAIM_NUMBER_SUFFIX_1].
+01:19	Internal	[AGENT_2]	Loading some details In, I guess wireless is loading. Can I get a couple of things off you just to confirm your identity and for data protection? If, what, what's the name of hmm, of either client and the date of law?
+01:24	External	Unavailable	Sure,
+01:26	External	Unavailable	yes.
+01:33	External	Unavailable	Uh, the client's name and the data loss, right?
+01:37	Internal	[AGENT_2]	Our plan, your plan and the date of loss, please?
+01:40	External	Unavailable	Our client's name is [COMPANY_1]. And your client's name is [COMPANY_2]. And the date of loss was on [DATE_2].
+01:49	Internal	[AGENT_2]	Perfect, thank. And you, And how can I help?
+01:52	External	Unavailable	I … see that my colleague received an email from uh [PERSON_1].
+01:58	Internal	[AGENT_2]	Yeah.
+01:58	External	Unavailable	Saying that the payment has been issued by E, can I have an update on that is uh, that been released or issued back to us because we haven't received as of not just having a update on that.
+02:13	Internal	[AGENT_2]	No, hmm, it's definitely gone. It cleared on [DATE_3] After,
+02:19	Internal	[AGENT_2]	let's see what time after 4:00 that means it should be on the account yesterday. And it should have been sent by bank transfer. And she put on the reference. The, I think it's your claim number. [REFERENCE_NUMBER_1].
+02:26	External	Unavailable	S T.
+02:36	External	Unavailable	So, you had sent the payment to policy holder to [INSURANCE_COMPANY_2].
+02:41	Internal	[AGENT_2]	Oh, to [INSURANCE_COMPANY_2] directly to as a bank account, yeah.
+02:43	External	Unavailable	Okay, fine. Uh, yeah. Could you please confirm the uh bank? I mean, I number if you don't mind.
+02:53	Internal	[AGENT_2]	Of course, so it's the usual one here. It's [IBAN_1].
+02:56	External	Unavailable	One second. One second, I will just take it out.
+02:58	Internal	[AGENT_2]	Oh,
+02:59	Internal	[AGENT_2]	of course I have no problem.
+03:02	External	Unavailable	One moment.
+03:03	Internal	[AGENT_2]	Yeah, no worries.
+03:05	External	Unavailable	… yes, go ahead.
+03:07	Internal	[AGENT_2]	So, [IBAN_1].
+03:10	External	Unavailable	Uh huh.
+03:10	Internal	[AGENT_2]	[IBAN_CODE_1].
+03:12	External	Unavailable	Uh hmm.
+03:12	Internal	[AGENT_2]	[IBAN_NUMBERS_1].
+03:13	External	Unavailable	Uh hmm,
+03:15	External	Unavailable	uh huh.
+03:20	External	Unavailable	Okay, And the … number, please?
+03:22	Internal	[AGENT_2]	No, I don't have that one. Uh, but all you need technically is after a B K, it's … quite high.
+03:24	External	Unavailable	Okay, perfect.
+03:26	External	Unavailable	Yeah, that's fine. That's fine. And can I have your full name for Fs, please?
+03:32	Internal	[AGENT_2]	Of course, yes. It's [AGENT_2_FULL_NAME].
+03:35	External	Unavailable	Could you just spell it that for me for dont mind
+03:35	Internal	[AGENT_2]	Its [AGENT_2_FIRST] an
+03:37	Internal	[AGENT_2]	definitely [SPELLING_1].
+03:41	External	Unavailable	And the surname?
+03:42	Internal	[AGENT_2]	Is, uh, more or bur it's [SPELLING_2].
+03:47	External	Unavailable	Perfect, thank you [AGENT_2]. Thanks for your help. Have a nice day. Bye.
+03:51	Internal	[AGENT_2]	Thank you. Bye bye.

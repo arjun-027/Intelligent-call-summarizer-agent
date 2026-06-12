@@ -1,0 +1,36 @@
+Interaction Type:	Call
+Interaction ID:	EVAL-006
+Transcript Start Time:	2025-01-10 15:22:17 (UTC+00:00)
+Transcript End Time:	2025-01-10 15:31:51 (UTC+00:00)
+Transcript Duration:	09:34
+Direction:	Inbound
+Internal Participant(s):	Niamh O'Sullivan
+External Participant(s):	01 677 8899
+
+Date/Time	Participant Type	Participant	Text
+00:03	Internal	Niamh O'Sullivan	Good morning, Pemberton Insurance claims, Niamh speaking.
+00:07	External	01 677 8899	Morning Niamh, this is Paul Kavanagh calling from Henderson Insurance.
+00:11	Internal	Niamh O'Sullivan	Hello Paul, how can I help?
+00:13	External	01 677 8899	We received a letter from yourselves regarding one of our policyholders in connection with an incident. Your reference is PI-2024-71123.
+00:23	Internal	Niamh O'Sullivan	OK, let me pull that up. Just for verification, can you confirm the name of your policyholder?
+00:28	External	01 677 8899	Yes, our policyholders are Mr and Mrs Derek and Susan Farrell. They own the dog â€¦ involved in the incident.
+00:36	Internal	Niamh O'Sullivan	Thank you. And the incident date?
+00:38	External	01 677 8899	3rd of October 2024.
+00:41	Internal	Niamh O'Sullivan	That's correct. Yes, we wrote to your clients asking about their insurance position.
+00:46	External	01 677 8899	Right. So just to understand the situation - your policyholder, a Mr... let me see... Brian Nolan, was walking the Farrells' dog when it bit someone, is that right?
+00:58	Internal	Niamh O'Sullivan	Yes, that's our understanding. Mr Nolan is a neighbour who was dog-sitting at the time.
+01:04	External	01 677 8899	OK. So I wanted to clarify what you're looking for. The Farrells have a household policy with us which includes personal liability cover.
+01:14	Internal	Niamh O'Sullivan	That's what we wanted to establish. We're trying to determine if there's any dual insurance situation here or how liability might be â€¦ apportioned.
+01:23	External	01 677 8899	Well, from our perspective, the dog was in your policyholder's care and control at the time. The Farrells weren't even there.
+01:31	Internal	Niamh O'Sullivan	I understand your position. But as the dog owners, there may be some liability that attaches regardless of who was walking the dog at the time.
+01:40	External	01 677 8899	That's something we'd need to look at. I'm not in a position to admit anything on behalf of our client today.
+01:46	Internal	Niamh O'Sullivan	Of course. We're really just trying to understand the insurance position at this stage.
+01:51	External	01 677 8899	OK. Well, I can confirm the Farrells do have liability cover. There's no dangerous dog exclusion. But we'll need to take instructions from them on how they want to â€¦ proceed.
+02:02	Internal	Niamh O'Sullivan	That's helpful, thank you. Would you be able to send us confirmation in writing?
+02:07	External	01 677 8899	I can send you a letter confirming we're on risk and investigating. But I'll need to speak to the Farrells first.
+02:14	Internal	Niamh O'Sullivan	That would be great. Our address is on the letter we sent.
+02:18	External	01 677 8899	OK, I'll be in touch.
+02:20	Internal	Niamh O'Sullivan	Thanks Paul. Is there anything else?
+02:22	External	01 677 8899	No, that's all for now.
+02:24	Internal	Niamh O'Sullivan	OK, goodbye.
+02:25	External	01 677 8899	Bye.

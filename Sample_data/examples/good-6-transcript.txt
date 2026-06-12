@@ -1,0 +1,81 @@
+Interaction Type:	Call
+Interaction ID:	[INTERACTION_ID_1]
+Transcript Start Time:	[DATE_1] [TIME_1] (UTC+01:00)
+Transcript End Time:	[DATE_1] [TIME_2] (UTC+01:00)
+Transcript Duration:	10:42
+Direction:	Inbound
+Internal Participant(s):	[AGENT_1]
+External Participant(s):	[PHONE_1]
+
+Date/Time	Participant Type	Participant	Text
+00:04	Internal	[AGENT_1]	You're through the Acces [AGENT_1] speaking. How can I help?
+00:07	External	[PHONE_1]	Hi, hi. Yeah, I'm just looking at … good new vehicle. Try to do it online just so it just … the call up.
+00:14	Internal	[AGENT_1]	Right, no problem. Your policy details of auto populated for data protection. Can I get your name, address, and date of birth?
+00:22	External	[PHONE_1]	[CUSTOMER_1] [DATE_2], and it's [ADDRESS_1].
+00:28	Internal	[AGENT_1]	Oh, that's perfect. Let's have a look here.
+00:31	Internal	[AGENT_1]	Right, so you have a temporary car … cover at the minute, isn't that right?
+00:32	External	[PHONE_1]	Okay,
+00:35	External	[PHONE_1]	yeah, that's right, yeah.
+00:36	Internal	[AGENT_1]	… that's why it's not letting you quoted online because of that temporary cover being on there, so.
+00:42	External	[PHONE_1]	Okay, okay.
+00:43	Internal	[AGENT_1]	What I'll need to do is, I'll need to quote this change of vehicle, basically from when the temporary cover has expired.
+00:50	External	[PHONE_1]	Oh yeah, no, that's … percent, yeah.
+00:51	Internal	[AGENT_1]	So
+00:52	Internal	[AGENT_1]	let me just see.
+00:54	External	[PHONE_1]	Think it's, no, it's tomorrow tomorrow. It expires, yeah.
+01:00	Internal	[AGENT_1]	At [TIME_3], right, okay, let's see. So if I go one from?
+01:02	External	[PHONE_1]	Yeah.
+01:14	Internal	[AGENT_1]	The [DATE_3] of Okay,
+01:33	Internal	[AGENT_1]	what's the registration of the car you're looking at?
+01:36	External	[PHONE_1]	It's [VEHICLE_REG_1]
+01:41	External	[PHONE_1]	[VEHICLE_REG_1_CONT]
+01:43	Internal	[AGENT_1]	So it's p for papa, o for oscar, seven zero r for romeo, n for november v for Victor.
+01:51	External	[PHONE_1]	Yeah, okay. It should come up by a class.
+01:52	Internal	[AGENT_1]	No problem,
+01:56	Internal	[AGENT_1]	it's … two fifty twenty twenty Hybrid.
+02:00	External	[PHONE_1]	Yeah, that's one.
+02:01	Internal	[AGENT_1]	What's the car value …
+02:04	External	[PHONE_1]	[AMOUNT_1].
+02:08	Internal	[AGENT_1]	Is it standard right hand drive
+02:10	External	[PHONE_1]	Yeah.
+02:12	Internal	[AGENT_1]	Any modification?
+02:13	External	[PHONE_1]	No.
+02:16	Internal	[AGENT_1]	Where would you keep it overnight?
+02:18	External	[PHONE_1]	I in the driveway at home.
+02:20	Internal	[AGENT_1]	No worries.
+02:21	External	[PHONE_1]	…
+02:23	Internal	[AGENT_1]	Would you be the owner and register keeper of the car?
+02:26	External	[PHONE_1]	Yes, I will. Me, yeah.
+02:28	Internal	[AGENT_1]	And you'd be happy enough to keep this car comprehensive cover, see as before.
+02:32	External	[PHONE_1]	Yeah, yeah.
+02:34	Internal	[AGENT_1]	No problem.
+02:36	Internal	[AGENT_1]	Right, so with this car being a Group 28, it is just a bit higher than a normally is for someone on a 1 year no cleans bonus.
+02:45	External	[PHONE_1]	Huh.
+02:46	Internal	[AGENT_1]	So what we have to do is called a 25% Russ cde. So basically, this car is
+02:51	External	[PHONE_1]	Huh.
+02:52	Internal	[AGENT_1]	Would have been a GP 28. It is a bit of a risk to ensure on your policy because of your age, your bonus. So that's risk lobe just needs applied. So I'll get you a quote to your no, based on that being applied.
+02:57	External	[PHONE_1]	Yeah,
+03:00	External	[PHONE_1]	100%.
+03:11	Internal	[AGENT_1]	You will be able to get insured on it. It's just gonna be a bit more expensive to actually get it insured, if that makes sense.
+03:17	External	[PHONE_1]	Yeah, yeah, no, I've I've had a couple of cars refused before with the with the … blow.
+03:22	Internal	[AGENT_1]	So you know what's that's about them basically?
+03:24	External	[PHONE_1]	Yeah,
+03:25	External	[PHONE_1]	yeah.
+03:27	Internal	[AGENT_1]	So once we apply this load now to actually change the car from tomorrow that I've quoted it because of the temporary changer on at the minute.
+03:36	External	[PHONE_1]	Huh.
+03:36	Internal	[AGENT_1]	So between tomorrow to your renewal, which is the [DATE_4], it would be a one off charge of [AMOUNT_2] just to put that [VEHICLE_MAKE_1] on cover until [MONTH_1].
+03:49	External	[PHONE_1]	Until [MONTH_1]. Okay.
+03:51	Internal	[AGENT_1]	So you can either pay that off front if you wanted. That means your last instalment just stays the same amount. Or if you add it on to your last instalment you will be paying from [AMOUNT_3] That's what you're on at the minute. And then your last payment is [AMOUNT_4]
+03:51	External	[PHONE_1]	Okay,
+03:54	External	[PHONE_1]	huh,
+03:57	External	[PHONE_1]	yeah,
+04:00	External	[PHONE_1]	huh,
+04:04	External	[PHONE_1]	huh,
+04:09	External	[PHONE_1]	okay. Okay. Alrighty. Okay. Well, I will keep that in mind, and I will haven't haven't exactly decided who's gonna buy a yet that insurance was gonna be the decide so I'll have a we think about it and I'll get back to you.
+04:23	Internal	[AGENT_1]	Hi, no worries. I'll keep the quote details saved here for you In the meantime, anyways,
+04:24	External	[PHONE_1]	Alright,
+04:26	External	[PHONE_1]	yes please. If you can, that would be perfect. Thank you so much. Thank you.
+04:30	Internal	[AGENT_1]	No worries. Is there anything else I can help with?
+04:31	External	[PHONE_1]	Alright, cheers. Nope, that's me. Thank you.
+04:33	Internal	[AGENT_1]	Not … [CUSTOMER_1]. See later.
+04:34	External	[PHONE_1]	Cheers, bye bye bye bye bye bye bye.

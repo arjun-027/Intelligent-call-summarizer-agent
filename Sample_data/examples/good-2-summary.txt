@@ -1,0 +1,17 @@
+Subject:
+Vehicle damage claim settlement and repair arrangements
+
+Executive Summary:
+I called the customer to discuss their vehicle damage claim and the approved repair costs. The customer opted for the garage to invoice [COMPANY_1] directly for the repairs.
+• Reviewed and approved repair costs for the vehicle damage claim.
+• Approved repair amount is [AMOUNT_2], compared to the garage's quote of [AMOUNT_1].
+• Customer prefers the garage to invoice [COMPANY_1] directly for repairs.
+• Discussed car hire options during the repair period.
+
+Next Steps
+[COMPANY_1]: Send confirmation email to the customer regarding the approved repair costs and instructions for the garage to invoice [COMPANY_1] directly.
+Other: Customer to contact the garage to arrange the repair and inform [COMPANY_1] if a hire vehicle is needed during the repair period.
+
+Vehicle Damage:
+Vehicle Status: The repair amount approved is [AMOUNT_2], which is lower than the garage's quote of [AMOUNT_1].
+Car hire: If the garage cannot provide a hire vehicle during the two-day repair period, [COMPANY_1] can arrange a hire vehicle through [COMPANY_2].

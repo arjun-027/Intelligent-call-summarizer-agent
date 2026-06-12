@@ -1,0 +1,13 @@
+Subject:
+Customer reporting property damage
+
+Executive Summary:
+The customer called to report a hairline crack in the slate of their shed roof, which cannot be repaired and requires replacement. The customer received a quote of [AMOUNT_1] for the repair.
+• Customer noticed the crack over a week ago.
+• No water damage currently due to duct tape covering the crack.
+• [INSURANCE_COMPANY_1] will arrange an inspection by [COMPANY_1] within 24-48 hours.
+• No policy excess applies to this claim.
+
+Next Steps
+[INSURANCE_COMPANY_1]: Arrange inspection by [COMPANY_1] within 24-48 hours and send an email confirming the next steps.
+Other: Customer to await contact from [COMPANY_1] for inspection before proceeding with repairs.

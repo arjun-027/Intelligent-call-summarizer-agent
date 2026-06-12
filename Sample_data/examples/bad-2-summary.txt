@@ -1,0 +1,30 @@
+Caller: Unavailable, representative of a client (inbound)
+
+Subject:
+Query regarding repair estimate and payment
+
+Executive Summary:
+Caller queried the discrepancy between the agreed repair cost and the garage's new estimate, which was stated to be a cash price.
+
+- Caller states the garage provided a new estimate, claiming the initial was a cash price.
+- I confirmed the agreed repair cost was [AMOUNT_1].
+- I advised the caller to obtain the correct estimate from the garage and send it for review.
+
+Next Steps:
+ - [INSURANCE_COMPANY_1]: Review the new estimate once received.
+ - Other party: Obtain and send the correct estimate from the garage for review.
+
+Liability Summary: None
+
+Negotiation Summary: None
+
+Loss of Earnings: None
+
+Injury: None
+
+Vehicle Damage:
+    Vehicle Status: Caller states the car is not fixed and has issues with the window.
+    Towage: None
+    Car hire: None
+
+Property: None

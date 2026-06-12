@@ -1,0 +1,35 @@
+Interaction Type:	Call
+Interaction ID:	EVAL-004
+Transcript Start Time:	2025-01-09 14:33:41 (UTC+00:00)
+Transcript End Time:	2025-01-09 14:39:59 (UTC+00:00)
+Transcript Duration:	06:18
+Direction:	Inbound
+Internal Participant(s):	Connor Murphy
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	Connor Murphy	Good afternoon, Pemberton Insurance, Connor speaking.
+00:05	External	Unavailable	Hi Connor, it's Siobhan Daly here. I'm trying to get through to Michael in the motor claims team but the line keeps going to voicemail.
+00:13	Internal	Connor Murphy	I'm sorry about that, Siobhan. Michael's in meetings this afternoon. Can I help at all or take a message?
+00:19	External	Unavailable	I really need to speak to him about a claim we're handling. Reference PI-2024-92847.
+00:27	Internal	Connor Murphy	Let me just verify - can you confirm the policyholder name?
+00:30	External	Unavailable	Yes, it's Brennan, Sean Brennan.
+00:33	Internal	Connor Murphy	And your company name?
+00:35	External	Unavailable	I'm from Quinn Direct, we're the third party insurers.
+00:39	Internal	Connor Murphy	OK, I can see the file. What's the query about?
+00:42	External	Unavailable	We've sent over the repair invoices twice now and haven't had any acknowledgment. It's been three weeks and our client is getting quite â€¦ frustrated.
+00:51	Internal	Connor Murphy	I apologise for that. Let me check the system... I can see one invoice received on the 5th of January for €4,200. Was there another one?
+01:01	External	Unavailable	Yes, there should be a supplementary invoice for €890 for additional parts that were needed.
+01:07	Internal	Connor Murphy	I'm not seeing that one on the system. Could you resend it?
+01:11	External	Unavailable	Yes, I'll do that now. What email should I send it to?
+01:14	Internal	Connor Murphy	Send it to motorclaims@pemberton.ie and put the reference number in the subject line.
+01:20	External	Unavailable	OK, motorclaims@pemberton.ie. Got it.
+01:24	Internal	Connor Murphy	I'll flag this for Michael and ask him to call you back once he's out of meetings. What's the best number?
+01:30	External	Unavailable	Can he call me on my mobile? It's 087 234 5618.
+01:36	Internal	Connor Murphy	087 234 5618. And just in case he needs to email you?
+01:41	External	Unavailable	It's siobhan.daly@quinndirect.ie
+01:45	Internal	Connor Murphy	Perfect. I'll make sure he gets the message today.
+01:48	External	Unavailable	Thanks Connor, I appreciate it.
+01:50	Internal	Connor Murphy	No problem. Have a good afternoon.
+01:52	External	Unavailable	You too, bye.
+01:53	Internal	Connor Murphy	Bye.

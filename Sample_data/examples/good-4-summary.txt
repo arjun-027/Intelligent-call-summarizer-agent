@@ -1,0 +1,16 @@
+Caller: Policyholder, inbound
+
+Subject:
+Query about vehicle repair status
+
+Executive Summary:
+The policyholder called to inquire about the status of their vehicle repair following an assessor's visit.
+
+- Policyholder provided policy number and vehicle registration.
+- Confirmed vehicle is drivable and located in [LOCATION_1].
+- Closest repair centre identified at [LOCATION_3].
+- Arrangements made for the repair centre to contact the policyholder to schedule an estimate.
+
+Next Steps:
+ - [COMPANY_1]: Contact repair centre to arrange estimate and follow-up with policyholder.
+ - Other party: Policyholder to await contact from the repair centre for scheduling.

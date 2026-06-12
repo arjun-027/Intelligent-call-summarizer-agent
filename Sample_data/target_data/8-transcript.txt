@@ -1,0 +1,34 @@
+Interaction Type:	Call
+Interaction ID:	EVAL-008
+Transcript Start Time:	2025-01-11 11:28:44 (UTC+00:00)
+Transcript End Time:	2025-01-11 11:34:39 (UTC+00:00)
+Transcript Duration:	05:55
+Direction:	Inbound
+Internal Participant(s):	Orla Keane
+External Participant(s):	Unavailable
+
+Date/Time	Participant Type	Participant	Text
+00:02	Internal	Orla Keane	Pemberton Insurance claims, Orla speaking.
+00:05	External	Unavailable	Hi, I was in an accident last week and I need to check on my claim.
+00:09	Internal	Orla Keane	Of course. Can I have your name and claim reference?
+00:12	External	Unavailable	Martin Doyle. The reference is PI-2024-90156.
+00:17	Internal	Orla Keane	Thank you Martin. And just for security, your date of birth please?
+00:21	External	Unavailable	4th of April 1982.
+00:24	Internal	Orla Keane	Perfect. I can see your claim here for the collision on January 2nd. How can I help?
+00:30	External	Unavailable	I wanted to check if the engineer has been out to look at the car yet. I hurt my back in the crash so I've not been able to â€¦ drive to check on it myself.
+00:39	Internal	Orla Keane	I'm sorry to hear you were injured. Yes, I can see the engineer attended the garage on the 6th of January. They've assessed the damage.
+00:48	External	Unavailable	OK, and what's the verdict?
+00:50	Internal	Orla Keane	The repair estimate has come in at €6,780. Given the age and value of the vehicle, it's been deemed economical to repair rather than write off.
+01:00	External	Unavailable	Right, that's good I suppose. How long will the repairs take?
+01:04	Internal	Orla Keane	The garage has estimated 8 working days once they receive the parts. There's a 3 day wait on one of the panels â€¦ apparently.
+01:12	External	Unavailable	OK. And I'm paying for a hire car at the moment out of my own pocket. Will I get that back?
+01:18	Internal	Orla Keane	Yes, you should be able to claim that back from the third party insurer since they've admitted liability. Do you have receipts?
+01:25	External	Unavailable	Yeah, I've been keeping everything.
+01:27	Internal	Orla Keane	Perfect. Send those through to us and we can include them when we pursue recovery.
+01:32	External	Unavailable	Grand. Where do I send them?
+01:34	Internal	Orla Keane	You can email them to claims@pemberton.ie with your reference number in the subject.
+01:40	External	Unavailable	OK, I'll do that.
+01:42	Internal	Orla Keane	Is there anything else I can help with?
+01:44	External	Unavailable	No, that's grand. Thanks.
+01:46	Internal	Orla Keane	Take care Martin. Bye.
+01:47	External	Unavailable	Bye.
