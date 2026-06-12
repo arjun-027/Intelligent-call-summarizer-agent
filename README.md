@@ -358,36 +358,76 @@ uv run python -c "import call_summarizer; print('OK')"
 
 ## Configuration
 
-Create a `.env` file in the project root (already in `.gitignore` — never committed):
+A `.env.example` file is included in the repository with every variable documented and placeholder values. Copy it and fill in your keys:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env` — it is already in `.gitignore` and will never be committed:
 
 ```env
 # .env
-GROQ_API_KEY=gsk_...          # Required — get from console.groq.com
-OUTPUT_DIR=Output_data         # Optional — defaults to Output_data/
-LOG_LEVEL=INFO                 # Optional — DEBUG / INFO / WARNING / ERROR
+GROQ_API_KEY=gsk_...                              # Required
+LANGSMITH_TRACING=true                            # Optional — set false to disable
+LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
+LANGSMITH_API_KEY=lsv2_pt_...                     # Optional
+LANGSMITH_PROJECT=Call summarizer agent           # Optional
 ```
 
 The application will fail to start if `GROQ_API_KEY` is missing or empty.
+
+### LangSmith Observability
+
+LangSmith is the observability platform built into the LangChain/LangGraph stack. When the four `LANGSMITH_*` variables are set, **every LangGraph node execution and every LLM call is automatically traced** — no code changes required.
+
+What you see in the LangSmith dashboard for each request:
+
+| Trace level | What is captured |
+|-------------|-----------------|
+| LangGraph run | Full pipeline: load → summarize → save node sequence, total latency |
+| LLM call | System prompt, human message, raw LLM response, token counts |
+| Retries | Each retry attempt is a separate child trace with its own input/output |
+
+**Disabling tracing** without removing the keys:
+
+```env
+LANGSMITH_TRACING=false
+```
+
+The startup banner printed by `uv run run.py` confirms whether tracing is active so you know before the first request is processed.
 
 ---
 
 ## Running the Application
 
-### 1. Streamlit UI (recommended for operators)
+### 1. Full stack — API + UI in one command (recommended)
 
-Start the API server first, then the Streamlit frontend in a second terminal:
+`run.py` starts both the FastAPI backend and the Streamlit frontend as
+managed sub-processes. It also calls `load_dotenv()` before spawning them,
+so LangSmith tracing is active from the very first LLM call in each process.
 
 ```bash
-# Terminal 1 — API server
-uv run uvicorn api.app:app --reload --port 8000
-
-# Terminal 2 — Streamlit UI
-uv run streamlit run ui/app.py
+uv run run.py
 ```
 
-Open [http://localhost:8501](http://localhost:8501) in your browser.
+Expected startup output:
 
-### 2. FastAPI only (for programmatic access)
+```
+  Starting Call Summariser Agent...
+  LangSmith → ENABLED  project='Call summarizer agent'  endpoint=https://eu.api.smith.langchain.com
+
+  FastAPI   → http://127.0.0.1:8000
+  API Docs  → http://127.0.0.1:8000/docs
+  Waiting 2s for API to be ready...
+  Streamlit → http://localhost:8501
+
+  Press Ctrl+C to stop all services.
+```
+
+Open [http://localhost:8501](http://localhost:8501) in your browser. Press `Ctrl+C` to stop both services cleanly.
+
+### 2. FastAPI only (for programmatic / API-only access)
 
 ```bash
 uv run uvicorn api.app:app --reload --port 8000

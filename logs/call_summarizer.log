@@ -844,3 +844,57 @@ Note: The conditional sections (Liability, Negotiation, Vehicle Damage, Injury, 
 2026-06-12 13:26:33 | INFO     | call_summarizer.service._log_generated_summary | Summary accepted | file: 1-transcript.txt | attempt: 2 | chars: 930 | warnings: 0
 2026-06-12 13:26:33 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for 1-transcript.txt — 930 chars, passed: True, errors: 0, warnings: 0
 2026-06-12 13:28:45 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:16:38 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:16:38 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:16:38 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:16:38 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:16:38 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:17:36 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: 2-transcript.txt, content-type: text/plain
+2026-06-12 15:17:36 | INFO     | call_summarizer.input_guardrails._audit_pii | [PII AUDIT] 2-transcript.txt — categories detected: email_address
+2026-06-12 15:17:36 | INFO     | call_summarizer.service.generate_summary_from_content | Generating summary | file: 2-transcript.txt | transcript: 2354 chars
+2026-06-12 15:17:37 | INFO     | httpx._send_single_request | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-12 15:17:37 | INFO     | call_summarizer.summarizer.generate_summary | Summary generated — 622 chars
+2026-06-12 15:17:37 | INFO     | call_summarizer.guardrails.run_guardrails | Guardrails complete — passed: False, errors: 1, warnings: 0
+2026-06-12 15:17:37 | INFO     | call_summarizer.service._log_generated_summary | === SUMMARY | file: 2-transcript.txt | attempt: 1/3 | chars: 622 | guardrails: FAILED ===
+------------------------------------------------------------
+Caller: Mrs Patricia Gallagher, policyholder, inbound
+
+Subject:
+Follow-up on vehicle claim PI-2024-81156.
+
+Executive Summary:
+James from Pemberton Insurance called to inform Mrs Gallagher that her vehicle claim had been approved for repair costs of €2,340. She opted for payment to be made directly to the garage. James also offered a courtesy car for up to 3 days during the repair period, which Mrs Gallagher accepted. A confirmation email with details will be sent to patriciagallagher@email.ie.
+
+Next Steps:
+Pemberton Insurance: Arrange payment with the garage and provide a courtesy car for up to 3 days.
+
+Other: None
+------------------------------------------------------------
+2026-06-12 15:17:37 | ERROR    | call_summarizer.service._log_generated_summary |   [GUARDRAIL][ERROR][EXECUTIVE_SUMMARY_NO_BULLETS] Executive Summary has no bullet points. The schema requires key facts listed as '- bullet' lines after the paragraph.
+2026-06-12 15:17:37 | WARNING  | call_summarizer.service.generate_summary_from_content | Guardrail errors on attempt 1: ['EXECUTIVE_SUMMARY_NO_BULLETS'] — retrying
+2026-06-12 15:17:37 | INFO     | call_summarizer.service.generate_summary_from_content | Retry attempt 1/2 with corrective addendum
+2026-06-12 15:17:38 | INFO     | httpx._send_single_request | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-12 15:17:38 | INFO     | call_summarizer.summarizer.generate_summary | Summary generated — 911 chars
+2026-06-12 15:17:38 | INFO     | call_summarizer.guardrails.run_guardrails | Guardrails complete — passed: True, errors: 0, warnings: 0
+2026-06-12 15:17:38 | INFO     | call_summarizer.service._log_generated_summary | === SUMMARY | file: 2-transcript.txt | attempt: 2/3 | chars: 911 | guardrails: PASSED ===
+------------------------------------------------------------
+Caller: Mrs Patricia Gallagher, Policyholder, Inbound
+
+Subject:
+Follow-up on vehicle claim PI-2024-81156 for approved repair costs.
+
+Executive Summary:
+James O'Brien from Pemberton Insurance called Mrs Patricia Gallagher to inform her that her vehicle claim PI-2024-81156 had been approved for repair costs. The approved amount is €2,340. Mrs Gallagher prefers to have the garage paid directly once the repairs are complete. James offered a courtesy car for 3 days if needed and will arrange payment with the garage once the repair date is confirmed. He also offered to set up a courtesy car through Pemberton's partner.
+
+- The claim reference number is PI-2024-81156.
+- The approved repair cost is €2,340.
+- Mrs Gallagher prefers direct payment to the garage.
+
+Next Steps:
+Pemberton Insurance: Arrange payment with the garage once the repair date is confirmed, and set up a courtesy car if needed.
+
+Other: None
+------------------------------------------------------------
+2026-06-12 15:17:38 | INFO     | call_summarizer.service._log_generated_summary | Summary accepted | file: 2-transcript.txt | attempt: 2 | chars: 911 | warnings: 0
+2026-06-12 15:17:38 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for 2-transcript.txt — 911 chars, passed: True, errors: 0, warnings: 0
+2026-06-12 15:18:11 | INFO     | api.app._lifespan | FastAPI shutdown

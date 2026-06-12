@@ -39,6 +39,36 @@ class Config:
     rate_limit_delay_seconds: float
 
 
+def _log_langsmith_status() -> None:
+    """Log whether LangSmith tracing is active so operators can confirm observability.
+
+    LangSmith tracing is activated automatically by LangChain/LangGraph when the
+    LANGSMITH_TRACING environment variable is set to ``true``.  This function
+    reads the same variables and writes a clear INFO or WARNING log line so the
+    startup output is unambiguous about whether traces are being sent.
+
+    Called automatically at the end of :func:`load_config`.
+    """
+    tracing = os.getenv("LANGSMITH_TRACING", "false").lower()
+    if tracing in ("true", "1", "yes"):
+        project = os.getenv("LANGSMITH_PROJECT", "<default>")
+        endpoint = os.getenv("LANGSMITH_ENDPOINT", "https://api.smith.langchain.com")
+        api_key_set = bool(os.getenv("LANGSMITH_API_KEY"))
+        logger.info(
+            "LangSmith tracing ENABLED — project: %r, endpoint: %s, api_key: %s",
+            project,
+            endpoint,
+            "set" if api_key_set else "MISSING — traces will not be sent",
+        )
+        if not api_key_set:
+            logger.warning(
+                "LANGSMITH_API_KEY is not set. "
+                "Add it to .env or set LANGSMITH_TRACING=false to suppress this warning."
+            )
+    else:
+        logger.info("LangSmith tracing DISABLED (set LANGSMITH_TRACING=true to enable)")
+
+
 def load_config() -> Config:
     """Load and validate application configuration from environment variables.
 
@@ -77,4 +107,5 @@ def load_config() -> Config:
         config.input_dir,
         config.output_dir,
     )
+    _log_langsmith_status()
     return config

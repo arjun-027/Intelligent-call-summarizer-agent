@@ -4,14 +4,24 @@ Starts the FastAPI backend (uvicorn) and the Streamlit frontend as two
 sub-processes and blocks until either exits or Ctrl+C is pressed, at which
 point both processes are gracefully terminated.
 
+LangSmith observability is activated automatically when LANGSMITH_TRACING=true
+is set in .env.  load_dotenv() is called here — before Popen — so that both
+child processes inherit the LangSmith environment variables from the start,
+ensuring traces are captured from the very first LLM call in each process.
+
 Usage::
 
     uv run run.py
 """
 
+import os
 import subprocess
 import sys
 import time
+
+# Must be called before Popen so child processes inherit the LangSmith vars.
+from dotenv import load_dotenv
+load_dotenv()
 
 _API_HOST = "127.0.0.1"
 _API_PORT = 8000
@@ -79,9 +89,21 @@ def _terminate_processes(*processes: subprocess.Popen) -> None:
             proc.kill()
 
 
+def _print_langsmith_status() -> None:
+    """Print whether LangSmith tracing is active so the operator can confirm observability."""
+    tracing = os.getenv("LANGSMITH_TRACING", "false").lower()
+    if tracing in ("true", "1", "yes"):
+        project = os.getenv("LANGSMITH_PROJECT", "<default>")
+        endpoint = os.getenv("LANGSMITH_ENDPOINT", "https://api.smith.langchain.com")
+        print(f"  LangSmith → ENABLED  project={project!r}  endpoint={endpoint}")
+    else:
+        print("  LangSmith → DISABLED (set LANGSMITH_TRACING=true in .env to enable)")
+
+
 def main() -> None:
     """Launch both services and wait until interrupted."""
     print("\n  Starting Call Summariser Agent…")
+    _print_langsmith_status()
 
     api_proc = _start_api_server()
     print(f"\n  FastAPI   → http://{_API_HOST}:{_API_PORT}")
