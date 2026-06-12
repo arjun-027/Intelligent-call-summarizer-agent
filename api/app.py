@@ -17,7 +17,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from call_summarizer.config import load_config
-from call_summarizer.logging_config import setup_logging
+from call_summarizer.observability.logging import setup_logging
 
 from .middleware.rate_limiter import SlidingWindowRateLimiter, _DEFAULT_MAX_REQUESTS
 from .routes.summarize import router as summarize_router
@@ -89,6 +89,10 @@ def create_app(rate_limit_per_minute: int = _DEFAULT_MAX_REQUESTS) -> FastAPI:
     )
 
     app.include_router(summarize_router, prefix="/api/v1", tags=["Summaries"])
+
+    @app.get("/health", tags=["Health"], summary="Liveness check")
+    async def health() -> dict[str, str]:
+        return {"status": "ok"}
 
     logger.debug(
         "FastAPI app created — router prefix /api/v1, rate limit %d req/min",

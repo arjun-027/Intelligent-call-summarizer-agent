@@ -12,7 +12,7 @@ Configuration is driven by ``.env`` — see README for setup instructions.
 import logging
 
 from call_summarizer.config import load_config
-from call_summarizer.logging_config import setup_logging
+from call_summarizer.observability.logging import setup_logging
 from call_summarizer.service import process_directory
 
 logger = logging.getLogger(__name__)

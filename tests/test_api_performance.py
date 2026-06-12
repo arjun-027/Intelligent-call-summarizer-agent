@@ -395,7 +395,8 @@ class TestLLMRetryBehaviour:
         with patch("call_summarizer.summarizer.time.sleep"):  # skip the backoff wait
             result = generate_summary("test transcript", mock_llm)
 
-        assert result == _MOCK_SUMMARY
+        # generate_summary calls .strip() on the LLM response, so compare stripped.
+        assert result == _MOCK_SUMMARY.strip()
         assert mock_llm.invoke.call_count == 2
 
     def test_non_retryable_error_raises_immediately(self) -> None:

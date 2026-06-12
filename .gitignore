@@ -11,6 +11,9 @@ wheels/
 
 # Environment variables
 .env
+architecture_diagram.md
 
 # Generated outputs
 Output_data/
+Input_data/
+

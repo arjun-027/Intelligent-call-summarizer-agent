@@ -44,6 +44,7 @@ import logging
 import re
 from dataclasses import dataclass, field
 
+from .observability.tracing import traceable
 from .guardrails import (
     _CONDITIONAL_SECTION_NAMES,
     _CONFIRMATION_PHRASE_CHECKS,
@@ -671,6 +672,7 @@ def build_eval_feedback_prompt(report: EvaluationReport) -> str:
     return "\n".join(lines)
 
 
+@traceable(name="evaluate_summary", run_type="chain")
 def evaluate_summary(
     summary: str,
     transcript: str = "",

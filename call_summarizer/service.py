@@ -32,12 +32,13 @@ from pathlib import Path
 from .config import Config
 from .evaluator import build_eval_feedback_prompt, evaluate_summary
 from .graph import build_graph
+from .input_guardrails import InputValidationResult, validate_transcript_input
 from .models import ProcessingResult, SummaryState
-from .storage import derive_output_path, save_summary
+from .utils.storage import derive_output_path, save_summary
 from .summarizer import build_llm, generate_summary
-from .transcript import find_transcripts, load_transcript
+from .utils.transcript import find_transcripts, load_transcript
 from .guardrails import build_retry_prompt_addendum, run_guardrails
-from .validator import validate_input_file, validate_summary
+from .utils.validator import validate_input_file, validate_summary
 
 logger = logging.getLogger(__name__)
 
@@ -127,6 +128,18 @@ def generate_summary_from_content(
         ``success=False`` only when the LLM call itself raises an exception.
     """
     logger.info("Generating summary | file: %s | transcript: %d chars", filename, len(transcript_content))
+
+    # ── Input guardrails (Tier 1: token budget, Tier 2: injection, Tier 3: PII audit) ──
+    input_result: InputValidationResult = validate_transcript_input(transcript_content, filename)
+    if not input_result.allowed:
+        error_msgs = "; ".join(f.message for f in input_result.errors)
+        logger.warning("Input guardrail blocked | file: %s | errors: %s", filename, error_msgs)
+        return ProcessingResult(
+            transcript_path=Path("<inline>"),
+            output_path=None,
+            success=False,
+            error=f"Input validation failed: {error_msgs}",
+        )
 
     llm = build_llm(config.groq_api_key, config.groq_model)
     prompt_addendum = ""
@@ -355,6 +368,20 @@ def process_transcript_file(
             output_path=None,
             success=False,
             error=str(exc),
+        )
+
+    # Input guardrails: run before spending LLM quota.
+    input_result = validate_transcript_input(content, transcript_path.name)
+    if not input_result.allowed:
+        error_msgs = "; ".join(f.message for f in input_result.errors)
+        logger.warning(
+            "Input guardrail blocked %s: %s", transcript_path.name, error_msgs
+        )
+        return ProcessingResult(
+            transcript_path=transcript_path,
+            output_path=None,
+            success=False,
+            error=f"Input validation failed: {error_msgs}",
         )
 
     llm = build_llm(config.groq_api_key, config.groq_model)

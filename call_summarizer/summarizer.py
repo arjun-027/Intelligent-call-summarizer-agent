@@ -7,6 +7,8 @@ import time
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_groq import ChatGroq
 
+from .observability.tracing import traceable
+
 logger = logging.getLogger(__name__)
 
 CHAR_LIMIT = 1500
@@ -79,7 +81,7 @@ STRICT RULES:
 6. Caller relationship describes their relationship to the CLAIM, not to the agent.
 7. If the caller represents another insurer or a solicitor's firm, state that specifically.
 8. Total summary must be ≤ 1,500 characters including all whitespace.
-9. Never include Note in the response like Note: The conditional sections (Liability, Negotiation, Vehicle Damage, Injury, Property) were not discussed on the call, so they are omitted."""
+9. Do not add any explanatory notes, footer comments, or meta-commentary to the output. The summary must contain ONLY the structured fields defined above. Never append statements such as "Note: the conditional sections were not discussed" — simply omit any section that does not apply."""
 
 
 def build_llm(api_key: str, model: str) -> ChatGroq:
@@ -125,6 +127,7 @@ def build_messages(transcript_content: str, prompt_addendum: str = "") -> list:
     ]
 
 
+@traceable(name="generate_summary", run_type="llm")
 def generate_summary(
     transcript_content: str,
     llm: ChatGroq,

@@ -329,8 +329,8 @@ def main() -> None:
 
     st.title("📞 Insurance Call Summariser")
     st.markdown(
-        "Upload a call transcript, generate a structured summary, "
-        "review it with guardrail feedback, then save it to the output folder."
+        "Upload a call transcript and generate a structured summary"
+        
     )
     st.divider()
 
