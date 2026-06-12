@@ -12,6 +12,7 @@ wheels/
 # Environment variables
 .env
 architecture_diagram.md
+Project_description.txt
 
 # Generated outputs
 Output_data/

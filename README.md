@@ -55,98 +55,98 @@ Insurance claims handlers review dozens of call recordings per shift. This agent
 
 ## Project Architecture
 
-```
-  +------------------------------------------------------------------------+
-  |                         User Interfaces                                |
-  |                                                                        |
-  |  +------------------+   +-------------------+   +------------------+  |
-  |  |  Streamlit UI    |   |  FastAPI (REST)   |   |  CLI (main.py)   |  |
-  |  |  ui/app.py       |   |  api/app.py       |   |  Direct import   |  |
-  |  +--------+---------+   +--------+----------+   +--------+---------+  |
-  +-----------|----------------------|------------------------|------------+
-              |  HTTP (requests)     |  HTTP (FastAPI)        |  Python
-              +-----------+----------+------------------------+
-                          |
-          +---------------v-----------------------------------------+
-          |                     Service Layer                        |
-          |              call_summarizer/service.py                  |
-          |  generate_summary_from_content()  process_directory()   |
-          +---+------------------+------------------+---------------+
-              |                  |                  |
-    +---------v----------------------------------------------------------+
-    |  Transcript Pre-processor   utils/preprocessor.py                  |
-    |  1. Encoding artefacts (mojibake)   2. Inaudible -> [unclear]      |
-    |  3. Speaker label normalisation     4. Filler word removal         |
-    +---+----------------------------------------------------------------+
-        |
-    +---v--------------+ +-------v--------+ +-------v---------+
-    |  Input           | |  LLM Engine    | |  Output         |
-    |  Guardrails      | |  summarizer.py | |  Guardrails     |
-    |  input_guardrails| |  Groq API      | |  guardrails/    |
-    |                  | |  + retry loop  | |                 |
-    |  T1 Token Budget | |                | |  T1 Structure   |
-    |  T2 Injection    | |  @traceable    | |  T2 Format      |
-    |  T3 PII Audit    | |                | |  T3 Content     |
-    |  @traceable      | |                | |  @traceable     |
-    +------------------+ +-------+--------+ +-------+---------+
-                                 |                  |
-                         +-------v------------------v--------+
-                         |      Evaluation Engine            |
-                         |      evaluator.py                 |
-                         |  8-metric quality scoring         |
-                         |  + agentic feedback loop          |
-                         |  @traceable                       |
-                         +-----------------------------------+
-                                         |
-                         +---------------v---------------+
-                         |      LangSmith Traces         |
-                         |  validate_input               |
-                         |  generate_summary (LLM span)  |
-                         |  run_output_guardrails        |
-                         |  evaluate_summary             |
-                         +-------------------------------+
-```
+> **Legend:** Green = implemented · Yellow dashed = future expansion · Pink = human-in-the-loop · Purple = ops/observability
 
-### Data Flow
+```mermaid
+flowchart TD
+    classDef current fill:#d4edda,stroke:#28a745,color:#155724
+    classDef future  fill:#fff3cd,stroke:#e6a817,color:#7d5a00,stroke-dasharray:6 3
+    classDef hitl    fill:#f8d7da,stroke:#c0392b,color:#721c24
+    classDef ops     fill:#e2d9f3,stroke:#6f42c1,color:#3d1a78
+    classDef err     fill:#f5c6cb,stroke:#721c24,color:#721c24
+    classDef layer   fill:#f8f9fa,stroke:#adb5bd,color:#495057
 
-```
-  Upload .txt transcript
-        |
-        v
-  Transcript Pre-processor
-  (encoding fix, speaker labels, filler words, [unclear] markers)
-        |
-        v
-  Input Guardrails ---------- BLOCKED? -------> HTTP 400 / error returned
-        | (allowed)                             (token budget, injection, PII)
-        v
-  LangGraph Pipeline
-        |  +----------+     +------------+     +--------+
-        +->|  load    |---->|  summarize |---->|  save  |
-           +----------+     +------------+     +--------+
-                                   |
-                              Groq LLM call
-                              (max 600 tokens)
-                                   |
-                            Output Guardrails
-                            T1 fail? --> retry (max 2x, targeted prompt)
-                                   |
-                            Evaluation Engine
-                            Grade < A? --> eval-feedback retry (max 1x)
-                                   |
-                            Return summary + grade to API
-                                   |
-                  +----------------v------------------+
-                  |   Reviewer in Streamlit UI        |
-                  |   (see guardrail findings + grade)|
-                  +----------------+------------------+
-                                   |  Submit & Save
-                                   v
-                         POST /api/v1/summaries
-                         (re-runs T1 guardrails)
-                                   |
-                                   v
-                         Output_data/<name>-summary.txt
+    %% ── ① Ingestion ─────────────────────────────────────────────
+    subgraph ING["① Ingestion"]
+        A1["REST API\nPOST /api/v1/summarize\napi/app.py"]:::current
+        A2["CLI Tool\nBatch mode · main.py"]:::current
+        A3["Streamlit UI\n.txt file upload\nui/app.py"]:::current
+    end
+
+    %% ── ② Pre-processing · Security ────────────────────────────
+    subgraph SEC["② Pre-processing · Security"]
+        B1["Transcript Pre-processor\nEncoding artefacts · Speaker labels\nFiller words · inaudible → unclear\nutils/preprocessor.py"]:::current
+        B2["Input Guardrails\nT1 Token budget · T2 OWASP LLM01\nT3 PII audit — GDPR Art.30\ninput_guardrails/"]:::current
+        B3["◈ Hash + Cache\nSHA-256 content dedup\nRedis / in-memory\nSkip LLM on duplicate"]:::future
+    end
+
+    %% ── ③ Summarisation ─────────────────────────────────────────
+    subgraph SUM["③ Summarisation"]
+        C1["◈ PII Masking\nMask before LLM call\nRestore after output\nPresidio / Comprehend"]:::future
+        C2["LLM Engine\nGroq llama-3.1-8b-instant\nT=0.1 · max 600 tokens\nsummarizer.py · @traceable"]:::current
+        C3["◈ Map-Reduce Chunking\nOverlapping windows ≤ 4k tok\nFor transcripts > 19 708 chars\nMap + reduce LLM calls"]:::future
+        C4["Retry / Fallback\nExp. backoff · max 3 attempts\n429 · 502–504 · timeout\nTransient error handling"]:::current
+        C5["Output Guardrails\nT1 Structural — blocking\nT2 Format — advisory\nT3 Content integrity\nguardrails/ · @traceable"]:::current
+    end
+
+    %% ── ④ Evaluation · Validation ───────────────────────────────
+    subgraph EVAL["④ Evaluation · Validation"]
+        D1["8-metric Evaluator\nGrounding 30% · Completeness 20%\nFormat 20% · Hallucination 10%\nProf · Handoff · Precision · Redundancy\nevaluator.py · @traceable"]:::current
+        D2["Agentic Eval-Feedback Loop\nGrade < A → targeted regen\nmax 1 retry · service.py"]:::current
+        D3["◈ LLM-as-Judge\nTone · contextual quality\nHandoff readiness\nProduction-only gate"]:::future
+        D4["Quality Gate\nA ≥ 90% · B ≥ 75%\nC ≥ 60% · F < 60%"]:::current
+    end
+
+    %% ── ⑤ Human-in-the-Loop ────────────────────────────────────
+    subgraph HITL["⑤ Human-in-the-Loop"]
+        E1["Streamlit Review UI\nGuardrail findings + grade\nAccept · edit · reject\nui/app.py"]:::hitl
+        E2["◈ Review Queue\nLow-confidence flagged\nPriority agent assignment"]:::future
+        E3["◈ Feedback Capture\nAccepted edits → few-shot cache\nFeed back to future calls"]:::future
+    end
+
+    %% ── ⑥ Output ────────────────────────────────────────────────
+    subgraph OUT["⑥ Output"]
+        F1["File Storage\nOutput_data/ · .txt\nutils/storage.py"]:::current
+        F2["API Response\nJSON — summary + grade\n+ guardrail findings\n+ warnings"]:::current
+        F3["◈ PostgreSQL + Audit Log\nClaim ref index · versions\nTimestamp · user identity"]:::future
+        F4["◈ Downstream CRM\nWebhook / export\nDirect claims system push"]:::future
+    end
+
+    %% ── ⑦ Eval · Ops · Observability ───────────────────────────
+    subgraph OPS["⑦ Eval · Ops · Observability"]
+        G1["Test Suite\n294 tests · pytest\nUnit + integration"]:::ops
+        G2["LangSmith Tracing\n4 spans · @traceable\nvalidate → LLM → guardrails → eval\nobservability/tracing.py"]:::ops
+        G3["Rate Limiter\n30 req/min · sliding window\nMatches Groq RPM cap\napi/middleware/"]:::ops
+        G4["◈ Prometheus / OpenTelemetry\nLatency · token cost\nError rate · alerting\nDashboards"]:::future
+    end
+
+    %% ── Connections ─────────────────────────────────────────────
+    A1 & A2 & A3 --> B1
+    B1 --> B2
+    B1 -. "◈ future" .-> B3
+    B2 -- "BLOCKED" --> ERR["HTTP 400\nError response"]:::err
+    B2 -- "allowed" --> C2
+    B3 -. "◈ cache hit\nskip LLM" .-> F2
+
+    C1 -. "◈ future\nPII mask" .-> C2
+    C3 -. "◈ future\nlong docs" .-> C2
+    C2 --> C4
+    C4 --> C5
+    C5 -- "T1 fail\nretry + addendum" --> C4
+    C5 -- "pass" --> D1
+
+    D1 --> D2
+    D2 -- "grade A" --> D4
+    D2 -- "grade < A\nregen" --> C2
+    D3 -. "◈ future\nprod gate" .-> D4
+    D4 --> E1
+
+    E1 -- "submit + save" --> F1 & F2
+    E2 -. "◈ future" .-> E1
+    E3 -. "◈ future\nfeedback loop" .-> C2
+
+    F1 & F2 -. "◈ future" .-> F3
+    F3 -. "◈ future" .-> F4
 ```
 
 ---
