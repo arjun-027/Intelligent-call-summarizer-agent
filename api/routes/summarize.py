@@ -137,13 +137,23 @@ async def generate_summary_endpoint(
     warnings = [f.message for f in gr.warnings] if gr else []
     passed = gr.passed if gr else True
 
+    ev = result.evaluation_report
+    eval_grade = ev.grade if ev else ""
+    eval_score = ev.overall_score if ev else 0.0
+    eval_findings = (
+        [f"{m.name}: {'; '.join(m.findings[:2])}"
+         for m in ev.metrics if m.score < 1.0 and m.findings
+         and not (len(m.findings) == 1 and "not evaluated" in m.findings[0])]
+        if ev else []
+    )
+
     logger.info(
-        "Summary ready for %s — %d chars, passed: %s, errors: %d, warnings: %d",
+        "Summary ready for %s — %d chars, guardrails: %s, eval: %s (%.0f%%)",
         file.filename,
         len(result.summary),
-        passed,
-        len(errors),
-        len(warnings),
+        "PASS" if passed else "FAIL",
+        eval_grade or "N/A",
+        eval_score * 100,
     )
 
     return SummarizeResponse(
@@ -154,6 +164,9 @@ async def generate_summary_endpoint(
         passed_guardrails=passed,
         errors=errors,
         warnings=warnings,
+        eval_grade=eval_grade,
+        eval_score=eval_score,
+        eval_findings=eval_findings,
     )
 
 

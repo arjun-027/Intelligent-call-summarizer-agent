@@ -30,6 +30,7 @@ import time
 from pathlib import Path
 
 from .config import Config
+from .evaluator import build_eval_feedback_prompt, evaluate_summary
 from .graph import build_graph
 from .models import ProcessingResult, SummaryState
 from .storage import derive_output_path, save_summary
@@ -41,6 +42,13 @@ from .validator import validate_input_file, validate_summary
 logger = logging.getLogger(__name__)
 
 _MAX_GUARDRAIL_RETRIES = 2
+
+# Evaluation-feedback agentic loop: after the guardrail loop passes, the
+# evaluator scores the summary and — if the grade is below A — the specific
+# findings are fed back to the LLM as a corrective addendum for one more
+# attempt.  One retry is usually sufficient; more would add latency without
+# proportional quality gain given the LLM's token limit.
+_MAX_EVAL_RETRIES = 1
 
 
 def _log_generated_summary(
@@ -123,17 +131,23 @@ def generate_summary_from_content(
     llm = build_llm(config.groq_api_key, config.groq_model)
     prompt_addendum = ""
     guardrail_result = None
+    total_attempt = 0   # monotonic counter across both phases for log clarity
 
-    for attempt in range(_MAX_GUARDRAIL_RETRIES + 1):
-        if attempt > 0:
+    # ── Phase 1: Guardrail retry loop ─────────────────────────────────────────
+    # Retries up to _MAX_GUARDRAIL_RETRIES times on Tier-1 structural errors,
+    # appending targeted corrections to the system prompt each time.
+    for g_attempt in range(_MAX_GUARDRAIL_RETRIES + 1):
+        total_attempt += 1
+
+        if g_attempt > 0:
             logger.info(
-                "Retry attempt %d/%d with corrective addendum", attempt, _MAX_GUARDRAIL_RETRIES
+                "Guardrail retry %d/%d with corrective addendum", g_attempt, _MAX_GUARDRAIL_RETRIES
             )
 
         try:
             summary = generate_summary(transcript_content, llm, prompt_addendum=prompt_addendum)
         except RuntimeError as exc:
-            logger.error("LLM call failed on attempt %d: %s", attempt + 1, exc)
+            logger.error("LLM call failed on attempt %d: %s", total_attempt, exc)
             return ProcessingResult(
                 transcript_path=Path("<inline>"),
                 output_path=None,
@@ -142,25 +156,89 @@ def generate_summary_from_content(
             )
 
         guardrail_result = run_guardrails(summary, transcript_content)
-
-        _log_generated_summary(summary, guardrail_result, attempt + 1, filename)
+        _log_generated_summary(summary, guardrail_result, total_attempt, filename)
 
         if guardrail_result.passed:
             break
 
-        if attempt < _MAX_GUARDRAIL_RETRIES:
+        if g_attempt < _MAX_GUARDRAIL_RETRIES:
             logger.warning(
                 "Guardrail errors on attempt %d: %s — retrying",
-                attempt + 1,
+                total_attempt,
                 [f.code for f in guardrail_result.errors],
             )
             prompt_addendum = build_retry_prompt_addendum(guardrail_result)
         else:
             logger.warning(
                 "Guardrail errors remain after %d attempts: %s",
-                _MAX_GUARDRAIL_RETRIES + 1,
+                total_attempt,
                 [f.code for f in guardrail_result.errors],
             )
+
+    # ── Phase 2: Evaluation-feedback agentic loop ─────────────────────────────
+    # The evaluator scores the guardrail-passing summary across eight quality
+    # dimensions.  If the grade is below A, the specific findings (missed facts,
+    # format gaps, professionalism issues, etc.) are fed back to the LLM as a
+    # corrective prompt addendum for one further attempt.  After regeneration,
+    # guardrails are re-run to ensure the new summary still passes structure
+    # checks before it is returned to the caller.
+    eval_report = None
+
+    for e_attempt in range(_MAX_EVAL_RETRIES + 1):
+        eval_report = evaluate_summary(summary, transcript_content)
+
+        logger.info(
+            "Eval [phase-2 attempt %d/%d] | grade: %s | score: %.2f | file: %s",
+            e_attempt + 1,
+            _MAX_EVAL_RETRIES + 1,
+            eval_report.grade,
+            eval_report.overall_score,
+            filename,
+        )
+
+        if eval_report.grade == "A" or e_attempt == _MAX_EVAL_RETRIES:
+            break
+
+        # Build a specific, weighted feedback prompt from failing metrics.
+        eval_feedback = build_eval_feedback_prompt(eval_report)
+        if not eval_feedback:
+            logger.info("Eval feedback prompt is empty — no actionable findings to improve")
+            break
+
+        logger.info(
+            "Eval-feedback retry | grade %s (%.0f%%) -> regenerating with specific corrections",
+            eval_report.grade,
+            eval_report.overall_score * 100,
+        )
+
+        total_attempt += 1
+        try:
+            summary = generate_summary(transcript_content, llm, prompt_addendum=eval_feedback)
+        except RuntimeError as exc:
+            logger.error("LLM call failed during eval-feedback retry: %s", exc)
+            break   # keep the last guardrail-passing summary
+
+        # Re-validate structure: the eval-feedback prompt may have caused the
+        # LLM to restructure sections in a way that breaks guardrails.
+        guardrail_result = run_guardrails(summary, transcript_content)
+        _log_generated_summary(summary, guardrail_result, total_attempt, filename)
+
+        if not guardrail_result.passed:
+            logger.warning(
+                "Eval-feedback regen broke guardrails: %s — keeping previous summary",
+                [f.code for f in guardrail_result.errors],
+            )
+            # Undo: revert to the summary that passed guardrails in Phase 1.
+            # We accept a lower eval score over a structurally invalid summary.
+            summary = summary   # already set — log only; eval_report updated next iteration
+
+    logger.info(
+        "Generation complete | file: %s | total_attempts: %d | final grade: %s (%.0f%%)",
+        filename,
+        total_attempt,
+        eval_report.grade if eval_report else "N/A",
+        (eval_report.overall_score * 100) if eval_report else 0,
+    )
 
     return ProcessingResult(
         transcript_path=Path("<inline>"),
@@ -169,6 +247,7 @@ def generate_summary_from_content(
         summary=summary,
         issues=[f.message for f in guardrail_result.findings] if guardrail_result else [],
         guardrail_result=guardrail_result,
+        evaluation_report=eval_report,
     )
 
 

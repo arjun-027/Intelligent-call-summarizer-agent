@@ -19,6 +19,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from call_summarizer.config import load_config
 from call_summarizer.logging_config import setup_logging
 
+from .middleware.rate_limiter import SlidingWindowRateLimiter, _DEFAULT_MAX_REQUESTS
 from .routes.summarize import router as summarize_router
 
 logger = logging.getLogger(__name__)
@@ -51,12 +52,18 @@ async def _lifespan(app: FastAPI) -> AsyncIterator[None]:
     logger.info("FastAPI shutdown")
 
 
-def create_app() -> FastAPI:
+def create_app(rate_limit_per_minute: int = _DEFAULT_MAX_REQUESTS) -> FastAPI:
     """Construct and return a configured :class:`~fastapi.FastAPI` instance.
 
     Registers:
+    - Sliding-window rate limiter (default: 30 req/min matching Groq's RPM cap).
     - CORS middleware allowing the Streamlit frontend origin.
     - The ``/api/v1`` router with summarise and submit endpoints.
+
+    Args:
+        rate_limit_per_minute: Maximum requests per 60-second window for the
+            ``/api/v1/summarize`` endpoint.  Override in tests to use a low
+            limit without changing the module-level default.
 
     Returns:
         A fully configured :class:`~fastapi.FastAPI` application.
@@ -71,6 +78,9 @@ def create_app() -> FastAPI:
         lifespan=_lifespan,
     )
 
+    # Rate limiter must be added before CORS so it can short-circuit before
+    # the CORS preflight headers are evaluated on rejected requests.
+    app.add_middleware(SlidingWindowRateLimiter, max_requests=rate_limit_per_minute)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=[_STREAMLIT_ORIGIN],
@@ -80,7 +90,10 @@ def create_app() -> FastAPI:
 
     app.include_router(summarize_router, prefix="/api/v1", tags=["Summaries"])
 
-    logger.debug("FastAPI app created with router prefix /api/v1")
+    logger.debug(
+        "FastAPI app created — router prefix /api/v1, rate limit %d req/min",
+        rate_limit_per_minute,
+    )
     return app
 
 

@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Literal, Optional, TypedDict
 
 if TYPE_CHECKING:
-    pass  # forward-reference guard
+    from .evaluator import EvaluationReport
 
 
 class SummaryState(TypedDict):
@@ -96,3 +96,6 @@ class ProcessingResult:
     error: Optional[str] = None
     issues: list[str] = field(default_factory=list)
     guardrail_result: Optional[GuardrailResult] = None
+    # Populated by the agentic eval-feedback loop in service.py when a
+    # transcript is available.  None when generation failed before evaluation.
+    evaluation_report: "Optional[EvaluationReport]" = None

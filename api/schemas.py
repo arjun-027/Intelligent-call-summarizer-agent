@@ -42,6 +42,19 @@ class SummarizeResponse(BaseModel):
         default_factory=list,
         description="Tier-2 / Tier-3 advisory warnings — save is still allowed",
     )
+    # ── Evaluation fields (from the agentic eval-feedback loop) ───────────────
+    eval_grade: str = Field(
+        default="",
+        description="Letter grade from the eight-metric evaluator: A / B / C / F",
+    )
+    eval_score: float = Field(
+        default=0.0,
+        description="Weighted overall quality score (0.0–1.0)",
+    )
+    eval_findings: list[str] = Field(
+        default_factory=list,
+        description="Failing metric descriptions from the final evaluation pass",
+    )
 
 
 class SubmitRequest(BaseModel):

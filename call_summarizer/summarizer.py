@@ -1,6 +1,8 @@
 """LLM-based call summarisation: prompt, client construction, and generation."""
 
 import logging
+import random
+import time
 
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_groq import ChatGroq
@@ -8,6 +10,27 @@ from langchain_groq import ChatGroq
 logger = logging.getLogger(__name__)
 
 CHAR_LIMIT = 1500
+
+# ── LLM retry constants ───────────────────────────────────────────────────────
+# Retries apply only to *transient* Groq errors (rate limit 429, gateway 502/503/504,
+# timeouts, connection resets).  Permanent errors (bad API key 401, invalid request 400)
+# are not retried — they would fail identically on every attempt.
+_MAX_LLM_RETRIES: int = 3
+_RETRY_BASE_DELAY: float = 1.0   # seconds; doubles each attempt (exponential backoff)
+_RETRY_JITTER: float = 0.5       # seconds; uniform random added to prevent thundering herd
+
+# Substrings that identify a transient (retryable) Groq error.
+# We match against the stringified exception rather than importing the groq
+# package directly, so this works regardless of how langchain-groq wraps errors.
+_RETRYABLE_SIGNALS: frozenset[str] = frozenset({
+    "429",            # HTTP Too Many Requests — rate limit hit
+    "rate_limit",     # Groq RateLimitError message text
+    "502",            # HTTP Bad Gateway — upstream transient
+    "503",            # HTTP Service Unavailable
+    "504",            # HTTP Gateway Timeout
+    "timeout",        # Network / socket timeout
+    "connection",     # Connection reset / refused
+})
 
 SYSTEM_PROMPT = """You are an expert insurance claims call summariser. Produce a precise, structured summary from the transcript below.
 
@@ -130,15 +153,37 @@ def generate_summary(
     )
     messages = build_messages(transcript_content, prompt_addendum)
 
-    try:
-        response = llm.invoke(messages)
-    except Exception as exc:
-        logger.error("LLM call failed: %s", exc)
-        raise RuntimeError(f"LLM call failed: {exc}") from exc
+    for attempt in range(_MAX_LLM_RETRIES + 1):
+        try:
+            response = llm.invoke(messages)
+            summary = response.content.strip()
+            logger.info("Summary generated — %d chars (attempt %d)", len(summary), attempt + 1)
+            return summary
+        except Exception as exc:
+            exc_str = str(exc).lower()
+            is_retryable = any(sig in exc_str for sig in _RETRYABLE_SIGNALS)
 
-    summary = response.content.strip()
-    logger.info("Summary generated — %d chars", len(summary))
-    return summary
+            if is_retryable and attempt < _MAX_LLM_RETRIES:
+                delay = _RETRY_BASE_DELAY * (2 ** attempt) + random.uniform(0, _RETRY_JITTER)
+                logger.warning(
+                    "LLM transient error on attempt %d/%d — retrying in %.1fs: %s",
+                    attempt + 1,
+                    _MAX_LLM_RETRIES + 1,
+                    delay,
+                    exc,
+                )
+                time.sleep(delay)
+            else:
+                logger.error(
+                    "LLM call failed on attempt %d/%d (retryable=%s): %s",
+                    attempt + 1,
+                    _MAX_LLM_RETRIES + 1,
+                    is_retryable,
+                    exc,
+                )
+                raise RuntimeError(f"LLM call failed: {exc}") from exc
+
+    raise RuntimeError("LLM call failed: exceeded maximum retries")
 
 
 def validate_summary_length(summary: str, limit: int = CHAR_LIMIT) -> bool:

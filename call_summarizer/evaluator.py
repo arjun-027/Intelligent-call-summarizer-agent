@@ -620,6 +620,57 @@ def _score_redundancy(summary: str) -> MetricScore:
 
 # ── Public API ─────────────────────────────────────────────────────────────────
 
+def build_eval_feedback_prompt(report: EvaluationReport) -> str:
+    """Build a targeted corrective prompt from an :class:`EvaluationReport`.
+
+    Used by the agentic eval-feedback loop in ``service.py`` to give the LLM
+    specific, actionable instructions for a regeneration attempt.  Only metrics
+    that actually failed (score < 1.0 **and** have findings) are included;
+    they are sorted by weight descending so the highest-impact corrections
+    appear first.
+
+    The output is appended to the system prompt as an addendum — it should be
+    concise enough to stay within the token budget while being specific enough
+    for the LLM to act on each point.
+
+    Args:
+        report: The :class:`EvaluationReport` from the previous generation attempt.
+
+    Returns:
+        A multi-line string to append to the system prompt, or an empty string
+        if every metric scored 1.0 (nothing to correct).
+    """
+    failing = [
+        m for m in report.metrics
+        if m.score < 1.0 and m.findings
+        # Skip the "no transcript provided" placeholder finding
+        and not (len(m.findings) == 1 and "not evaluated" in m.findings[0])
+    ]
+    if not failing:
+        return ""
+
+    failing.sort(key=lambda m: m.weight, reverse=True)
+
+    lines: list[str] = [
+        f"QUALITY EVALUATION FEEDBACK — previous attempt scored "
+        f"{report.overall_score:.0%} (Grade {report.grade}).",
+        "Address each issue below before regenerating:\n",
+    ]
+
+    for m in failing:
+        lines.append(f"{m.name} ({m.score:.0%}, weight {m.weight:.0%}):")
+        for finding in m.findings[:3]:   # cap at 3 per metric to save tokens
+            lines.append(f"  - {finding}")
+        lines.append("")
+
+    logger.debug(
+        "Built eval feedback prompt — %d failing metrics, %d lines",
+        len(failing),
+        len(lines),
+    )
+    return "\n".join(lines)
+
+
 def evaluate_summary(
     summary: str,
     transcript: str = "",

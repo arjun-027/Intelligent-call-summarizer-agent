@@ -898,3 +898,250 @@ Other: None
 2026-06-12 15:17:38 | INFO     | call_summarizer.service._log_generated_summary | Summary accepted | file: 2-transcript.txt | attempt: 2 | chars: 911 | warnings: 0
 2026-06-12 15:17:38 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for 2-transcript.txt — 911 chars, passed: True, errors: 0, warnings: 0
 2026-06-12 15:18:11 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:28:47 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:28:47 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:28:47 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:28:47 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:28:47 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:29:18 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: 5-transcript.txt, content-type: text/plain
+2026-06-12 15:29:18 | INFO     | call_summarizer.input_guardrails._audit_pii | [PII AUDIT] 5-transcript.txt — categories detected: date_of_birth_context
+2026-06-12 15:29:18 | INFO     | call_summarizer.service.generate_summary_from_content | Generating summary | file: 5-transcript.txt | transcript: 2567 chars
+2026-06-12 15:29:19 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: 5-transcript.txt, content-type: text/plain
+2026-06-12 15:29:19 | INFO     | call_summarizer.input_guardrails._audit_pii | [PII AUDIT] 5-transcript.txt — categories detected: date_of_birth_context
+2026-06-12 15:29:19 | INFO     | call_summarizer.service.generate_summary_from_content | Generating summary | file: 5-transcript.txt | transcript: 2567 chars
+2026-06-12 15:29:20 | INFO     | httpx._send_single_request | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-12 15:29:20 | INFO     | httpx._send_single_request | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-12 15:29:20 | INFO     | call_summarizer.summarizer.generate_summary | Summary generated — 894 chars (attempt 1)
+2026-06-12 15:29:20 | INFO     | call_summarizer.guardrails.run_guardrails | Guardrails complete — passed: False, errors: 2, warnings: 2
+2026-06-12 15:29:20 | INFO     | call_summarizer.summarizer.generate_summary | Summary generated — 869 chars (attempt 1)
+2026-06-12 15:29:20 | INFO     | call_summarizer.service._log_generated_summary | === SUMMARY | file: 5-transcript.txt | attempt: 1/3 | chars: 894 | guardrails: FAILED ===
+------------------------------------------------------------
+Caller: Rory McMahon, Policyholder, Inbound
+
+Subject:
+Rory McMahon calls about his car insurance claim (PI-2024-88934) to inquire about reimbursement for parts he paid for and the status of the garage payment.
+
+Executive Summary:
+Rory McMahon called to discuss two issues with his car insurance claim. He had paid for parts totalling €478.50, which were approved and will be reimbursed to him. He also inquired about the status of the garage payment, which was approved but delayed due to a query on the garage's VAT number. Aoife Brennan confirmed that payment to the garage should be made early next week.
+
+Next Steps:
+Pemberton Insurance: Process payment to Rory McMahon for €478.50 and resolve the VAT number query for the garage payment.
+
+Vehicle Damage:
+Vehicle Status: Not discussed
+Towage: Not discussed
+Car hire: Not discussed
+
+Injury:
+Treatment: Not discussed
+
+Property:
+Not discussed
+------------------------------------------------------------
+2026-06-12 15:29:20 | INFO     | call_summarizer.guardrails.run_guardrails | Guardrails complete — passed: False, errors: 2, warnings: 2
+2026-06-12 15:29:20 | ERROR    | call_summarizer.service._log_generated_summary |   [GUARDRAIL][ERROR][EXECUTIVE_SUMMARY_NO_BULLETS] Executive Summary has no bullet points. The schema requires key facts listed as '- bullet' lines after the paragraph.
+2026-06-12 15:29:20 | INFO     | call_summarizer.service._log_generated_summary | === SUMMARY | file: 5-transcript.txt | attempt: 1/3 | chars: 869 | guardrails: FAILED ===
+------------------------------------------------------------
+Caller: Rory McMahon, policyholder, inbound
+
+Subject:
+Rory McMahon calls about his car insurance claim, specifically regarding reimbursement of parts he paid for and payment to the garage.
+
+Executive Summary:
+Rory McMahon called to discuss two issues with his car insurance claim. He had paid for parts himself and wanted to claim them back, which was approved and will be processed with a payment of €478.50. He also inquired about the payment to the garage, which was approved for €3,150, but there was a query on the VAT number, and payment is expected to be made early next week.
+
+Next Steps:
+Pemberton Insurance: Process payment of €478.50 to Rory McMahon and resolve the VAT number query for the garage payment.
+
+Vehicle Damage:
+Vehicle Status: Not discussed
+Towage: Not discussed
+Car hire: Not discussed
+
+Injury:
+Treatment: Not discussed
+
+Property:
+Not discussed
+------------------------------------------------------------
+2026-06-12 15:29:20 | ERROR    | call_summarizer.service._log_generated_summary |   [GUARDRAIL][ERROR][NEXT_STEPS_INCOMPLETE] Next Steps is missing an 'Other:' line for third-party actions.
+2026-06-12 15:29:20 | ERROR    | call_summarizer.service._log_generated_summary |   [GUARDRAIL][ERROR][EXECUTIVE_SUMMARY_NO_BULLETS] Executive Summary has no bullet points. The schema requires key facts listed as '- bullet' lines after the paragraph.
+2026-06-12 15:29:20 | WARNING  | call_summarizer.service._log_generated_summary |   [GUARDRAIL][WARN][CONDITIONAL_SECTION_UNJUSTIFIED] 'Injury' section is included but no related terms were found in the transcript. This section may not be relevant to this call.
+2026-06-12 15:29:20 | ERROR    | call_summarizer.service._log_generated_summary |   [GUARDRAIL][ERROR][NEXT_STEPS_INCOMPLETE] Next Steps is missing an 'Other:' line for third-party actions.
+2026-06-12 15:29:20 | WARNING  | call_summarizer.service._log_generated_summary |   [GUARDRAIL][WARN][CONDITIONAL_SECTION_UNJUSTIFIED] 'Property' section is included but no related terms were found in the transcript. This section may not be relevant to this call.
+2026-06-12 15:29:20 | WARNING  | call_summarizer.service._log_generated_summary |   [GUARDRAIL][WARN][CONDITIONAL_SECTION_UNJUSTIFIED] 'Injury' section is included but no related terms were found in the transcript. This section may not be relevant to this call.
+2026-06-12 15:29:20 | WARNING  | call_summarizer.service.generate_summary_from_content | Guardrail errors on attempt 1: ['EXECUTIVE_SUMMARY_NO_BULLETS', 'NEXT_STEPS_INCOMPLETE'] — retrying
+2026-06-12 15:29:20 | WARNING  | call_summarizer.service._log_generated_summary |   [GUARDRAIL][WARN][CONDITIONAL_SECTION_UNJUSTIFIED] 'Property' section is included but no related terms were found in the transcript. This section may not be relevant to this call.
+2026-06-12 15:29:20 | INFO     | call_summarizer.service.generate_summary_from_content | Retry attempt 1/2 with corrective addendum
+2026-06-12 15:29:20 | WARNING  | call_summarizer.service.generate_summary_from_content | Guardrail errors on attempt 1: ['EXECUTIVE_SUMMARY_NO_BULLETS', 'NEXT_STEPS_INCOMPLETE'] — retrying
+2026-06-12 15:29:20 | INFO     | call_summarizer.service.generate_summary_from_content | Retry attempt 1/2 with corrective addendum
+2026-06-12 15:29:20 | INFO     | httpx._send_single_request | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-12 15:29:20 | INFO     | groq._base_client._sleep_for_retry | Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-06-12 15:29:21 | INFO     | httpx._send_single_request | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-12 15:29:21 | INFO     | call_summarizer.summarizer.generate_summary | Summary generated — 1084 chars (attempt 1)
+2026-06-12 15:29:21 | INFO     | call_summarizer.guardrails.run_guardrails | Guardrails complete — passed: True, errors: 0, warnings: 2
+2026-06-12 15:29:21 | INFO     | call_summarizer.service._log_generated_summary | === SUMMARY | file: 5-transcript.txt | attempt: 2/3 | chars: 1084 | guardrails: PASSED ===
+------------------------------------------------------------
+Caller: Rory McMahon, Policyholder, Inbound
+
+Subject:
+Rory McMahon called to inquire about the status of his car insurance claim, specifically regarding reimbursement for parts he paid for and payment to the garage.
+
+Executive Summary:
+Rory McMahon called to discuss his car insurance claim (PI-2024-88934). He had paid for parts totalling €478.50, which were approved and will be reimbursed to him. The garage invoice for €3,150 was also approved, but payment is pending verification of their bank details. Aoife Brennan confirmed that payment should go out early next week.
+- Rory McMahon's claim reference number is PI-2024-88934.
+- He will be reimbursed €478.50 for parts he paid for.
+
+Next Steps:
+Pemberton Insurance: Process payment to Rory McMahon for €478.50 and verify the garage's bank details to facilitate payment of €3,150.
+Other: Rory McMahon will inform the garage that payment is expected to be made early next week.
+
+Vehicle Damage:
+Vehicle Status: Not discussed
+Towage: Not discussed
+Car hire: Not discussed
+
+Injury:
+Treatment: Not discussed
+
+Property:
+Not discussed
+------------------------------------------------------------
+2026-06-12 15:29:21 | WARNING  | call_summarizer.service._log_generated_summary |   [GUARDRAIL][WARN][CONDITIONAL_SECTION_UNJUSTIFIED] 'Injury' section is included but no related terms were found in the transcript. This section may not be relevant to this call.
+2026-06-12 15:29:21 | WARNING  | call_summarizer.service._log_generated_summary |   [GUARDRAIL][WARN][CONDITIONAL_SECTION_UNJUSTIFIED] 'Property' section is included but no related terms were found in the transcript. This section may not be relevant to this call.
+2026-06-12 15:29:21 | INFO     | call_summarizer.service._log_generated_summary | Summary accepted | file: 5-transcript.txt | attempt: 2 | chars: 1084 | warnings: 2
+2026-06-12 15:29:21 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for 5-transcript.txt — 1084 chars, passed: True, errors: 0, warnings: 2
+2026-06-12 15:29:34 | INFO     | httpx._send_single_request | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-12 15:29:34 | INFO     | call_summarizer.summarizer.generate_summary | Summary generated — 1143 chars (attempt 1)
+2026-06-12 15:29:34 | INFO     | call_summarizer.guardrails.run_guardrails | Guardrails complete — passed: True, errors: 0, warnings: 0
+2026-06-12 15:29:34 | INFO     | call_summarizer.service._log_generated_summary | === SUMMARY | file: 5-transcript.txt | attempt: 2/3 | chars: 1143 | guardrails: PASSED ===
+------------------------------------------------------------
+Caller: Rory McMahon, Policyholder, Inbound
+
+Subject:
+Rory McMahon calls to inquire about his car insurance claim, specifically regarding reimbursement for parts he paid for and the payment status of his garage.
+
+Executive Summary:
+Rory McMahon called to discuss his car insurance claim (PI-2024-88934). He had paid for parts totalling €478.50, which were approved for reimbursement. Aoife processed the payment, which will be sent to Rory's bank account (ending in 4721) within 3-5 working days. Rory also inquired about the payment status of his garage, which had an approved invoice of €3,150. Aoife explained that there was a query on the garage's VAT number, but payment was expected to be resolved by the end of the week and sent out early next week.
+
+- Rory McMahon's claim reference number is PI-2024-88934.
+- The approved reimbursement for parts is €478.50.
+
+Next Steps:
+Pemberton Insurance: Process payment for the approved reimbursement of €478.50 to Rory McMahon's bank account (ending in 4721).
+Other: Rory McMahon will inform the garage that payment is expected to be resolved by the end of the week and sent out early next week.
+------------------------------------------------------------
+2026-06-12 15:29:34 | INFO     | call_summarizer.service._log_generated_summary | Summary accepted | file: 5-transcript.txt | attempt: 2 | chars: 1143 | warnings: 0
+2026-06-12 15:29:34 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for 5-transcript.txt — 1143 chars, passed: True, errors: 0, warnings: 0
+2026-06-12 15:34:02 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:34:05 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:34:05 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:34:05 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:34:05 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:34:05 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:43:16 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:43:19 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:43:19 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:43:19 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:43:19 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:43:19 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:43:23 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:43:26 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:43:26 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:43:26 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:43:26 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:43:26 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:43:39 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:43:41 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:43:41 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:43:41 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:43:41 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:43:41 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:43:47 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:43:50 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:43:50 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:43:50 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:43:50 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:43:50 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:43:55 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:43:57 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:43:57 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:43:57 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:43:57 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:43:57 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:44:28 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:44:31 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:44:31 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:44:31 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:44:31 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:44:31 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:44:38 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:44:41 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:44:41 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:44:41 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:44:41 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:44:41 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:44:50 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:44:52 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:44:52 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:44:52 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:44:52 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:44:52 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:44:58 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:45:00 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:45:00 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:45:00 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:45:00 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:45:00 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:45:11 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:45:13 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:45:13 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:45:13 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:45:13 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:45:13 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:45:39 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:45:41 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:45:41 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:45:41 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:45:41 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:45:41 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:58:23 | INFO     | api.app._lifespan | FastAPI shutdown
+2026-06-12 15:58:30 | INFO     | call_summarizer.logging_config.setup_logging | Logging initialised — file: logs\call_summarizer.log, max size: 5 MB, backups: 3
+2026-06-12 15:58:30 | INFO     | api.app._lifespan | FastAPI startup — loading configuration
+2026-06-12 15:58:30 | INFO     | call_summarizer.config.load_config | Config loaded — model: llama-3.1-8b-instant, input: Input_data, output: Output_data
+2026-06-12 15:58:30 | INFO     | call_summarizer.config._log_langsmith_status | LangSmith tracing ENABLED — project: 'Call summarizer agent', endpoint: https://eu.api.smith.langchain.com, api_key: set
+2026-06-12 15:58:30 | INFO     | api.app._lifespan | FastAPI ready
+2026-06-12 15:58:59 | INFO     | api.routes.summarize.generate_summary_endpoint | POST /summarize — file: 7-transcript.txt, content-type: text/plain
+2026-06-12 15:58:59 | INFO     | call_summarizer.input_guardrails._audit_pii | [PII AUDIT] 7-transcript.txt — categories detected: UK/IE_postcode
+2026-06-12 15:58:59 | INFO     | call_summarizer.service.generate_summary_from_content | Generating summary | file: 7-transcript.txt | transcript: 2876 chars
+2026-06-12 15:59:00 | INFO     | httpx._send_single_request | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-12 15:59:00 | INFO     | call_summarizer.summarizer.generate_summary | Summary generated — 888 chars (attempt 1)
+2026-06-12 15:59:00 | INFO     | call_summarizer.guardrails.run_guardrails | Guardrails complete — passed: True, errors: 0, warnings: 0
+2026-06-12 15:59:00 | INFO     | call_summarizer.service._log_generated_summary | === SUMMARY | file: 7-transcript.txt | attempt: 1/3 | chars: 888 | guardrails: PASSED ===
+------------------------------------------------------------
+Caller: Frances Howard, Policyholder, Inbound
+
+Subject:
+Claim update and resolution for roof damage assessment.
+
+Executive Summary:
+Frances Howard called to express frustration about the lack of progress on her claim (PI-2024-83321) for roof damage. The assessor was scheduled for December 12th but was cancelled without notice. Declan Fitzgerald apologised and offered to flag the claim as urgent, rebook the assessor, and email the team manager. He also promised to follow up and ensure someone contacts her by 5 pm.
+
+- Claim reference number: PI-2024-83321
+- Postcode: BT9 7AW
+
+Next Steps:
+Pemberton Insurance: Declan will flag the claim as urgent, rebook the assessor, and email the team manager. He will also ensure someone contacts Frances by 5 pm.
+
+Other: Frances will wait for a call from Pemberton Insurance by 5 pm and will make a formal complaint if she doesn't hear from them.
+------------------------------------------------------------
+2026-06-12 15:59:00 | INFO     | call_summarizer.service._log_generated_summary | Summary accepted | file: 7-transcript.txt | attempt: 1 | chars: 888 | warnings: 0
+2026-06-12 15:59:00 | INFO     | call_summarizer.evaluator.evaluate_summary | Evaluation — grade: A, score: 1.00 | Factual =100% | Complete=100% | Format C=100% | Hallucin=100% | Professi=100% | Handoff =100% | Section =100% | Redundan=100%
+2026-06-12 15:59:00 | INFO     | call_summarizer.service.generate_summary_from_content | Eval [phase-2 attempt 1/2] | grade: A | score: 1.00 | file: 7-transcript.txt
+2026-06-12 15:59:00 | INFO     | call_summarizer.service.generate_summary_from_content | Generation complete | file: 7-transcript.txt | total_attempts: 1 | final grade: A (100%)
+2026-06-12 15:59:00 | INFO     | api.routes.summarize.generate_summary_endpoint | Summary ready for 7-transcript.txt — 888 chars, guardrails: PASS, eval: A (100%)
+2026-06-12 15:59:11 | INFO     | api.routes.summarize.save_summary_endpoint | POST /summaries — filename: 7-transcript, chars: 888
+2026-06-12 15:59:11 | INFO     | call_summarizer.guardrails.run_guardrails | Guardrails complete — passed: True, errors: 0, warnings: 0
+2026-06-12 15:59:11 | INFO     | call_summarizer.storage.save_summary | Summary saved: 7-transcript-summary.txt (888 chars)
+2026-06-12 15:59:11 | INFO     | api.routes.summarize.save_summary_endpoint | Summary saved: 7-transcript-summary.txt (888 chars, 0 warnings)
+2026-06-12 15:59:23 | INFO     | api.app._lifespan | FastAPI shutdown
